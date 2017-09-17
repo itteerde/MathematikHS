@@ -1967,7 +1967,7 @@ Beim Rechnen mit Geld sind \textbf{Kapital} und \textbf{Guthaben}\footnote{sowie
 
 \chapter{Geometrie}\index{Geometrie}
 
-In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, elementare 2D-Flächen und \textbf{Prismen}\index{Prisma}.
+In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, andere elementare 2D-Flächen und \textbf{Prismen}\index{Prisma}.
 
 
 \section{Flächen (-inhalt)}
@@ -2041,8 +2041,44 @@ Eine rechteckige (ebne/ 2-dimensionale) Fläche beschreiben wir durch Länge und
 
 Als Umfang einer (ebenen zusammenhängenden, von Löchern freien) Fläche/ Figur bezeichnen wir die Strecke, die ein Faden/ Maßband, ... misst, der/das genau benötigt würde um die Außenlinie einmal einzuschließen. Man kann z.B. auch an die Länge denken, die bei Zeichnen (ohne abzusetzen) die Spitze des Stiftes zurücklegt.
 
+\begin{beispiel}
+    \begin{figure}
+      \centering
+        \begin{tikzpicture}
+            \draw (1cm, 1cm) -- (8cm, 1cm) -- (8cm, 5cm) -- (1cm, 5cm) -- (1cm, 1cm);
+
+            \draw (1cm, 0.7cm) -- (1cm, 0.9cm);
+            \draw[thick,->,shorten >=2pt,shorten <=2pt,>=stealth] (1cm, 0.8cm) -- (4cm, 0.8cm) (5cm, 0.8cm) -> (8cm, 0.8cm);
+            \node at (4.5cm, 0.8cm) {\tiny 7cm};
+            \draw[thick,->,shorten >=2pt,shorten <=2pt,>=stealth] (0.8cm, 5cm) -- (0.8cm, 3.5cm) (0.8cm, 2.5cm) -> (0.8cm, 1cm);
+            \node[rotate=90] at (0.8cm, 3cm) {\tiny 4cm};
+            \draw[thick,->,shorten >=2pt,shorten <=2pt,>=stealth] (8.2cm, 1cm) -- (8.2cm, 2.5cm) (8.2cm, 3.5cm) -> (8.2cm, 5cm);
+            \node[rotate=90] at (8.2cm, 3cm) {\tiny 4cm};
+            \draw[thick,->,shorten >=2pt,shorten <=2pt,>=stealth] (8cm, 5.2cm) -- (5cm, 5.2cm) (4cm, 5.2cm) -> (1cm, 5.2cm);
+            \node at (4.5cm, 5.2cm) {\tiny 7cm};
+        \end{tikzpicture}
+      \caption{Umfang: $U_R=7\text{cm} + 4\text{cm} + 7\text{cm} + 4\text{cm} = 22\text{cm}$}\label{fig:geometrieUmfang1}
+    \end{figure}
+    
+    Der Umfang des Rechtecks mit Länge $a=7\text{cm}$ und Breite $c=7\text{cm}$ (s. Abb. \ref{fig:geometrieUmfang1}) errechnet sich als $U_R=a+b+a+b=2a+2b=14\text{cm}+8\text{cm}=22\text{cm}$.
+\end{beispiel}
+
+
 
 \section{Rechteck}
+
+\begin{definition}[Rechteck 1]
+    Wir nennen ein Viereck mit vier rechten Winkeln ein Rechteck.
+\end{definition}
+
+\begin{definition}[Rechteck 2]
+    Wir nennen ein Viereck mit zwei Paaren paralleler Seiten mit einem rechten Winkeln ein Rechteck.
+\end{definition}
+
+\begin{eqnarray}\label{eqn:RechteckFormeln}
+    A_R &=& a b\\
+    U_R &=& 2a + 2b
+\end{eqnarray}
 
 
 
@@ -2160,8 +2196,11 @@ der Nenner (pl. die Nenner),
 die Notation (pl. die Notationen),
 notwendig,
 die Ordnung (pl. die Ordnungen),
+parallel,
+das Parallelogramm (pl. die Parallelogramme),
 plausibel,
 die Plausibilität (kein Plural),
+das Polygon (pl. die Polygone),
 das Prisma (pl. die Prismen),
 die Probe (pl. die Proben),
 die Proberechnung (pl. die Proberechnungen),
