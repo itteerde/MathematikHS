@@ -341,13 +341,16 @@ Die \textbf{Mathematik} im Hauptschulabschluss\footnote{Für den Realschulabschl
 
 \textbf{\glsdisp{symb:N}{Natürliche Zahlen}} benutzen wir zum Zählen. Ein Apfel, zwei Äpfel, drei Äpfel, vier Äpfel, ... $\mathbb{N} = \{ 0$\footnote{Viele Mathematiker betrachten die Null nicht als natürliche Zahl. Für uns spielt keine Rolle ob Null eine natürliche Zahl ist oder nicht.}$, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...\}$
 
+
+\section{Primfaktorzerlegung}
+
 Jede natürliche Zahl $n$ kann (in einer eindeutigen Weise) in \textbf{Primfaktoren}\index{Primfaktor} zerlegt werden (\textbf{Faktorisierung}). 6 ist \textbf{teilbar} durch 2 und 3. 1 und die Zahl selbst zählen hier nicht.
 
 \begin{equation}
     6 = 2 \cdot 3
 \end{equation}
 
-Die Reihenfolge der \textbf{Faktoren} ist egal. $3 \cdot 2$ und $2 \cdot 3$ werden als die selbe \textbf{Zerlegung} betrachtet.
+Die Reihenfolge der \textbf{Faktoren} ist egal. $3 \cdot 2$ und $2 \cdot 3$ werden als die selbe \textbf{Zerlegung} (\textbf{Primfaktorzerlegung}) betrachtet.
 
 \begin{equation}
     60 = 2 \cdot 2 \cdot 3 \cdot 5
@@ -476,7 +479,7 @@ Wir schreiben die \textbf{Multiplikation} von \textbf{Faktoren} $f_1 \cdot f_2$ 
 
 \section{Division}
 
-Wir schreiben die \textbf{Division} von \textbf{Faktoren}\footnote{Die Mathematik nennt das in der Tat so (und unterscheidet Multiplikation und Division kaum). Wem das zu unklar ist kann die Begriffe Dividend und Divisor benutzen. Dann bezeichnet der Dividend die zu teilende Zahl und Divisor die Zahl durch die der Dividend geteilt wird.} $f_1 \div f_2$ und bezeichnen das Ergebnis einer \textbf{Division} das \textbf{Quotient}.\glsadd{symb:Div}
+Wir schreiben die \textbf{Division} von \textbf{Faktoren}\footnote{Die Mathematik nennt das in der Tat so (und unterscheidet Multiplikation und Division kaum). Wem das zu unklar ist kann die Begriffe Dividend und Divisor benutzen. Dann bezeichnet der Dividend die zu teilende Zahl und Divisor die Zahl durch die der Dividend geteilt wird.} $f_1 \div f_2$ und bezeichnen das Ergebnis einer \textbf{Division} der \textbf{Quotient}.\glsadd{symb:Div}
 
 
 \chapter{Maßeinheiten}\index{Maßeinheiten}
@@ -492,7 +495,31 @@ Das \glsdisp{SISystem}{SI-System} wird weltweit für im technischen und wissensc
 
 \section{Der Meter, Maßeinheit für Strecken}
 
-Mit dem Meter messen wir Entfernungen, Längen, Strecken. Alle anderen Maßeinheiten für Strecken werden durch den Meter definiert. Ein Millimeter ist ein tausendstel Meter. \enquote{Milli} ist das Präfix für $\frac{1}{1000}$.
+Mit dem Meter messen wir Entfernungen, Längen, Strecken. Alle anderen Maßeinheiten für Strecken werden durch den Meter definiert. Ein Millimeter ist ein tausendstel Meter. \enquote{Milli} ist das Präfix für $\frac{1}{1000}$. Prüfungsrelevant sind Meter, Kilometer, Dezimeter, Zentimeter und Millimeter. Mikrometer ($10^{-6}m$) und Nanometer ($10^{-9}m$) kommen gelegentlich in Nachrichten vor, z.B. als Größe von (gesundheitsschädlichen) Partikeln. Für die Prüfung relevant sind:
+
+\begin{eqnarray*}
+% \nonumber to remove numbering (before each equation)
+  1mm &=& \frac{1}{1000}m \\
+  1cm &=& \frac{1}{100}m \\
+  1dm &=& \frac{1}{10}m \\
+  1km &=& 1000m
+\end{eqnarray*}
+
+Für weniger alltäglichen Gebrauch gibt es in beide Richtungen weiter Namen für Maßeinheiten für Strecken, die sich ebenfalls jeweils auf den Meter beziehen, z.B. ist $1m = \frac{1}{9460730472580800}\text{ly}$ (Lichtjahre), d.h. ein Lichtjahr (kommt gelegentlich in den Nachrichten vor) ist somit gleich $9460730472580800\text{m}$. In der anderen Richtung sind die nächsten Präfixe \enquote{Piko} und \enquote{Femto}, so dass $1\text{m}=1000000000000000\text{fm}$.
+
+\begin{uebung}
+    Rechne um/ löse für $x$:
+
+    \begin{equation}
+        2km + 23m = x m
+    \end{equation}
+    \begin{equation}
+        17km + 791m = x cm
+    \end{equation}
+    \begin{equation}
+        3km + 17m + 5dm + 23cm + 2mm = x mm
+    \end{equation}
+\end{uebung}
 
 \tikzset{
 %Define standard arrow tip
@@ -520,10 +547,9 @@ pil/.style={
         \node[punkt, above=of meter] (dezimeter) {dm};
         \node[punkt, above=of dezimeter] (zentimeter) {cm};
         \node[punkt, above=of zentimeter] (millimeter) {mm};
+        \node[punkt, above=of millimeter] (mikrometer) {$\mu$m};
+        \node[punkt, above=of mikrometer] (nanometer) {nm};
         \node[punkt, below=of meter] (kilometer) {km};
-        \node[punkt, below=of kilometer] (lowerpaddingdummy) {};
-        \node[punkt, left=of kilometer] (leftpaddingdummy) {};
-        \node[punkt, left=of leftpaddingdummy] (leftpaddingdummy2) {};
         \node[punkt, below=of meter] (kilometerdummy) {}
             edge[pil,bend right=70] node[text width= 15em, anchor=west] {$\cdot 1000$} (meter.east);
         \node[punkt, above=of kilometer] (meterdummy) {}
@@ -536,16 +562,103 @@ pil/.style={
             edge[pil,bend right=70] node[text width= 2em, anchor=east] {$\div 10$} (dezimeter.west)
             edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 10$} (millimeter.east);
         \node[punkt, above=of zentimeter] (millimeterdummy) {}
-            edge[pil,bend right=70] node[text width= 2em, anchor=east] {$\div 10$} (zentimeter.west);
-    \end{tikzpicture}
+            edge[pil,bend right=70] node[text width= 2em, anchor=east] {$\div 10$} (zentimeter.west)
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (mikrometer.east);
+        \node[punkt, above=of millimeter] (mikrometerdummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (nanometer.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (millimeter.west);
+        \node[punkt, above=of mikrometer] (nanometerdummy) {}
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (mikrometer.west);
 
-  \caption{Umwandlungen von Strecken (m)}\label{fig:sisystemMUmwandlungen}
+        %\node[punkt, below=of kilometer] (lowerpaddingdummy) {};
+        \node[punkt, left=of kilometer] (leftpaddingdummy) {};
+        \node[punkt, left=of leftpaddingdummy] (leftpaddingdummy2) {};
+    \end{tikzpicture}
+  \caption{Umwandlungen von Strecken (m)}\label{fig:sisystemMUmwandlungenM}
 \end{figure}
 
 
 \section{Das Kilogramm, Maßeinheit für Massen}
 
 \textbf{Das Kilogramm (kg)}\index{Kilogramm}\index{kg|see{Kilogramm}} ist die \textbf{Maßeinheit} des \glsdisp{SISystem}{SI-Systems} für \textbf{Massen}. In der Prüfung werden damit auch Gewichte gemessen.\footnote{Tatsächlich ist das Kilogramm die Einheit für Massen. Da alle Massen im Hauptschulabschluss auf der Erde, mehr oder minder in gleich bleibendem Abstand vom Mittelpunkt der Erde, gemessen werden können wir die Unterscheidung vernachlässigen, auch wenn das dem Physiker weh tut...}
+
+\begin{figure}
+  \centering
+    \begin{tikzpicture}[node distance=1cm, auto,]
+        \node[punkt] (kilogramm) {kg};
+        \node[punkt, above=of kilogramm] (gramm) {g};
+        \node[punkt, above=of gramm] (milligramm) {mg};
+        \node[punkt, above=of milligramm] (mikrogramm) {$\mu$g};
+        \node[punkt, below=of kilogramm] (tonne) {t};
+        \node[punkt, below=of gramm] (kilogrammdummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (gramm.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (tonne.west);
+        \node[punkt, above=of kilogramm] (grammdummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (milligramm.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (kilogramm.west);
+        \node[punkt, above=of gramm] (milligrammdummy) {}
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (gramm.west)
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (mikrogramm.east);
+        \node[punkt, above=of milligramm] (mikrogrammdummy) {}
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (milligramm.west);
+        \node[punkt, below=of kilogramm] (tonnedummy) {}
+            edge[pil,bend right=70] node[text width= 15em, anchor=west] {$\cdot 1000$} (kilogramm.east);
+
+        \node[punkt, left=of kilogramm] (leftpaddingdummy) {};
+        \node[punkt, left=of leftpaddingdummy] (leftpaddingdummy2) {};
+    \end{tikzpicture}
+
+  \caption{Umwandlungen von Massen (kg)}\label{fig:sisystemMUmwandlungenKG}
+\end{figure}
+
+
+\section{Die Sekunde, Maßeinheit für Zeitspannen}
+
+\textbf{Die Sekunde}\index{Sekunde}\index{s|see{Sekunde}} ist die \textbf{Maßeinheit} des \glsdisp{SISystem}{SI-Systems} für Zeitspannen. Bei den Zeiteinheiten haben sich die Schritte des 60er-Stellensystem der Babylonier gehalten. In der Prüfung müssen wir mit den 60er-Schritten zwischen Sekunden, Minuten und Stunden zurechtkommen. Technisch und Wissenschaftlich rechnet man in Sekunden und den im \gls{SISystem} regelmäßigen Präfixen.
+
+\begin{figure}
+  \centering
+    \begin{tikzpicture}[node distance=1cm, auto,]
+        \node[punkt] (sekunde) {s};
+        \node[punkt, above=of sekunde] (millisekunde) {ms};
+        \node[punkt, above=of millisekunde] (mikrosekunde) {$\mu$s};
+        \node[punkt, above=of mikrosekunde] (nanosekunde) {ns};
+        \node[punkt, below=of sekunde] (minute) {min};
+        \node[punkt, below=of minute] (stunde) {h};
+        \node[punkt, below=of stunde] (tag) {d};
+        \node[punkt, below=of tag] (jahr) {y};
+
+        \node[punkt, below=of millisekunde] (sekundedummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (millisekunde.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 60$} (minute.west);
+        \node[punkt, below=of sekunde] (minutedummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 60$} (sekunde.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 60$} (stunde.west);
+        \node[punkt, below=of minute] (stundedummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 60$} (minute.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 24$} (tag.west);
+        \node[punkt, below=of stunde] (tagdummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 24$} (stunde.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 365$} (jahr.west);
+        \node[punkt, below=of tag] (jahrdummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 365$} (tag.east);
+        \node[punkt, above=of sekunde] (millisekundedummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (mikrosekunde.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (sekunde.west);
+        \node[punkt, above=of millisekunde] (mikroskundedummy) {}
+            edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (nanosekunde.east)
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (millisekunde.west);
+        \node[punkt, above=of mikrosekunde] (nanoskundedummy) {}
+            edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (mikrosekunde.west);
+        
+        \node[punkt, left=of sekunde] (leftpaddingdummy) {};
+        \node[punkt, left=of leftpaddingdummy] (leftpaddingdummy2) {};
+    \end{tikzpicture}
+  \caption{Umwandlungen von Zeitspannen (s)}\label{fig:sisystemMUmwandlungenS}
+\end{figure}
+
+Monate sind nicht eindeutig. Kalendarische Monate haben 28 bis 31 Tage, betriebswirtschaftliche häufig 30. Wichtig für die Prüfung sollte höchstens sein dass ein Jahr zwölf Monate hat (Zinsen, Gehalt, ...).
+
 
 \chapter{1 mal 1}
 
@@ -1838,6 +1951,14 @@ Beim Rechnen mit Geld sind \textbf{Kapital} und \textbf{Guthaben}\footnote{sowie
 \end{beispiel}
 
 
+\chapter{Geometrie}\index{Geometrie}
+
+In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, elementare 2D-Flächen und \textbf{Prismen}\index{Prisma}.
+
+
+\chapter{Proportionale und Antiproportionale Zuordnungen}\index{proportionale Zuordnung}\index{antiproportionale Zuordnung|see{proportionale Zuordnung}}
+
+
 \chapter{Term Replacement Systems (TRS)}\label{TRS}\index{TRS}
 
 Um effizient Mathematik zu betreiben ist eine nützliche Sichtweise das Rechnen als System zu verstehen in dem Ausdrücke durch anders geformte Ausdrücke ersetzt werden können, ohne den ursprünglichen Ausdruck (wertmäßig) zu verändern. Insbesondere benutzen wir \textbf{Formeln} und ersetzen die in ihnen enthaltenen allgemeinen \textbf{Variablen} durch konkrete Werte (\textbf{einsetzen}), wodurch wir konkrete Ergebnisse \textbf{ausrechnen} können.
@@ -1924,14 +2045,17 @@ die Einzahlung (pl. die Einzahlungen),
 das Ergebnis (pl. die Ergebnisse),
 die Ganze Zahl (pl. die Ganzen Zahlen),
 das Gewicht (pl. die Gewichte),
+das Gramm (kein pl.),
 die Grundrechenart (pl. die Grundrechenarten),
 die Größenordnung (pl. die Größenordnungen),
 das Guthaben (pl. die Guthaben),
 hinreichend,
 das Kapital (kein pl.),
+das Kilogramm (kein pl.),
 die Kommunikation (pl. die Kommunikationen),
 konstruieren,
 kommunizieren,
+der Kreis (pl. die Kreise),
 kürzen,
 die Masse (pl. die Massen),
 das Maß (pl. die Maße),
@@ -1947,12 +2071,15 @@ notwendig,
 die Ordnung (pl. die Ordnungen),
 plausibel,
 die Plausibilität (kein Plural),
+das Prisma (pl. die Prismen),
 die Probe (pl. die Proben),
 die Proberechnung (pl. die Proberechnungen),
 proportional,
 das Prozent (pl. die Prozente),
 die Prozentrechnung (kein pl.),
 rechnen,
+der Quader (pl. die Quader),
+der Quotient (pl. die Quotienten),
 die Rechnung (pl. die Rechnungen),
 das Recht (pl. die Rechte),
 runden,
@@ -1972,6 +2099,7 @@ die Voraussetzung (pl. die Voraussetzungen),
 die Waage (pl. die Waagen),
 der Wert (pl. die Werte),
 wiegen,
+der Würfel (pl. die Würfel),
 zählen,
 der Zähler (pl. die Zähler),
 die Zahl (pl. die Zahlen),
@@ -1983,7 +2111,8 @@ die Ziffer (pl. die Ziffern),
 der Zins (pl. die Zinsen),
 die Zinsrechnung (kein pl.),
 zeigen,
-das Zwischenergebnis (pl. die Zwischenergebnisse)
+das Zwischenergebnis (pl. die Zwischenergebnisse),
+der Zylinder (pl. die Zylinder)
 
 
 \printglossary
