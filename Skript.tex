@@ -382,6 +382,11 @@ Die Menge der rationalen Zahlen $\mathbb{Q}$ besteht aus den Zahlen der Form $\f
 Die Menge der reellen Zahlen $\mathbb{R}$ \enquote{besteht aus allen Stellen auf dem Zahlenstrahl}\footnote{Eine rigorose Einführung/ Definition ist für alle Schulabschlüsse überflüssig und wird in naturwissenschaftlichen Studiengängen im ersten Semester an der Universität unterrichtet.}. Wenn wir nicht ausdrücklich eine andere Domäne angeben betrachten wir alle Zahlen mit denen wir arbeiten als reelle Zahlen.
 
 
+\section{Rundungen}\index{Rundung}
+
+Wir können Zahlen \textbf{runden}\index{runden}. Wir sprechen von \enquote{runden auf $n$ Stellen (nach dem Komma)} oder \enquote{runden auf ganze Tausend, Millionen, ...}. Zu runden bedeutet die nächste Stelle nach der gewünschten Genauigkeit zu betrachten und bei Ziffern kleiner als 5 \textbf{abzurunden} und ab 5 \textbf{aufzurunden}. Oft legt die Bedeutung der Zahl (i.d.R. mit Maßeinheit) eine bestimmte Rundung nahe. Z.B. wird man €-Werte fast immer auf zwei Nachkommastellen gerundet erwarten (auf Cent genau). Wollen wir kennzeichnen dass eine Zahl nicht mehr genau/ exakt ist, sondern (mit bestimmter Präzession) gerundet, schreiben wir statt $=$, \enquote{(ist) gleich}, \glsdisp{symb:Ungefaehr}{$\approx$}, \enquote{(ist) ungefähr (gleich)} oder \enquote{(ist) rund}.
+
+
 \section{Numeralia (Zahlwörter)}\label{numeralia}
 
 \enquote{eins, zwei, drei, vier, fünf, sechs, sieben, ...} ist der Beginn der Zahlwörter (als Kardinalzahlen). \citep[Randzahl 509]{DudenGrammatik2016} gibt eine unvollständige Einleitung. Demnach sind sowohl Schreibweisen als auch gesprochene Zahlen nicht (mehr) streng festgelegt. Eine veraltete Regel lautet dass natürliche Zahlen bis zwölf als Zahlwort geschrieben werden, darüber hinaus als Ziffernfolge. Es bleibt das Problem Zahlwörter für größere Zahlen festzulegen, so dass größere Zahlen gesprochen werden können. Die Numeralia von 0 bis 12 sind \enquote{eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf}. Für Zahlen mit Zehnerstellen\footnote{Mit \enquote{echten} Zehnerstellen, also keine Null in der vorletzten Ziffer der Zahl.} werden die Zehner-Suffixe benötigt, diese sind \enquote{-zehn, -zwanzig, -dreißig, -vierzig, -fünfzig, -sechzig, -siebzig, -achtzig, -neunzig}. Für die Hunderter-Stellen werden die Numerale von 1 bis 9 vor das Numeral \enquote{hundert} gesetzt. Statt \enquote{eins} ist das Numeral hier \enquote{ein}. Sind Hunderter vorhanden wird zwischen ihnen und den Zehnern \enquote{und} eingefügt: \enquote{eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf, dreizehn, vierzehn, ..., neunzehn, zwanzig, einundzwanzig, zweiundzwanzig, ..., neunundzwanzig, dreißig, einunddreißig, ..., neunundneunzig, einhundert, einhundertundeins, ..., einhundertundneunundneunzig\footnote{\cite{DudenGrammatik2016} erkennt ausdrücklich auch hundertneunundneunzig als korrekt an.}, zweihundert, zweihundertundeins, ... neunhundertundneunundneunzig}.
@@ -2205,9 +2210,11 @@ die Differenz (pl. die Differenzen),
 die Division (pl. die Divisionen),
 dividieren,
 drehen,
+der Durchschnitt (pl. die Durchschnitte),
 die Einheit (pl. die Einheiten),
 die Einzahlung (pl. die Einzahlungen),
 das Ergebnis (pl. die Ergebnisse),
+die Folge (pl. die Folgen),
 die Ganze Zahl (pl. die Ganzen Zahlen),
 das Geodreieck (pl. die Geodreiecke),
 das Gewicht (pl. die Gewichte),
@@ -2230,9 +2237,11 @@ das Maß (pl. die Maße),
 die Maßeinheit (pl. die Maßeinheiten),
 der Maßstab (pl. die Maßstäbe),
 maßstabsgetreu,
+das Maximum (pl. die Maxima),
 die Menge (pl. die Mengen),
 messen,
 die Messung (pl. die Messungen),
+das Minimum (pl. die Minima),
 die Multiplikation (pl. die Multiplikationen),
 der Nenner (pl. die Nenner),
 die Notation (pl. die Notationen),
@@ -2240,6 +2249,7 @@ notieren,
 notwendig,
 ordnen,
 die Ordnung\footnote{Eine Ordnung in der Mathematik ist etwas anderes als die Ordnung die man in seiner Wohnung schafft wenn man aufräumt.} (pl. die Ordnungen),
+das Paar (pl. die Paare),
 parallel,
 das Parallelogramm (pl. die Parallelogramme),
 plausibel,
@@ -2260,6 +2270,7 @@ die Rechnung (pl. die Rechnungen),
 das Recht (pl. die Rechte),
 die Relation (pl. die Relationen),
 runden,
+die Rundung (pl. die Rundungen),
 die Schulden (kein Singular),
 die Skizze (pl. die Skizzen),
 skizzieren,
@@ -2275,6 +2286,8 @@ der Summand (pl. die Summanden),
 die Summe (pl. die Summen),
 die Symmetrie (pl. die Symmetrien),
 die Symmetrieachse (pl. die Symmetrieachsen),
+das Tripe (pl. die Tripel),
+das Tupel (pl. die Tupel),
 der Übertrag (pl. die Überträge),
 der Uhrzeigersinn (kein pl.),
 die Voraussetzung (pl. die Voraussetzungen),
@@ -2310,6 +2323,26 @@ der Zylinder (pl. die Zylinder)
 
 \begin{eqnarray}
 % \nonumber to remove numbering (before each equation)
+  1,23456\text{dm} &=& x \text{cm}\\
+  24,86\text{m} &=& x \text{km}\\
+  0,0074\text{mm} &=& x \text{dm}\\
+  654,456\text{km} &=& x \text{cm}\\
+  75,3\text{mm} &=& x \text{km}\\
+  54,1745\text{m} &=& x \text{cm}\\
+  5678\text{cm} &=& x \text{dm}\\
+  0,00054\text{dm} &=& x \text{mm}\\
+  2,5468789\text{km} &=& x \text{dm}\\
+  32458\text{dm} &=& x \text{km}\\
+  12,6385\text{m} &=& x \text{dm}\\
+  0,00578\text{km} &=& x \text{mm}\\
+  54678534\text{cm} &=& x \text{km}\\
+  567878,5\text{mm} &=& x \text{m}\\
+  687798,24\text{cm} &=& x \text{m}\\
+  534,32\text{dm} &=& x \text{m}\\
+  0,005456\text{m} &=& x \text{mm}\\
+  6546\text{mm} &=& x \text{cm}\\
+  1,6574\text{cm} &=& x \text{mm}\\
+  3,6578\text{km} &=& x \text{m}\\
   382\text{cm} &=& x \text{mm}\\
   1\text{km} + 2\text{m} +3\text{dm} +4\text{cm} +5\text{mm} &=& x \text{m} \\
   123.456.789\text{mm} &=& x \text{km} \\
