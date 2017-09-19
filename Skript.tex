@@ -335,6 +335,10 @@ Das Modellieren (einfacher) Probleme sollte von Anfang an geübt werden, so dass
 
 Die \textbf{Mathematik} im Hauptschulabschluss\footnote{Für den Realschulabschluss kommt schon einiges zu Funktionen, auch wenn man noch ohne das durch die Prüfung kommt.} verstehen wir als \textbf{Zählen}\index{zählen}, \textbf{Messen}\index{messen}, (elementares) \textbf{Rechnen}\index{rechnen} und die \textbf{Kommunikation} dessen.
 
+Während die Schule in der Tat häufig auf das Rechnen konzentriert ist, ist die Aufgabe der Mathematik eine weiter gehende (für die allerdings rechnen zu können Voraussetzung ist). Die Mathematik erlaubt uns Probleme der Wirklichkeit zu lösen indem wir sie abstrahieren und in dem Modell eine Lösung finden, die wir zurück auf die Realität übertragen können und die in der Weise erfolgreich ist, dass sie einen Vorgang beschreiben kann inklusive Vorhersagen für die Zukunft. Eine frühe Erfolgsgeschichte der Mathematik ist zum Beispiel zukünftige Positionen der Planeten des Sonnensystems vorherzusagen, Sonnenfinsternisse, Mondphasen, Jahreszeiten und so weiter. Die selbe Mathematik, die für diese astronomischen Berechnungen benutzt wird erlaubte viel später Flugbahnen, zunächst von Artillerie-Geschossen, später auch der Apollo-Missionen, die 1969 Menschen ermöglicht hat auf dem Mond zu gehen, fahren, Mondgestein zur Erde zurück zu bringen usw. Auch die gesamte Informatik, also alles was mit Computern und ihren Berechnungen zu tun hat - inklusive der zugrundeliegenden Theorie - ist eine Abspaltung der Mathematik, die so relevant geworden ist, dass wir ihr einen eigenen Namen gegeben haben.
+
+Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen gestellt werden, so dass die Teilnehmer ihre Abschlüsse schaffen. Darüber hinaus bereiten wir diejenigen, die nicht voll ausgelastet sind mit der Mathematik des Hauptschulabschlusses, auch darauf vor in den Jahren nach dem Abschluss etwas schwierigere Probleme bewältigen zu können. Viele Teilnehmer an \meineChance werden nach dem Hauptschulabschluss eine technische Ausbildung machen, die sehr viel mehr Mathematik benötigt im Abschluss der Berufsausbildung und an der Berufsschule als der Hauptschulabschluss und werden in der Praxis auch hin und wieder selbst Modelle modellieren müssen und mit ihrer Berechnung Entscheidungen im Beruf treffen. Auch daraufhin wollen wir ein Stück weit vorbereiten durch Beispiele aus dem Alltag und möglicher beruflicher Zukunft.
+
 
 \chapter{Zahlen}
 
@@ -575,6 +579,7 @@ pil/.style={
             edge[pil,bend right=70] node[text width= 15em, anchor=west] {$\cdot 1000$} (meter.east);
         \node[punkt, above=of kilometer] (meterdummy) {}
             edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 10$} (dezimeter.east)
+            edge[pil,bend right=90] node[text width= 15em, anchor=west] {$\cdot 1000$} (millimeter.east)
             edge[pil,bend right=70] node[text width= 3em, anchor=east] {$\div 1000$} (kilometer.west);
         \node[punkt, above=of meter] (dezimeterdummy) {}
             edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 10$} (zentimeter.east)
@@ -584,6 +589,7 @@ pil/.style={
             edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 10$} (millimeter.east);
         \node[punkt, above=of zentimeter] (millimeterdummy) {}
             edge[pil,bend right=70] node[text width= 2em, anchor=east] {$\div 10$} (zentimeter.west)
+            edge[pil,bend right=90] node[text width= 4em, anchor=east] {$\div 1000$} (meter.west)
             edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (mikrometer.east);
         \node[punkt, above=of millimeter] (mikrometerdummy) {}
             edge[pil,bend right=70] node[text width= 11em, anchor=west] {$\cdot 1000$} (nanometer.east)
@@ -680,6 +686,7 @@ pil/.style={
 
 Monate sind nicht eindeutig. Kalendarische Monate haben 28 bis 31 Tage, betriebswirtschaftliche häufig 30. Wichtig für die Prüfung sollte höchstens sein dass ein Jahr zwölf Monate hat (Zinsen, Gehalt, ...).
 
+In Wissenschaft und Technik wird durchgehend mit der Sekunde gerechnet und die Größenordnung wissenschaftlich notiert. So ist ein Tag $1 \text{d} = 60 \cdot 60 \cdot 24 \text{s} = 86.400\text{s} = 8,64 \times 10^4 \text{s}$ und das Universum ist ca. 14 Milliarden Jahre alt, was wissenschaftlich notiert $4,3 \times 10^{17}\text{s}$ sind.
 
 \chapter{1 mal 1}
 
@@ -2126,6 +2133,26 @@ Zeichnungen geben Objekte der Realität häufig nicht in ihrer natürlichen Grö
 \chapter{Proportionale und Antiproportionale Zuordnungen}\index{proportionale Zuordnung}\index{antiproportionale Zuordnung|see{proportionale Zuordnung}}
 
 
+\chapter{Graphische Darstellungen}
+
+Viele Sachverhalte der (schulischen) Mathematik lassen sich sehr \enquote{anschaulich} grafisch darstellen. Wir skizzieren die groben Zusammenhänge in Skizzen, zeichnen Diagramme und Graphen in denen die Lösungen sogar in der grafischen Darstellung (in etwa/ näherungsweise) abgelesen werden können.
+
+
+\section{Skizze}\index{Skizze}
+
+Eine Skizze nennen wir eine grafische Darstellung, die die Struktur eines Objekts erfasst, die uns jeweils interessierenden Aspekte sichtbar macht, jedoch nicht präzise ist. In der Mathematik im Hauptschulabschluss verstehen wir darunter insbesondere die Planskizzen\index{Planskizze} in der Geometrie mit denen wir uns daran erinnern welche Punkte, Seiten, Strecken, Winkel, ... wo sind relativ zu einander, um die passenden Formeln zu finden und korrekt Werte einzusetzen, die im Text gegeben sind. Beachte dass die Autoren der Prüfungen manchmal die Begriffe Skizze und Zeichnung nicht unterscheiden.
+
+
+\section{Zeichnung}\index{Zeichnung}
+
+
+\section{Diagramm}\index{Diagramm}
+
+
+\section{Funktionsgraph}\index{Funktionsgraph}\index{Graph|see{Funktionsgraph}}
+
+
+
 \chapter{Term Replacement Systems (TRS)}\label{TRS}\index{TRS}
 
 Um effizient Mathematik zu betreiben ist eine nützliche Sichtweise das Rechnen als System zu verstehen in dem Ausdrücke durch anders geformte Ausdrücke ersetzt werden können, ohne den ursprünglichen Ausdruck (wertmäßig) zu verändern. Insbesondere benutzen wir \textbf{Formeln} und ersetzen die in ihnen enthaltenen allgemeinen \textbf{Variablen} durch konkrete Werte (\textbf{einsetzen}), wodurch wir konkrete Ergebnisse \textbf{ausrechnen} können.
@@ -2149,6 +2176,50 @@ Eine vollständige Regel lautet: \enquote{Arbeite die List von oben nach unten a
         2 + 3 \cdot 4 = 2 + (3 \cdot 4) = 2 + 12 = 14
     \end{equation}\topicend
 \end{beispiel}
+
+
+\chapter{Lineare Gleichungen einer Variablen}
+
+\enquote{Lineare Gleichung einer Variablen} ist eine Bezeichnung deren Bedeutung man in der Regel erst (lange) nachdem man sie \enquote{zu lösen} gelernt hat etwas abfangen kann. Deshalb beginnen wir mit einem Beispiel.
+
+\begin{beispiel}
+    Zwei Anbieter stehen für die Stromversorgung Deiner Wohnung zur Verfügung. Du möchtest überprüfen welcher Anbieter für Dich der günstigere ist. Anbieter $A$ bietet einen Vertrag an mit einem festen Grundbetrag von 20 Euro und einem Preis pro Kilowattstunde von 25 Cents. Anbieter $B$ bietet einen Vertrag an ohne Grundbetrag mit einem Preis von 35 Cents pro Kilowattstunde. Sicher kannst Du das Problem lösen indem Du ausrechnest welcher Vertrag günstiger für Dich gewesen wäre im letzten Monat. Das Verfahren funktioniert sogar ganz ordentlich. Aber was machst Du wenn Dein Verbrauch im letzten Jahr von Monat zu Monat angestiegen ist und die beiden Verträge bei den aktuellen Zahlen nur einen geringen Unterschied ergeben?
+    
+    Wir lösen rechnerisch indem wir den \textbf{Schnittpunkt} der Geraden $y_a = 0,25x + 20$ und $y_b = 0,35x$ berechnen. Am Schnittpunkt ist ihr $y$-Wert gleich. Wir setzen also die Formeln der Verträge gleich:
+    \begin{align}\label{eqn:lineareGleichungen1}
+      0,25x + 20 &=& 0,35x && | -0,25x \\
+      20 &=& 0,1x && | \cdot 10 \\
+      200 &=& x &&
+    \end{align}
+    Das bedeutet, dass Vertrag $B$ bei einem Verbrauch von weniger als 200kWh günstiger ist und Vertrag $A$ bei einem größeren Verbrauch. Aus der Vergangenheit extrapolierend ermöglicht dieses Wissen eine wesentlich bessere Planung.\proofsquare
+\end{beispiel}
+
+Dieses Beispiel können wir auch grafisch interpretieren (und damit ungefähr lösen) (s. Abb. \ref{fig:lineareGleichungen1}). Der Schnittpunkt der beiden Geraden hat die $x$-Koordinate $x=200$, den Punkt an dem beide Verträge gleich teuer sind. Hier wir im wahren Sinn \enquote{offensichtlich}, dass $B$ links und damit bei kleinerem Verbrauch günstiger ist, und $A$ rechts und damit bei größerem Verbrauch als am Schnittpunkt.
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[domain=0:300, scale=0.04]
+        \draw[very thin,color=gray, step=50] (-5,-5) grid (295,145);
+        
+        \draw[->] (-5,0) -- (300,0) node[right] {kWh};
+        \draw[->] (0,-5) -- (0,150) node[above] {€};
+        
+        \draw[color=red] plot (\x,{0.25*\x +20});
+        \draw[color=blue] plot (\x,{0.35*\x});
+        
+        \node at (50,-10) {\small50};
+        \node at (100,-10) {\small100};
+        \node at (150,-10) {\small150};
+        \node at (200,-10) {\small200};
+        \node at (250,-10) {\small250};
+        \node at (-10,50) {\small50};
+        \node at (-10,100) {\small100};
+        
+        \draw[text=red] node at (300,90) {A};
+        \draw[text=blue] node at (300,115) {B};
+  \end{tikzpicture}
+  \caption{Grafische Lösung/Interpretation}\label{fig:lineareGleichungen1}
+\end{figure}
+
 
 
 \chapter{Prüfungstaktik}
@@ -2180,6 +2251,23 @@ Die Aufgaben in den Prüfungen sind mit dem Bemühen gestellt plausible Anwendun
 
 \section{Proben rechnen}
 
+Wenn man (in der Prüfung) Zeit hat kann man seine eigenen Ergebnisse überprüfen und oftmals Fehler selbst finden. Wir nennen eine zweite Rechnung (auf einem anderen Weg), die das selbe Problem löst, also das gleiche Ergebnis\footnote{Oder ein anderes Ergebnis, das sich leicht mit dem ersten vergleichen lässt, z.B. bei einer Rechnung mit verschiedenen Maßeinheiten in eine zweite Einheit ausrechnen und prüfen ob der Faktor zwischen den Ergebnissen passt.} haben muss, eine Proberechnung.
+
+\begin{beispiel}[Proberechnung]
+    \begin{align}
+      12 \text{mm} + 34 \text{cm} + 56 \text{dm} && &&\\
+      + 78 \text{m} + 90 \text{km} &=& x \text{m} && | \text{Aufgabe}\\
+      0,012 \text{m} + 0,34 \text{m} + 5,6 \text{m} && &&\\
+      + 78 \text{m} + 90.000 \text{m} &=& 90.083,952 \text{m} && | \text{Lösung}\\
+      12 \text{mm} + 340 \text{mm} && &&\\
+      + 5.600 \text{mm} + 78.000 \text{mm} && &&\\
+      + 90.000.000 \text{mm} &=& 90.083.952 \text{mm} && | \text{Probe}
+    \end{align}
+
+    Die Proberechnung wird in diesem Fall aus der ersten Zeile errechnet und nicht aus der bereits gefundenen Lösung. Das unabhängig von der Lösung ermittelte zweite Ergebnis (Probe) ist 1.000 mal so hoch bei einer Einheit, die $\frac{1}{1000}$ der Einheit der Lösung ist. Die Probe und Lösung sind also gleich: $90.083,952 \text{m}=90.083.952 \text{mm}$. Wenn man wirklich das zweite Ergebnis ohne die Lösung zu benutzen errechnet hat ist sehr wahrscheinlich dass die Lösung richtig ist. Passt das Ergebnis von Probe und Lösung nicht zusammen ist sicher eine der beiden Rechnungen falsch und man sollte den Fehler suchen.
+\end{beispiel}
+
+
 \appendix
 
 \chapter{Vokabeln}
@@ -2206,6 +2294,7 @@ der Bruch (pl. die Brüche),
 die Bruchrechnung (kein pl.),
 buchen,
 die Buchung (pl. die Buchungen),
+das Diagramm (pl. die Diagramme),
 die Differenz (pl. die Differenzen),
 die Division (pl. die Divisionen),
 dividieren,
@@ -2215,9 +2304,12 @@ die Einheit (pl. die Einheiten),
 die Einzahlung (pl. die Einzahlungen),
 das Ergebnis (pl. die Ergebnisse),
 die Folge (pl. die Folgen),
+der Funktionsgraph (pl. die Funktionsgraphen),
 die Ganze Zahl (pl. die Ganzen Zahlen),
 das Geodreieck (pl. die Geodreiecke),
 das Gewicht (pl. die Gewichte),
+die Grafik (pl. die Grafiken),
+grafisch,
 das Gramm (kein pl.),
 die Grundrechenart (pl. die Grundrechenarten),
 die Größenordnung (pl. die Größenordnungen),
@@ -2228,6 +2320,7 @@ das Kapital (kein pl.),
 das Kilogramm (kein pl.),
 die Kommunikation (pl. die Kommunikationen),
 konstruieren,
+die Konstruktion (pl. die Konstruktionen),
 kommunizieren,
 die Körperhöhe (pl. die Körperhöhen),
 der Kreis (pl. die Kreise),
@@ -2242,6 +2335,8 @@ die Menge (pl. die Mengen),
 messen,
 die Messung (pl. die Messungen),
 das Minimum (pl. die Minima),
+das Modell (pl. die Modelle),
+modellieren,
 die Multiplikation (pl. die Multiplikationen),
 der Nenner (pl. die Nenner),
 die Notation (pl. die Notationen),
@@ -2252,6 +2347,7 @@ die Ordnung\footnote{Eine Ordnung in der Mathematik ist etwas anderes als die Or
 das Paar (pl. die Paare),
 parallel,
 das Parallelogramm (pl. die Parallelogramme),
+die Planskizze (pl. die Planskizzen),
 plausibel,
 die Plausibilität (kein Plural),
 das Polygon (pl. die Polygone),
@@ -2271,6 +2367,7 @@ das Recht (pl. die Rechte),
 die Relation (pl. die Relationen),
 runden,
 die Rundung (pl. die Rundungen),
+der Schnittpunkt (pl. die Schnittpunkte),
 die Schulden (kein Singular),
 die Skizze (pl. die Skizzen),
 skizzieren,
@@ -2280,6 +2377,7 @@ die Stelle (pl. die Stellen),
 der Stellenwert (pl. die Stellenwerte),
 das Stellenwertsystem (pl. die Stellenwertsysteme),
 die Strecke (pl. die Strecken),
+senkrecht,
 subtrahieren,
 die Subtraktion (pl. die Subtraktionen),
 der Summand (pl. die Summanden),
@@ -2361,10 +2459,25 @@ der Zylinder (pl. die Zylinder)
 
 \begin{eqnarray}
 % \nonumber % Remove numbering (before each equation)
+    758.432 \text{g} &=& x \text{t} \\
+    0,0034 \text{t} &=& x \text{mg} \\
+    73.534 \text{mg} &=& x \text{kg} \\
+    0,378.4 \text{g} &=& x \text{mg} \\
+    750 \text{g} &=& x \text{kg} \\
+    0,3 \text{kg} &=& x \text{g} \\
+    12,5 \text{mg} &=& x \text{g} \\
+    123 \text{kg} &=& x \text{t} \\
+    1,23 \text{t} &=& x \text{g} \\
+    23.464.674 \text{mg} &=& x \text{t} \\
+    2,034 \text{t} &=& x \text{kg} \\
+    0,0125 \text{kg} &=& x \text{mg} \\
   832.747.982\text{mg} &=& x \text{t} \\
   1,236.78 \text{g} &=& x \text{t} \\
   98764\text{g} &=& x \text{kg} \\
-  6,54768578654657\text{t} &=& x \text{mg}
+  6,54768578654657\text{t} &=& x \text{mg} \\
+  123 \text{mg} + 78 \text{g} + 2,34 \text{kg} + 0,75 \text{t} &=& x \text{kg} \\
+  123.245 \text{mg} + 7,8 \text{g} + 12,634 \text{kg} + 0,00075 \text{t} &=& x \text{mg} \\
+  6123 \text{mg} + 7,8 \text{g} + 2.123,4 \text{kg} + 0,0075 \text{t} &=& x \text{g}
 \end{eqnarray}
 
 \printglossary
