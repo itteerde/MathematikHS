@@ -361,13 +361,13 @@ Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen ge
 
 \section{Natürliche Zahlen ($\mathbb{N}$)}\index{natürliche Zahlen}
 
-\textbf{\glsdisp{symb:N}{Natürliche Zahlen}} benutzen wir zum Zählen. Ein Apfel, zwei Äpfel, drei Äpfel, vier Äpfel, ... $\mathbb{N} = \{ 0$\footnote{Viele Mathematiker betrachten die Null nicht als natürliche Zahl. Für uns spielt keine Rolle ob Null eine natürliche Zahl ist oder nicht.}$, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...\}$
+\textbf{\glsdisp{symb:N}{Natürliche Zahlen}} benutzen wir zum Zählen. Ein Apfel, zwei Äpfel, drei Äpfel, vier Äpfel, ... $\mathbb{N} = \{ 0$\footnote{Viele Mathematiker betrachten die Null nicht als natürliche Zahl. Für uns spielt keine Rolle ob Null eine natürliche Zahl ist oder nicht.}\textsuperscript{,}\footnote{Wir verzichten auf eine Definition und gehen davon aus, dass Beispiele ausreichen und spätestens mit der Teilbarkeit Klarheit intuitiv (natürlich!) entsteht.}$, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...\}$.
 
 
 \section{Teilbarkeit}\index{Teilbarkeit}\label{def:teilbarkeit}
 
 \begin{definition}[Teilbarkeit]
-    Wir sagen dass eine natürliche Zahl $a$ eine natürliche Zahl $b$ \textbf{teilt} wenn $b \div a$ eine natürliche Zahl ist. Wir sagen \enquote{a teilt b} und schreiben \enquote{\glsdisp{symb:teilt}{$a | b$}} und \enquote{a teilt nicht b} und schreiben \glsdisp{symb:teiltnicht}{\enquote{$a \nmid b$}}.
+    Wir sagen dass eine natürliche Zahl $a$ ($a \neq 1, a \neq b$)\footnote{Wir nennen 1 und die Zahl selbst \textbf{triviale} Teiler und führen sie nicht auf und schließen sie aus der Menge der Teiler aus, weil sie bei \textbf{jeder} Zahl auftauchen und damit nur die Lesbarkeit verschlechtern ohne Information zu gewinnen.} eine natürliche Zahl $b$ \textbf{teilt} wenn $b \div a$ eine natürliche Zahl ist. Wir sagen \enquote{a teilt b} und schreiben \enquote{\glsdisp{symb:teilt}{$a | b$}} und \enquote{a teilt nicht b} und schreiben \glsdisp{symb:teiltnicht}{\enquote{$a \nmid b$}}.
 \end{definition}
 
 \begin{beispiel}[Teilbarkeit]
@@ -375,7 +375,16 @@ Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen ge
 \end{beispiel}
 
 
-\subsection{ggT}\index{ggT}
+\subsection{Größter gemeinsamer Teiler (ggT)}\index{ggT}
+
+\begin{definition}
+    Wir nennen die größte Zahl, die alle Zahlen einer Menge \textbf{teilt}, den \enquote{\textbf{größten gemeinsamen Teiler} (ggT)} der Menge.
+\end{definition}
+
+\begin{beispiel}[ggT]
+    Die Teiler von 60 sind $\text{T}_{60} = \{2,3,4,5,6,10,12,15,20,30\}$ und die Teiler von 40 sind $\text{T}_{40}\{2,4,5,8,10,20\}$. Die \textbf{gemeinsamen Teiler} von 60 und 40 sind $\text{gT}_{\{60,40\}} = \text{T}_{60} \bigcup \text{T}_{40} = \{2,4,5,10,20\}$. Der \textbf{größte gemeinsame Teiler (ggT)} von 60 und 40 ist das größte \textbf{Element} von $\text{gT}_{\{60,40\}}$: $\text{ggT}_{\{60,40\}}=20$.
+\end{beispiel}
+
 
 \subsection{kgV}\index{kgV}
 
