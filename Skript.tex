@@ -456,7 +456,9 @@ In der Mathematik wollen wir (insbesondere in \textbf{Formeln}) möglichst \text
       A_R & =  a b && a \rightarrow 12 cm, b \rightarrow 6 cm\\
        & =  12 cm \cdot 6 cm &&\\
        & =  60 cm^2 &&
-    \end{align}\topicend
+    \end{align}
+    
+    Es ist weitgehend eine sehr gute Weise an die Schulmathematik heran zu gehen indem man \enquote{Rechnen} als \glsdisp{TRS}{Term Replacement System} (System von Ersetzungsregeln/ systematisches Einsetzen) versteht.\topicend
 \end{beispiel}
 
 Genau genommen ersetzen wir wie im Beispiel zu sehen, in diesem Fall mit einer reellen Zahl und einer Maßeinheit. Diese Feinheiten können wir jedoch zunächst ignorieren und in den kommenden Monaten intuitiv durch Üben lernen.
@@ -2570,23 +2572,55 @@ Wir nennen ein Viereck dessen gegenüber liegende Seiten zu einander parallel si
 \subsection{Trapez}
 
 Wir nennen ein Viereck mit zwei parallelen Seiten \enquote{Trapez}.
-\begin{align}\label{eqn:Trapez}
+\begin{align}\label{eqn:fsTrapez}
   A_T &= \frac{a+c}{2} h_a \\
   U_T &= a+b+c+d
 \end{align}
 
+
 \subsection{Kreis}
+
+Wir nennen die Fläche, deren Rand ein Zirkel um einen Mittelpunkt zieht, deren Rand damit einen festen Radius vom Mittelpunkt entfernt ist, \enquote{Kreis}.
+\begin{align}\label{eqn:fsKreis}
+  A_K &= \pi r^2 \\
+  U_K &= 2 \pi r
+\end{align}
+
 
 
 \section{Körper}
 
+
 \subsection{Würfel}
+
+Wir nennen einen Körper dessen sechs Seiten (Seitenflächen) Quadrate sind \enquote{Würfel}.
+\begin{align}\label{eqn:fsWuerfel}
+  V &= a^3 \\
+  O &= 6a^2
+\end{align}
+
 
 \subsection{Quader}
 
+Wir nennen einen Körper dessen sechs Seiten (Seitenflächen) Rechtecke sind \enquote{Quader}.
+\begin{align}\label{eqn:fsQuader}
+  V &= a \cdot b \cdot c \\
+  O &= 2ab + 2ac + 2bc
+\end{align}
+
+
 \subsection{Prisma}
 
+Wir nennen einen Körper mit zwei gleichen Seiten (Seitenflächen) ein Polygon sind dessen gleiche Ecken mit geraden Strecken (senkrecht zum Polygon) verbunden sind \enquote{Prisma}.
+\begin{align}\label{eqn:fsPrisma}
+  V &= A_G \cdot h_K \\
+  O &= 2 A_G + A_M
+\end{align}
+
+
 \subsection{Zylinder}
+
+Wir nennen den Körper aus zwei Kreisen als Grundflächen, die durch einen (senkrechten, geraden) Mantel verbunden sind, \enquote{Zylinder}.
 
 \printindex
 \printbibliography
