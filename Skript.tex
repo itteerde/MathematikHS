@@ -2031,6 +2031,17 @@ Wir dürfen nur Brüche mit gleichem \textbf{Nenner} (direkt) \textbf{addieren} 
     \frac{a}{c} - \frac{b}{c} = \frac{a-b}{c}
 \end{equation}
 
+Wir multiplizieren Brüche indem wir die Zähler multiplizieren und das Ergebnis der Zähler des Produktes ist und die Nenner multiplizieren und das Ergebnis der Nenner des Produktes ist.
+
+\begin{beispiel}[Brüche multiplizieren]
+    \begin{align}\label{eqn:BruecheMultiplikation01}
+      \frac{2}{3} \cdot \frac{5}{7} & = \frac{10}{21}\\
+      3 \cdot \frac{5}{7} = \frac{3}{1} \cdot \frac{5}{7} & = \frac{15}{7}\\
+      \frac{8}{21} \cdot \frac{7}{16} & = \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{6}\\
+      \frac{5}{3} \cdot \frac{3}{5} & = 1
+    \end{align}
+\end{beispiel}
+
 \begin{equation}
     \frac{a}{c} \cdot \frac{b}{d} = \frac{a b}{c d}
 \end{equation}
@@ -2161,9 +2172,9 @@ Eine rechteckige (ebne/ 2-dimensionale) Fläche beschreiben wir durch Länge und
 \end{beispiel}
 
 
-\section{Umfang}
+\section{Umfang}\index{Umfang}
 
-Als Umfang einer (ebenen zusammenhängenden, von Löchern freien) Fläche/ Figur bezeichnen wir die Strecke, die ein Faden/ Maßband, ... misst, der/das genau benötigt würde um die Außenlinie einmal einzuschließen. Man kann z.B. auch an die Länge denken, die bei Zeichnen (ohne abzusetzen) die Spitze des Stiftes zurücklegt.
+Als Umfang einer (ebenen zusammenhängenden, von Löchern freien) Fläche/ Figur bezeichnen wir die Strecke, die ein Faden/ Maßband, ... misst, der/das genau benötigt würde um die Außenlinie einmal einzuschließen. Man kann z.B. auch an die Länge denken, die bei Zeichnen (ohne abzusetzen) die Spitze des Stiftes zurücklegt. Wir schreiben \glsdisp{symb:Umfang}{$U_F$} für den Umfang der Fläche $F$ und ersetzen $F$ durch den ersten Buchstaben der Fläche, z.B. $U_Q$ für den Umfang des Quadrats.
 
 \begin{beispiel}
     \begin{figure}
@@ -2189,7 +2200,7 @@ Als Umfang einer (ebenen zusammenhängenden, von Löchern freien) Fläche/ Figur
 
 
 
-\section{Rechteck}
+\section{Rechteck}\label{Rechteck}\index{Rechteck}
 
 \begin{figure}
   \centering
@@ -2509,6 +2520,74 @@ Den \textbf{\texttt{[-i-]}} $q_1 = \frac{1}{2}$ können wir durch den \textbf{\t
 
 \printglossary
 \printglossary[type=symbols,style=long]
+
+\chapter{Formelsammlung}
+
+\section{Flächen}
+
+\subsection{Viereck}\label{fs:Viereck}
+
+Wir nennen ein Polygon mit vier Ecken ein \enquote{Viereck}.
+
+Die Summe der Innenwinkel im Viereck beträgt 360°.
+
+
+\subsection{Rechteck}\label{fs:Rechteck}
+
+Wir nennen ein Viereck mit rechten Winkeln \enquote{Rechteck} (s. \ref{Rechteck}, S. \pageref{Rechteck}).
+\begin{align}\label{eqn:fsRechteck}
+    A_R &= a \cdot b\\
+    U_R &= 2a + 2b
+\end{align}
+
+
+\subsection{Quadrat}\label{fs:Quadrat}
+
+Wir nennen ein Rechteck mit gleichen Seitenlängen \enquote{Quadrat} ().
+\begin{align}\label{eqn:fsQuadrat}
+  A_Q &= 4a \\
+  U_Q &= a^2
+\end{align}
+
+
+\subsection{Dreieck}\label{fs:Dreieck}
+
+Wir nennen ein Polygon mit drei Ecken \enquote{Dreieck} ().
+\begin{align}\label{eqn:fsDreieck}
+  A_D &= \frac{a \cdot h_a}{2} \\
+  U_D &= a+b+c
+\end{align}
+
+
+\subsection{Parallelogramm}
+
+Wir nennen ein Viereck dessen gegenüber liegende Seiten zu einander parallel sind \enquote{Parallelogramm}.
+\begin{align}\label{eqn:fsPrallelogramm}
+  A_P &= a \cdot h_a \\
+  U_P &= 2a + 2b
+\end{align}
+
+\subsection{Trapez}
+
+Wir nennen ein Viereck mit zwei parallelen Seiten \enquote{Trapez}.
+\begin{align}\label{eqn:Trapez}
+  A_T &= \frac{a+c}{2} h_a \\
+  U_T &= a+b+c+d
+\end{align}
+
+\subsection{Kreis}
+
+
+\section{Körper}
+
+\subsection{Würfel}
+
+\subsection{Quader}
+
+\subsection{Prisma}
+
+\subsection{Zylinder}
+
 \printindex
 \printbibliography
 
