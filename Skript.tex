@@ -2460,9 +2460,27 @@ Eine Skizze nennen wir eine grafische Darstellung, die die Struktur eines Objekt
 
 Als \enquote{Zeichnung} bezeichnen wir eine graphische Darstellung, der alle (für das Problem) relevanten Informationen zu entnehmen sind. Insbesondere nennen wir z:B. in einer Planskizze eines Dreiecks die Seiten $a$, $b$ und $c$, in einer Zeichnung haben in der Regel die Seiten Längenangaben wie $3 \text{cm}$, $4 \text{cm}$ und $5 \text{cm}$. Vorsicht: die Begriffe \enquote{Skizze} und \enquote{Zeichnung} werden nicht immer sauber getrennt.
 
+
 \subsection{Schrägbild}\index{Schrägbild}\label{Schrägbild}
 
+\begin{definition}
+    Wir bezeichnen eine (2-dimensionale) Zeichnung eines (3-dimensionalen) Körpers bei der nicht perspektivisch abgebildet wird, sondern eine Fläche frontal zweidimensional gezeichnet wird und die \enquote{Tiefe} in der Weise, dass für eine Einheit, die auf kariertem Papier zwei Kästchen misst (insbesondere 1cm bei maßstabsgetreuer Zeichnung), als eine Diagonale \enquote{nach rechts oben} dargestellt wird mit einer Länge von einem Kästchen diagonal pro Einheit.
+\end{definition}
+
+\begin{figure}
+  \centering
+    \begin{tikzpicture}
+        \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
+    \end{tikzpicture}
+  \caption{Schrägbild eines Würfels, maßstabsgetreu mit einer Kantenlänge von 4cm}\label{fig:SchraegbildWuerfel}
+\end{figure}
+
+
 \subsection{Netz}\index{Netz}\label{Netz}
+
+\begin{definition}[Netz]
+    Wir bezeichnen eine Fläche, die \enquote{durch Falten} die Seiten eines Körpers (und damit den [hohlen] Körper) ergeben würde, als ein \enquote{Netz} des Körpers.
+\end{definition}
 
 
 \section{Diagramm}\index{Diagramm}
