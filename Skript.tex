@@ -2424,7 +2424,7 @@ Wir nennen den Raum/ Rauminhalt eines Körpers (\enquote{Wie viel Masse hat/ ent
 \subsection{Oberfläche}\index{Oberfläche}\label{Oberfläche}
 
 \begin{definition}[Oberfläche]
-    Wir nennen die Summe der Flächeninhalte der Flächen, die einen Körper begrenzen, \enquote{Oberfläche}.    
+    Wir nennen die Summe der Flächeninhalte der Flächen, die einen Körper begrenzen, \enquote{Oberfläche}.
 \end{definition}
 
 
@@ -2471,8 +2471,30 @@ Als \enquote{Zeichnung} bezeichnen wir eine graphische Darstellung, der alle (f�
   \centering
     \begin{tikzpicture}
         \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
+        
+        \draw[line width=0.3mm] (1,1) -- (7,1) -- (7,7) -- (1,7) -- (1,1);
+        \draw[line width=0.3mm] (7,1) -- (10,4);
+        \draw[line width=0.3mm] (1,7) -- (4,10);
+        \draw[line width=0.3mm] (4,10) --  (10,10);
+        \draw[line width=0.3mm] (7,7) -- (10,10);
+        \draw[line width=0.3mm] (10,4) -- (10,10);
+        \draw[dashed, line width=0.3mm] (4,4) -- (4,10);
+        \draw[dashed, line width=0.3mm] (1,1) -- (4,4);
+        \draw[dashed, line width=0.3mm] (4,4) -- (10,4);
+        
+        \coordinate (pa1) at (1, 0.5);
+        \coordinate (pa2) at (7, 0.5);
+        \draw[->] (pa1) -- (pa2) node[midway,fill=white] {6cm};
+
+        \coordinate (pb1) at (0.5, 1);
+        \coordinate (pb2) at (0.5, 7);
+        \draw[->] (pb1) -- (pb2) node[rotate=90, anchor=center, midway,fill=white] {6cm};
+
+        \coordinate (pc1) at (7.5, 1);
+        \coordinate (pc2) at (10.5, 4);
+        \draw[->] (pc1) -- (pc2) node[rotate=45, anchor=center, midway,fill=white] {6cm};
     \end{tikzpicture}
-  \caption{Schrägbild eines Würfels, maßstabsgetreu mit einer Kantenlänge von 4cm}\label{fig:SchraegbildWuerfel}
+  \caption{Schrägbild eines Würfels, maßstabsgetreu mit einer Kantenlänge von 6cm}\label{fig:SchraegbildWuerfel}
 \end{figure}
 
 
