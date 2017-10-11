@@ -357,6 +357,14 @@ Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen ge
 \end{enumerate}
 
 
+\chapter{Mengen}
+
+Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mittelbar für die Prüfung relevant sind. Wir benutzen sie aber bei Erklärungen und auch bei Definitionen und führen sie deshalb (nicht rigoros) ein.
+
+\begin{definition}[Menge]\index{Menge}
+    Wir nennen Eine \enquote{Ansammlung/ Sammlung} von \enquote{Dingen} eine Menge. Die Dinge in einer Menge nennen wir die \enquote{Elemente} der Menge. Wir schreiben $m \in \mathbb{M}$ falls das Element $m$ in der Menge $\mathbb{M}$ enthalten ist und $m \notin \mathbb{M}$ falls das Element $m$ nicht in der Menge $\mathbb{M}$ enthalten ist.
+\end{definition}
+
 
 \chapter{Zahlen}
 
@@ -2105,10 +2113,12 @@ Beim Rechnen mit Geld sind \textbf{Kapital} und \textbf{Guthaben}\footnote{sowie
 
 \chapter{Geometrie}\index{Geometrie}
 
-In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, andere elementare 2D-Flächen und \textbf{Prismen}\index{Prisma}.
+In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, andere elementare 2-dimensionale Flächen und 3-dimensionale Körper, \textbf{Prismen}\index{Prisma} und Zylinder.
 
 
-\section{Flächen (-inhalt)}
+\section{Flächen}
+
+\subsection{Flächen (-inhalt)}
 
 Eine rechteckige (ebne/ 2-dimensionale) Fläche beschreiben wir durch Länge und Breite. Wir schreiben für ihre Fläche/ ihren Flächeninhalt $A_R = a b$ und lesen \enquote{Die Fläche eines Rechtecks ist gleich Länge mal Breite.} Gemäß \gls{SISystem} ist unsere Standard-Einheit für Strecken der Meter. Eine quadratische (und damit auch rechteckige) Fläche mit einer Seitenlänge von einem Meter nennen wir einen Quadratmeter und schreiben $A_Q = a^2 = (1\text{m})^2 = 1\text{m}^2$ und lesen \enquote{Die Fläche eines Quadrats mit Seitenlängen von je einem Meter ist gleich ein Quadratmeter} oder \enquote{Der Flächeneinheit eines Quadrates mit Seitenlängen gleich ein Meter ist ein Quadratmeter}. Entsprechend hat ein Quadrat mit Seitenlängen von einem Millimeter eine Fläche oder einen Flächeninhalt von einem Quadratmillimeter. Mit solchen Kacheln können wir offensichtlich die Flächeninhalte aller planen Flächen/ Figuren ausdrücken (auch wenn nicht bei allen klar ist wie wir sie messen können).
 
@@ -2175,11 +2185,13 @@ Eine rechteckige (ebne/ 2-dimensionale) Fläche beschreiben wir durch Länge und
 \end{beispiel}
 
 
-\section{Umfang}\index{Umfang}
+\subsection{Umfang}\index{Umfang}
 
-Als Umfang einer (ebenen zusammenhängenden, von Löchern freien) Fläche/ Figur bezeichnen wir die Strecke, die ein Faden/ Maßband, ... misst, der/das genau benötigt würde um die Außenlinie einmal einzuschließen. Man kann z.B. auch an die Länge denken, die bei Zeichnen (ohne abzusetzen) die Spitze des Stiftes zurücklegt. Wir schreiben \glsdisp{symb:Umfang}{$U_F$} für den Umfang der Fläche $F$ und ersetzen $F$ durch den ersten Buchstaben der Fläche, z.B. $U_Q$ für den Umfang des Quadrats.
+\begin{definition}[Umfang]
+    Als Umfang einer (ebenen zusammenhängenden, von Löchern freien) Fläche/ Figur bezeichnen wir die Strecke, die ein Faden/ Maßband, ... misst, der/das genau benötigt würde um die Außenlinie einmal einzuschließen. Man kann z.B. auch an die Länge denken, die bei Zeichnen (ohne abzusetzen) die Spitze des Stiftes zurücklegt. Wir schreiben \glsdisp{symb:Umfang}{$U_F$} für den Umfang der Fläche $F$ und ersetzen $F$ durch den ersten Buchstaben der Fläche, z.B. $U_Q$ für den Umfang des Quadrats.
+\end{definition}
 
-\begin{beispiel}
+\begin{beispiel}[Umfang]
     \begin{figure}
       \centering
         \begin{tikzpicture}
@@ -2203,7 +2215,7 @@ Als Umfang einer (ebenen zusammenhängenden, von Löchern freien) Fläche/ Figur
 
 
 
-\section{Rechteck}\label{Rechteck}\index{Rechteck}
+\subsection{Rechteck}\label{Rechteck}\index{Rechteck}
 
 \begin{figure}
   \centering
@@ -2277,7 +2289,7 @@ Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) geg
 \end{eqnarray}
 
 
-\section{Quadrat}\index{Quadrat}
+\subsection{Quadrat}\index{Quadrat}
 
 \begin{figure}
     \centering
@@ -2307,7 +2319,7 @@ Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) geg
             \node at (0.5cm, 1.5cm) {=};
             \node at (1cm,4.5cm) {};
         \end{tikzpicture}
-      & 
+      &
         \begin{tikzpicture}
             \draw (1cm,1cm) -- (4cm,1cm) -- (4cm, 4cm) -- (1cm, 4cm) -- (1cm, 1cm);
             \node at (0.75cm, 0.75cm) {A};
@@ -2336,7 +2348,7 @@ Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) geg
 \end{definition}
 
 
-\section{Dreieck}\index{Dreieck}\label{Dreieck}
+\subsection{Dreieck}\index{Dreieck}\label{Dreieck}
 
 \begin{definition}
     Wir nennen ein Polygon mit drei Ecken \enquote{Dreieck}.
@@ -2371,10 +2383,62 @@ Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) geg
 \end{figure}
 
 
+\subsection{Parallelogramm}\index{Parallelogramm}\label{Parallelogramm}
+
+\begin{definition}[Parallelogramm]
+    Wir nennen ein Viereck mit zwei mal zwei \textbf{parallelen} Seiten \enquote{Parallelogramm}.
+\end{definition}
+
+Alle Parallelogramme sind Trapeze.
+
+
+\subsection{Trapez}\index{Trapez}\label{Trapez}
+
+\begin{definition}
+    Wir nennen ein Viereck mit zwei Parallelen Seiten \enquote{Trapez}.
+\end{definition}
+
+
+\subsection{Kreis}\index{Kreis}\label{Kreis}
+
+Der \textbf{Kreis} ist die einzige Fläche, die für den Hauptschulabschluss relevant ist, die kein Polygon ist. Sie hat keine Ecke. Sie wird beschrieben durch \textbf{Mittelpunkt} und \textbf{Radius}.
+
+\begin{definition}
+    Wir nennen eine Fläche, die von einer kreisförmigen Linie begrenzt ist, d.h. jeder Punkt auf dem Rand der Fläche ist gleich weit vom \textbf{Mittelpunkt} der Fläche entfernt, \enquote{Kreis}.
+\end{definition}
+
+\begin{align}\label{eqn:Kreis}
+  A_K &= \pi r^2 \\
+  U_K &= 2 \pi r
+\end{align}
 
 
 
-\section{Maßstab}\index{Maßstab}
+\section{Körper}
+
+\subsection{Volumen}\index{Volumen}\label{Volumen}
+
+Wir nennen den Raum/ Rauminhalt eines Körpers (\enquote{Wie viel Masse hat/ enthält der Körper}) \enquote{Volumen}.
+
+
+\subsection{Oberfläche}\index{Oberfläche}\label{Oberfläche}
+
+\begin{definition}[Oberfläche]
+    Wir nennen die Summe der Flächeninhalte der Flächen, die einen Körper begrenzen, \enquote{Oberfläche}.    
+\end{definition}
+
+
+
+
+\subsection{Quader}\index{Quader}\label{Quader}
+
+\subsection{Würfel}\index{Würfel}\label{Würfel}
+
+\subsection{Prisma}\index{Prisma}\label{Prisma}
+
+\subsection{Zylinder}\index{Zylinder}\label{Zylinder}
+
+\subsection{Maßstab}\index{Maßstab}\label{Maßstab}
 
 Zeichnungen geben Objekte der Realität häufig nicht in ihrer natürlichen Größe wieder. Große Objekte werden oft verkleinert dargestellt, sehr kleine vergrößert. Um aus solch einer nicht maßstabsgetreuen Zeichnung die wirklichen Strecken zu ermitteln müssen wir die Messungen an der Zeichnung mit dem Maßstab umrechnen. Eine Entfernung von 7cm auf einer Fahrradkarte im Maßstab 1:100000 sind z.B. in Wirklichkeit 7cm mal 100000, also 700000cm = 7km. Gebräuchlich sind Maßstäbe 1:n, sprich \enquote{eins zu n} für verkleinerte Darstellungen wie auf Landkarten sowie n:1 für vergrößerte Darstellungen, z.B. mikroskopische Lebewesen in einem Biologie-Buch. Häufig wird der Maßstab auch gezeichnet und eine Strecke am Rand der Abbildung, die z.B. 1cm lang ist mit 1mm beschriftet. Das bedeutet, dass die Abbildung im Maßstab 10:1 vergrößert dargestellt ist, z.B. ein Käfer wiederum im Biologie-Buch.
 
@@ -2394,8 +2458,93 @@ Eine Skizze nennen wir eine grafische Darstellung, die die Struktur eines Objekt
 
 \section{Zeichnung}\index{Zeichnung}
 
+Als \enquote{Zeichnung} bezeichnen wir eine graphische Darstellung, der alle (für das Problem) relevanten Informationen zu entnehmen sind. Insbesondere nennen wir z:B. in einer Planskizze eines Dreiecks die Seiten $a$, $b$ und $c$, in einer Zeichnung haben in der Regel die Seiten Längenangaben wie $3 \text{cm}$, $4 \text{cm}$ und $5 \text{cm}$. Vorsicht: die Begriffe \enquote{Skizze} und \enquote{Zeichnung} werden nicht immer sauber getrennt.
+
+\subsection{Schrägbild}\index{Schrägbild}\label{Schrägbild}
+
+\subsection{Netz}\index{Netz}\label{Netz}
+
 
 \section{Diagramm}\index{Diagramm}
+
+Wir bezeichnen eine graphische Darstellung, die einen numerischen Sachverhalt \enquote{auf einen Blick} erkennbar darstellt, andere Aspekte jedoch gar nicht, ein \enquote{Diagramm}.
+
+\subsection{Kreis- oder Tortendiagramm}\index{Kreisdiagramm}\index{Tortendiagramm|see Kreisdiagramm}
+
+\subsection{Balken- oder Säulendiagramm}\index{Balkendiagramm}\index{Säulendiagramm|see Balkendiagramm}
+
+\subsection{Liniendiagramm}\index{Liniendiagramm}
+
+\subsection{Flächendiagramm}\index{Flächendiagramm}
+
+
+\subsection{Venn-Diagramm}\index{Venn-Diagramm}
+
+Mit einem \textbf{Venn-Diagramm} können wir Mengen hinsichtlich ihrer Schnitte darstellen. Venn-Diagramme können für (rigorose) Beweise benutzt werden. Die Mengen\footnote{Es können beliebig viele Mengen sein, wirklich übersichtlich sind i.d.R. nur bis zu drei Mengen (ggf. plus Komplementärmenge in der alle dargestellten Mengen liegt).} Werden als Kreise dargestellt, die sich teilweise überschneiden.
+
+\begin{figure}
+  \centering
+    % Definition of circles
+    \def\firstcircle{(0,0) circle (1.5cm)}
+    \def\secondcircle{(0:2cm) circle (1.5cm)}
+
+    \colorlet{circle edge}{blue!50}
+    \colorlet{circle area}{blue!20}
+
+    \tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
+        outline/.style={draw=circle edge, thick}}
+
+    \setlength{\parskip}{5mm}
+    % Set A and B
+    \begin{tikzpicture}
+        \begin{scope}
+            \clip \firstcircle;
+            \fill[filled] \secondcircle;
+        \end{scope}
+        \draw[outline] \firstcircle node {$A$};
+        \draw[outline] \secondcircle node {$B$};
+        \node[anchor=south] at (current bounding box.north) {$A \cap B$};
+    \end{tikzpicture}
+
+    %Set A or B but not (A and B) also known a A xor B
+    \begin{tikzpicture}
+        \draw[filled, even odd rule] \firstcircle node {$A$}
+                                     \secondcircle node{$B$};
+        \node[anchor=south] at (current bounding box.north) {$\overline{A \cap B}$};
+    \end{tikzpicture}
+
+    % Set A or B
+    \begin{tikzpicture}
+        \draw[filled] \firstcircle node {$A$}
+                      \secondcircle node {$B$};
+        \node[anchor=south] at (current bounding box.north) {$A \cup B$};
+    \end{tikzpicture}
+
+    % Set A but not B
+    \begin{tikzpicture}
+        \begin{scope}
+            \clip \firstcircle;
+            \draw[filled, even odd rule] \firstcircle node {$A$}
+                                         \secondcircle;
+        \end{scope}
+        \draw[outline] \firstcircle
+                       \secondcircle node {$B$};
+        \node[anchor=south] at (current bounding box.north) {$A - B$};
+    \end{tikzpicture}
+
+    % Set B but not A
+    \begin{tikzpicture}
+        \begin{scope}
+            \clip \secondcircle;
+            \draw[filled, even odd rule] \firstcircle
+                                         \secondcircle node {$B$};
+        \end{scope}
+        \draw[outline] \firstcircle node {$A$}
+                       \secondcircle;
+        \node[anchor=south] at (current bounding box.north) {$B - A$};
+    \end{tikzpicture}
+  \caption{Venn-Diagramm}\label{fig:VennDiagramm}
+\end{figure}
 
 
 \section{Funktionsgraph}\index{Funktionsgraph}\index{Graph|see{Funktionsgraph}}
