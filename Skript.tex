@@ -240,6 +240,24 @@
     \end{scope}
 }
 
+\newcommand{\slice}[4]{
+  \pgfmathparse{0.5*#1+0.5*#2}
+  \let\midangle\pgfmathresult
+
+  % slice
+  \draw[thick,fill=black!10] (0,0) -- (#1:1) arc (#1:#2:1) -- cycle;
+
+  % outer label
+  \node[label=\midangle:#4] at (\midangle:1) {};
+
+  % inner label
+  \pgfmathparse{min((#2-#1-10)/110*(-0.3),0)}
+  \let\temp\pgfmathresult
+  \pgfmathparse{max(\temp,-0.5) + 0.8}
+  \let\innerpos\pgfmathresult
+  \node at (\midangle:\innerpos) {#3};
+}
+
 \newcommand{\legend}[2][]{
     \begin{scope}[#1]
     \path
@@ -257,6 +275,7 @@
 \newtheorem{definition}{Definition}
 \newtheorem{uebung}{Übung}
 \newtheorem{beispiel}{Beispiel}
+\newtheorem{satz}{Satz}
 
 \newglossary*{symbols}{Symbolverzeichnis}
 
@@ -345,12 +364,12 @@ Während die Schule in der Tat häufig auf das Rechnen konzentriert ist, ist die
 Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen gestellt werden, so dass die Teilnehmer ihre Abschlüsse schaffen. Darüber hinaus bereiten wir diejenigen, die nicht voll ausgelastet sind mit der Mathematik des Hauptschulabschlusses, auch darauf vor in den Jahren nach dem Abschluss etwas schwierigere Probleme bewältigen zu können. Viele Teilnehmer an \meineChance werden nach dem Hauptschulabschluss eine technische Ausbildung machen, die sehr viel mehr Mathematik benötigt im Abschluss der Berufsausbildung und an der Berufsschule als der Hauptschulabschluss und werden in der Praxis auch hin und wieder selbst Modelle modellieren müssen und mit ihrer Berechnung Entscheidungen im Beruf treffen. Auch daraufhin wollen wir ein Stück weit vorbereiten durch Beispiele aus dem Alltag und möglicher beruflicher Zukunft.
 
 
-\section{Wieso müssen wir Mathematik lernen?}
+\section{Wieso müssen wir Mathematik lernen?}\label{MathematikWieso}
 
 \begin{enumerate}
   \item Mathematik erlaubt es sicheres Wissen zu erlangen, z.B. sicher sein zu können dass ein Vertrag billiger ist als ein anderer.
   \item Mathematik erlaubt es zwingend zu argumentieren, z.B. nachzuweisen dass ein Angebot eines Konkurrenten günstiger ist (und der Verkäufer dem man das zeigt vielleicht auf diesen Preis herunter geht).
-  \item \enquote{Mathematiker sind intelligent.} Mal davon abgesehen dass das stimmt\footnote{... aber ziemlich unklar ist was das bedeutet über das Abschneiden im Intelligenztest hinaus...} lässt sich immer wieder feststellen dass wer eine solide Basis mathematischer Kompetenzen zeigt für intelligent gehalten wird - mit entsprechend vorteilhaften Folgen z.B. hinsichtlich beruflicher Karriere. Eine Abwandlung ist die Annahme von vielen Personalverantwortlichen, dass wer sich durch die Mathematik durchgekämpft hat mit guten Ergebnissen auch alles lernen kann was man (in einer nicht handwerklichen) beruflichen Tätigkeit braucht.
+  \item \enquote{Mathematiker sind intelligent.} Mal davon abgesehen dass das stimmt\footnote{... aber ziemlich unklar ist was das bedeutet über das Abschneiden im Intelligenztest hinaus...} lässt sich immer wieder feststellen dass wer eine solide Basis mathematischer Kompetenzen zeigt für intelligent gehalten wird - mit entsprechend vorteilhaften Folgen z.B. hinsichtlich beruflicher Karriere. Eine Abwandlung ist die Annahme von vielen Personalverantwortlichen, dass wer sich durch die Mathematik durchgekämpft hat, mit guten Ergebnissen, auch alles lernen kann was man (in einer nicht handwerklichen) beruflichen Tätigkeit braucht.
   \item Mathematik macht Spaß. (WTF?) Leider können wir mit der schulischen Mathematik interessante Themen, die Spaß machen, nur gelegentlich streifen/ andeuten. Der ein oder andere wird aber vielleicht später einmal \enquote{richtige} Mathematik betreiben (können oder müssen..?), die in der Tat viel Freude machen kann.
   \item Mathematik ist die Sprache aller (Natur-) Wissenschaften und darüber hinaus auch in fast allen anderen Wissenschaften massiv im Vormarsch - ausgenommen vielleicht die Theologien.
   \item Ohne elementare Kompetenzen der Mathematik kann man fast keinen Beruf ausüben. Auch hier seien nochmals Verträge erwähnt und die zugrunde liegenden Angebote und Rechnungen, wobei letztere nicht umsonst \enquote{Rechnungen} genannt werden - sie berechnen die Kosten.
@@ -412,15 +431,19 @@ Eine natürliche Zahl $n > 1$\footnote{Wieso wir die Eins nicht \textbf{Primzahl
 
 Jede natürliche Zahl $n$ kann (in einer eindeutigen Weise) in \textbf{Primfaktoren}\index{Primfaktor} zerlegt werden (\textbf{Faktorisierung}). 6 ist \textbf{teilbar} durch 2 und 3. 1 und die Zahl selbst zählen hier nicht.
 
-\begin{equation}
-    6 = 2 \cdot 3
-\end{equation}
+\begin{beispiel}[Primfaktorzerlegung]
+    \begin{equation}\label{eqn:primfaktorzerlegung01}
+        6 = 2 \cdot 3
+    \end{equation}
+\end{beispiel}
 
-Die Reihenfolge der \textbf{Faktoren} ist egal. $3 \cdot 2$ und $2 \cdot 3$ werden als die selbe \textbf{Zerlegung} (\textbf{Primfaktorzerlegung}) betrachtet.
+Die Reihenfolge der \textbf{Faktoren} ist egal. $3 \cdot 2$ und $2 \cdot 3$ werden als die selbe \textbf{Zerlegung} (\textbf{Primfaktorzerlegung}) betrachtet. Für bessere Lesbarkeit schreiben wir die Faktoren meistens von klein nach groß aufsteigend.
 
-\begin{equation}
-    60 = 2 \cdot 2 \cdot 3 \cdot 5
-\end{equation}
+\begin{beispiel}[Primfaktorzerlegung]
+    \begin{equation}\label{eqn:primfaktorzerlegung02}
+        60 = 2 \cdot 2 \cdot 3 \cdot 5
+    \end{equation}
+\end{beispiel}
 
 
 \section{Ganze Zahlen ($\mathbb{Z}$)}\index{ganze Zahlen}
@@ -473,7 +496,36 @@ In der Mathematik wollen wir (insbesondere in \textbf{Formeln}) möglichst \text
 Genau genommen ersetzen wir wie im Beispiel zu sehen, in diesem Fall mit einer reellen Zahl und einer Maßeinheit. Diese Feinheiten können wir jedoch zunächst ignorieren und in den kommenden Monaten intuitiv durch Üben lernen.
 
 
-\chapter{Elementare Rechenoperationen}
+\section{Dezimalsystem}\index{Dezimalsystem}\label{Dezimalsystem}
+
+Weltweit hat sich das \textbf{Dezimalsystem} für sowohl alltägliche als auch wissenschaftlich-technische Rechnungen durchgesetzt. Ausnahmen sind Rechnungen mit Zeiten mit Maßeinheiten größer als Sekunden und die technische Umsetzung in der Informatik (Binärsystem).
+
+Ein Stellenwertsystem funktioniert wie folgt: Es gibt eine 1er-Stelle ($10^0=1$). D.h. die Zahl Eins schreiben wir \enquote{1} da $1 \cdot 10^0 = 1$. Die nächstgrößere Stelle (nach links gehend) ist im Dezimalsystem die 10er-Stelle ($10^1=10$). Es folgen nach links die 100er-Stelle, die 1000er-Stelle usw. Jede Stelle ist 10 mal so groß wie ihr rechter Nachbar. Das gilt auch von der 1er-Stelle nach rechts. Die nächste Stelle rechts ist die $\frac{1}{10}$-Stelle, dann die $\frac{1}{100}$-Stelle, die $\frac{1}{1000}$-Stelle und so weiter. Nach links also mal zehn und nach rechts geteilt durch zehn.
+
+$10^0$ ist gleich eins. Das akzeptieren wir bitte, weil es in die Reihe passt und die Dozenten sagen dass das richtig ist, ohne es rigoros einzuführen. $10^1=10$, $10^2=100$, $10^5=100.000$, $10^{-1}=\frac{10}{1}$, $10^{-3}=\frac{1}{1000}$, $10^{-6}=\frac{1}{1.000.000}$, ... Auch hier verzichten wir auf eine Definition und verlassen uns darauf dass die Regel mit Übung natürlich wird.
+
+\begin{beispiel}[Dezimalsystem]\label{bsp:Dezimalsystem01}
+    \begin{align}\label{eqn:Dezimalsystem01}
+      123,456 &= 1 \cdot 10^2 = 100 \\
+       & \quad + 2 \cdot 10^1 = 10  \\
+       & \quad + 3 \cdot 10^0 = 3 \\
+       & \quad + 4 \cdot 10^{-1} = 0,4\\
+       & \quad + 5 \cdot 10^{-2} = 0,05\\
+       & \quad + 6 \cdot 10^{-3} = 0,006\\
+       &= 123,456
+    \end{align}
+\end{beispiel}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
+  \end{tikzpicture}
+  \caption{Dezimalsystem}\label{fig:Dezimalsystem01}
+\end{figure}
+
+
+\chapter{Grundrechenarten}\index{Grundrechenarten}\label{Grundrechenarten}
 
 \enquote{$1+2=3$}\glsadd{symb:Plus}\glsadd{symb:Minus}\glsadd{symb:Gleich} sprechen wir \enquote{eins plus zwei (ist) gleich drei}. \textbf{Plus} zu rechnen nennen wir \textbf{addieren} oder \textbf{die Addition}. \enquote{$3-2=1$} sprechen wir \enquote{drei minus zwei (ist) gleich 1}. \textbf{Minus} zu rechnen nennen wir \textbf{subtrahieren} oder \textbf{die Subtraktion}. \textbf{Das Ergebnis} einer \textbf{Subtraktion} nennen wir \textbf{die Differenz}. Wir sagen auch \enquote{die Differenz von drei und zwei ist eins}\footnote{und umgangssprachlich/ alltagssprachlich auch \enquote{die Differenz von zwei und drei ist eins (obwohl $2-3=-1$). Hierbei kommt die Vorstellung der \textbf{Differenz} als \textbf{Abstand} am \textbf{Zahlenstrahl} $\mathbb{R}^1$ zum intuitiven Ausdruck}}.
 
@@ -2116,6 +2168,20 @@ Beim Rechnen mit Geld sind \textbf{Kapital} und \textbf{Guthaben}\footnote{sowie
 In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, andere elementare 2-dimensionale Flächen und 3-dimensionale Körper, \textbf{Prismen}\index{Prisma} und Zylinder.
 
 
+\section{Geraden und Strecken}\index{Gerade}\index{Strecke}
+
+\begin{definition}[Gerade]\index{Gerade}\label{def:Gerade}
+    Eine gerade, unendlich lange, unendlich dünne und in beide Richtungen unbegrenzte Linie nennen \enquote{Gerade}.
+\end{definition}
+
+\begin{definition}[Strecke]\index{Strecke}\label{def:Strecke}
+    Einen endlich langen Abschnitt (ohne Unterbrechungen) einer Gerade nennen wir \enquote{Strecke}.
+\end{definition}
+
+\begin{satz}[Parallelität in 2d]\index{Prallele}\label{def:Parallele}
+    Zwei Geraden in einer Ebene\footnote{I-nsbesondere ist jede 2-dimensionale ebene Fläche (Teil einer) Ebene (der euklidischen Geometrie).} sind entweder parallel oder haben genau einen Schnittpunkt.
+\end{satz}
+
 \section{Flächen}
 
 \subsection{Flächen (-inhalt)}
@@ -2471,7 +2537,7 @@ Als \enquote{Zeichnung} bezeichnen wir eine graphische Darstellung, der alle (f�
   \centering
     \begin{tikzpicture}
         \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
-        
+
         \draw[line width=0.3mm] (1,1) -- (7,1) -- (7,7) -- (1,7) -- (1,1);
         \draw[line width=0.3mm] (7,1) -- (10,4);
         \draw[line width=0.3mm] (1,7) -- (4,10);
@@ -2481,7 +2547,7 @@ Als \enquote{Zeichnung} bezeichnen wir eine graphische Darstellung, der alle (f�
         \draw[dashed, line width=0.3mm] (4,4) -- (4,10);
         \draw[dashed, line width=0.3mm] (1,1) -- (4,4);
         \draw[dashed, line width=0.3mm] (4,4) -- (10,4);
-        
+
         \coordinate (pa1) at (1, 0.5);
         \coordinate (pa2) at (7, 0.5);
         \draw[<->] (pa1) -- (pa2) node[midway,fill=white] {6cm};
@@ -2511,6 +2577,36 @@ Wir bezeichnen eine graphische Darstellung, die einen numerischen Sachverhalt \e
 
 \subsection{Kreis- oder Tortendiagramm}\index{Kreisdiagramm}\index{Tortendiagramm|see Kreisdiagramm}
 
+Mit einem Kreis- oder Tortendiagramm (synonym) stellen wir die Anteile an einem Ganzen dar, z.B. Wahlergebnisse oder Anteile von Altersgruppen an der Gesamtbevölkerung. Die Anteile müssen ohne Überschneidung sein um im Kreisdiagramm dargestellt werden zu können. Eine Summe von weniger als 100 Prozent ist möglich; in dem Fall markiert man den Rest als \enquote{Rest}, \enquote{Diverse}, \enquote{Sonstige} oder ähnliche Bezeichnungen für den Rest.
+
+\begin{beispiel}[Kreis-/ Tortendiagramm]\label{bsp:Kreisdiagramm01}
+    \begin{figure}
+      \centering
+        \begin{tikzpicture}[scale=3]
+            \newcounter{a}
+            \newcounter{b}
+            \foreach \p/\t in {20/Klasse A, 4/Klasse B, 11/Klasse C,
+                               49/Klasse D, 16/Sonstige}
+              {
+                \setcounter{a}{\value{b}}
+                \addtocounter{b}{\p}
+                \slice{\thea/100*360}
+                      {\theb/100*360}
+                      {\p\%}{\t}
+              }
+        \end{tikzpicture}
+      \caption{Kreis-/ Tortendiagramm}\label{fig:Kreisdiagramm01}
+    \end{figure}
+    
+    Für die Klassen A bis D liegen Daten vor und werden dargestellt. Für andere Klassen liegen keine Daten vor oder es sind so viele sehr kleine Anteile, dass getrennte Darstellung nicht informativ wäre. Diese anderen Klassen sind als \enquote{Sonstige} zusammengefasst.
+\end{beispiel}
+
+Ein Kreisdiagramm stellt insgesamt immer hundert Prozent, also eine Gesamtheit dar. Man sollte diesen Diagramm-Typ immer von senkrecht oben (eben als Kreis) darstellen und nicht auf Spielereien wie 3d-Schrägsicht verfallen (wozu das Synonym \enquote{Tortendiagramm} verleitet). Nur bei der Darstellung des Kreises sieht man auf den ersten Blick die wirklichen Verhältnisse. In einer Schrägsicht scheinen die \enquote{vorne} liegenden Anteile größer zu sein als sie sind und die \enquote{hinteren} scheinen verkleinert. Leider kann so eine schlechte Darstellung vorkommen. Deshalb immer nochmal genau auf die Zahlen achten!
+
+\begin{uebung}[Kreisdiagramm]
+    Versuche ein Kreisdiagramm für die letzte Bundestagswahl zu zeichnen (nicht nur skizzieren, sondern präzise zeichnen, so dass die Anteile am Kreis tatsächlich den Stimmanteilen in der Wahl entsprechen.
+\end{uebung}
+
 \subsection{Balken- oder Säulendiagramm}\index{Balkendiagramm}\index{Säulendiagramm|see Balkendiagramm}
 
 \subsection{Liniendiagramm}\index{Liniendiagramm}
@@ -2520,7 +2616,7 @@ Wir bezeichnen eine graphische Darstellung, die einen numerischen Sachverhalt \e
 
 \subsection{Venn-Diagramm}\index{Venn-Diagramm}
 
-Mit einem \textbf{Venn-Diagramm} können wir Mengen hinsichtlich ihrer Schnitte darstellen. Venn-Diagramme können für (rigorose) Beweise benutzt werden. Die Mengen\footnote{Es können beliebig viele Mengen sein, wirklich übersichtlich sind i.d.R. nur bis zu drei Mengen (ggf. plus Komplementärmenge in der alle dargestellten Mengen liegt).} Werden als Kreise dargestellt, die sich teilweise überschneiden.
+Mit einem \textbf{Venn-Diagramm} können wir Mengen hinsichtlich ihrer Schnitte darstellen. Venn-Diagramme können für (rigorose) Beweise benutzt werden. Die Mengen\footnote{Es können beliebig viele Mengen sein, wirklich übersichtlich sind i.d.R. nur bis zu drei Mengen (ggf. plus Komplementärmenge in der alle dargestellten Mengen liegen).} Werden als Kreise dargestellt, die sich teilweise überschneiden.
 
 \begin{figure}
   \centering
@@ -2936,6 +3032,13 @@ Wir nennen einen Körper mit zwei gleichen Seiten (Seitenflächen) ein Polygon s
 \subsection{Zylinder}
 
 Wir nennen den Körper aus zwei Kreisen als Grundflächen, die durch einen (senkrechten, geraden) Mantel verbunden sind, \enquote{Zylinder}.
+\begin{align}\label{eqn:fsZylinder}
+  V &= A_G \cdot h_K \\
+  O &= 2 A_G + A_M\\
+  A_G (A_{\text{Kreis}}) &= \pi r^2\\
+  A_M &= U_K \cdot h_K\\
+    &= 2 \pi r h_K
+\end{align}
 
 \printindex
 \printbibliography
