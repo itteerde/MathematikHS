@@ -2174,6 +2174,50 @@ In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, an
     Eine gerade, unendlich lange, unendlich dünne und in beide Richtungen unbegrenzte Linie nennen \enquote{Gerade}.
 \end{definition}
 
+Eine Gerade ist damit ein rein mathematisches Objekt. In der Natur kennen wir nichts was unendlich lang ist und sehen nichts was Breite und Länge von 0 hat.
+
+\begin{definition}[Parallelität]\index{parallel}\label{def:parallel}
+    Wir nennen zwei Geraden in einer Ebene, die sich nicht schneiden, \enquote{Parallelen}, sagen \enquote{a ist \glsdisp{symb:parallel}{parallel} zu b} und schreiben \glsdisp{symb:parallel}{$a \| b$}.
+\end{definition}
+
+\begin{figure}
+  \centering
+    \begin{tikzpicture}
+        \draw (1,0.75) -- (4,0.75);
+        \draw (1,2) -- (4,2);  
+        \draw (2.5,0.25) -- (2.5,2.5);
+        
+        \node at (0.75,0.75) {a};
+        \node at (0.75,2) {b};
+        \node at (2.5,2.75) {c};
+        \node at (2.3,0.9) {$\cdot$};
+        \node at (2.3,1.8) {$\cdot$};
+        
+        \draw (2.0,1.5) ++(0:0.5) arc (-90:-180:0.5);
+        \draw (2.0,1.25) ++(0:0.5) arc (90:180:0.5);
+
+    \end{tikzpicture}$\quad$
+    \begin{tikzpicture}[rotate=30]
+        \draw (1,0.75) -- (4,0.75);
+        \draw (1,2) -- (4,2);
+        \draw (2.5,0.25) -- (2.5,2.5);
+
+        \node at (0.75,0.75) {a};
+        \node at (0.75,2) {b};
+        \node at (2.5,2.75) {c};
+        \node at (2.3,0.9) {$\cdot$};
+        \node at (2.3,1.8) {$\cdot$};
+
+        \draw (2.0,1.5) ++(0:0.5) arc (-90:-180:0.5);
+        \draw (2.0,1.25) ++(0:0.5) arc (90:180:0.5);
+
+    \end{tikzpicture}
+
+  \caption{Parallelität: $a \glsdisp{symb:parallel}{\|} b \glsdisp{symb:Und}{\wedge} b \glsdisp{symb:parallel}{\|} a$, sowie $a \glsdisp{symb:senkrecht}{\bot} c \glsdisp{symb:Und}{\wedge} c b \glsdisp{symb:senkrecht}{\bot} c$ und $c \glsdisp{symb:senkrecht}{\bot} a \glsdisp{symb:Und}{\wedge} c \glsdisp{symb:senkrecht}{\bot} b$}\label{fig:Parallelitaet}
+\end{figure}
+
+
+
 \begin{definition}[Strecke]\index{Strecke}\label{def:Strecke}
     Einen endlich langen Abschnitt (ohne Unterbrechungen) einer Gerade nennen wir \enquote{Strecke}.
 \end{definition}
@@ -2198,13 +2242,13 @@ In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, an
         \draw (1,2.5) -- (1.4,2.75) -- (1,2.75) -- (1,2.5);
         \draw (0.5,3.25) -- (1.5,3.35) -- (1.9,3.75) -- (0.5,3.25);
         \draw (0.5,5) -- (1.5,4.8) -- (1.9,5.95) -- (0.5,5);
-        
+
         \draw (3,1) -- (4,1) -- (4,2) -- (3,2) -- (3,1);
         \draw (3,2.5) -- (4.5,2.5) -- (4.5,3.5) -- (3,3.5) -- (3,2.5);
         \draw (3,4) -- (4.5,4) -- (5,5) -- (3.5,5) -- (3,4);
         \draw (3,5.5) -- (4.5,5.5) -- (4,6.5) -- (3.25,6.5) -- (3,5.5);
         \draw (3,7) -- (4.5,7) -- (3.25,7.15) -- (3.6,7.75) -- (3,7);
-        
+
         \draw (5.5,1) -- (6,1) -- (6.25,1.5) -- (5.75,2) -- (5.25,1.5) -- (5.5,1);
         \draw (5.5,3) -- (6,3) -- (6.25,3.5) -- (5.75,3.25) -- (5.25,3.5) -- (5.5,3);
 
@@ -2511,7 +2555,7 @@ Alle Parallelogramme sind Trapeze.
         \node at (7.7,3.8) {$\scriptstyle \gamma$};
         \draw (3cm,4cm) ++(0:0.5) arc (0:-122:0.5cm);
         \node at (3.1,3.8) {$\scriptstyle \delta$};
-        
+
         \draw[dashed] (5,1) -- (5,4);
         \node at (4.75,2.5) {$h_a$};
         \draw (4.5,1.5) ++(0:0.5) arc (90:180:0.5cm);
@@ -2661,7 +2705,7 @@ Mit einem Kreis- oder Tortendiagramm (synonym) stellen wir die Anteile an einem 
         \end{tikzpicture}
       \caption{Kreis-/ Tortendiagramm}\label{fig:Kreisdiagramm01}
     \end{figure}
-    
+
     Für die Klassen A bis D liegen Daten vor und werden dargestellt. Für andere Klassen liegen keine Daten vor oder es sind so viele sehr kleine Anteile, dass getrennte Darstellung nicht informativ wäre. Diese anderen Klassen sind als \enquote{Sonstige} zusammengefasst.
 \end{beispiel}
 
