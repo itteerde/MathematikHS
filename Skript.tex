@@ -2176,6 +2176,35 @@ In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, an
 
 Eine Gerade ist damit ein rein mathematisches Objekt. In der Natur kennen wir nichts was unendlich lang ist und sehen nichts was Breite und Länge von 0 hat.
 
+\begin{satz}[Winkelsumme am Schnittpunkt von Geraden]
+    Die Summe der Winkel am Schnittpunkt zweier Geraden beträgt 360.
+\end{satz}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \draw (1,1) -- (5,5);
+        \draw (1,3) -- (5,3);
+        
+        \node at (0.75,0.75) {a};
+        \node at (0.75,3) {b};
+        
+        \node at (2.75,3.2) {$\delta$};
+        \node at (3.5,3.2) {$\gamma$};
+        \node at (3.2,2.75) {$\beta$};
+        \node at (2.5,2.75) {$\alpha$};
+
+        \draw (3,3) ++(0:1) arc (0:45:1);
+        \draw (2.625,3.88) ++(0:1.25) arc (45:180:1.25);
+        \draw (1,3) ++(0:1) arc (180:225:1);
+        \draw (0.86,2.125) ++(0:1.25) arc (225:360:1.25);
+  \end{tikzpicture}
+  \caption{Winkelsumme am Schnittpunkt von Geraden: u.a. $\alpha + \beta = 180°$ und $\alpha = \gamma$ sowie $\beta = \delta$}\label{fig:WinkelsummeSchnittpunkt}
+\end{figure}
+
+Beachte dass jeweils zwei benachbarte Winkel zusammen 180° ergeben. Da zwei benachbarte Winkel den Halbkreis über einer Gerade schlagen ist ihre Summe 180°. Die gegenüber liegenden Winkel sind gleich.
+
+
 \begin{definition}[Parallelität]\index{parallel}\label{def:parallel}
     Wir nennen zwei Geraden in einer Ebene, die sich nicht schneiden, \enquote{Parallelen}, sagen \enquote{a ist \glsdisp{symb:parallel}{parallel} zu b} und schreiben \glsdisp{symb:parallel}{$a \| b$}.
 \end{definition}
@@ -2231,7 +2260,7 @@ Eine Gerade ist damit ein rein mathematisches Objekt. In der Natur kennen wir ni
 
 \subsection{Polygon}\index{Polygon}\label{Polygon}
 
-\begin{definition}
+\begin{definition}[Polygon]
     Eine ebene Fläche mit Ecken, die von geraden Strecken verbunden werden nennen wird \enquote{Polygon}.
 \end{definition}
 
@@ -2356,8 +2385,28 @@ Eine rechteckige (ebne/ 2-dimensionale) Fläche beschreiben wir durch Länge und
 \end{beispiel}
 
 
+\subsection{Viereck}\index{Viereck}\label{Viereck}
+
+\begin{definition}[Viereck]
+    Ein Polygon mit genau vier Ecken nennen wir \enquote{Viereck}
+\end{definition}
+
+\begin{satz}[Winkelsumme Viereck]\label{satz:WinkelsummeViereck}
+    Die Summe der Innenwinkel eines Vierecks beträgt 360°.
+\end{satz}
+
 
 \subsection{Rechteck}\label{Rechteck}\index{Rechteck}
+
+\begin{definition}[Rechteck]\label{def:Rechteck01}
+    Ein Viereck mit zwei diagonal gegenüber liegenden rechten Winkeln nennen wir \enquote{Rechteck}.
+\end{definition}
+
+\begin{definition}[Rechteck]\label{def:Rechteck02}
+    Ein Viereck mit drei rechten Winkeln nennen wir \enquote{Rechteck}.\footnote{Ein Viereck mit vier rechten Winkeln hat drei rechte Winkel, und noch einen mehr. In der Mathematik gibt es einen bedeutenden Unterschied zwischen \enquote{das drei rechte Winkel hat} und \enquote{das \textbf{genau} drei rechte Winkel hat}.}
+\end{definition}
+
+Beachte dass somit alle Rechtecke Vierecke sind, aber nur einige Vierecke Rechtecke sind. Rechtecke sind spezielle Vierecke. Sie haben alle Eigenschaften von Vierecken, müssen darüber hinaus aber noch die Anforderungen an die rechten Winkel erfüllen.
 
 \begin{figure}
   \centering
@@ -2410,18 +2459,6 @@ Eine rechteckige (ebne/ 2-dimensionale) Fläche beschreiben wir durch Länge und
   \end{longtable}
   \caption{Planskizze Rechteck}\label{fig:RechteckPlanskizze}
 \end{figure}
-
-\begin{definition}[Rechteck 1]
-    Wir nennen ein Viereck mit vier rechten Winkeln ein Rechteck.
-\end{definition}
-
-\begin{definition}[Rechteck 2]
-    Wir nennen ein Viereck mit zwei Paaren paralleler Seiten mit einem rechten Winkeln ein Rechteck.
-\end{definition}
-
-\begin{definition}[Rechteck 3]
-    Wir nennen ein Viereck mit zwei diagonal gegenüber liegenden rechten Winkeln ein Rechteck.
-\end{definition}
 
 Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) gegen den \glsdisp{Uhrzeigersinn}{\textbf{Uhrzeigersinn}} $A$, $B$, $C$ und $D$. Die gerade Strecke von $A$ nach $B$, $\overline{AB}$, nennen wir \enquote{die Seite $a$}. Die gerade Strecke von $B$ nach $C$, $\overline{BC}$, nennen wir \enquote{die Seite $b$}. Die gerade Strecke von $C$ nach $D$, $\overline{CD}$, nennen wir \enquote{die Seite $c$}. Die gerade Strecke von $D$ nach $C$, $\overline{DC}$, nennen wir \enquote{die Seite $c$}. Die gerade Strecke von $D$ nach $A$, $\overline{DA}$, nennen wir \enquote{die Seite $d$}. Den Winkel am Punkt $A$ nennen wir \glsdisp{symb:alpha}{$\alpha$}, sprich \enquote{alpha}. Den Winkel am Punkt $B$ nennen wir \glsdisp{symb:beta}{$\beta$}, sprich \enquote{beta}. Den Winkel am Punkt $C$ nennen wir \glsdisp{symb:gamma}{$\gamma$}, sprich \enquote{gamma}. Den Winkel am Punkt $D$ nennen wir \glsdisp{symb:delta}{$\delta$}, sprich \enquote{delta}.
 
@@ -2486,8 +2523,10 @@ Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) geg
 \end{figure}
 
 \begin{definition}[Quadrat]
-    Wir nennen ein Rechteck mit vier gleich langen Seiten \enquote{Quadrat}.
+    Wir nennen ein Rechteck mit vier gleich langen Seiten.
 \end{definition}
+
+Beachte dass damit alle Quadrate Rechtecke sind, aber nur einige Rechtecke Quadrate. Quadrate sind spezielle Rechtecke. Sie haben alle Eigenschaften von Rechtecken und müssen zusätzlich die Anforderung an die Seitenlängen erfüllen.
 
 
 \subsection{Dreieck}\index{Dreieck}\label{Dreieck}
@@ -2568,9 +2607,124 @@ Alle Parallelogramme sind Trapeze.
 
 \subsection{Trapez}\index{Trapez}\label{Trapez}
 
-\begin{definition}
+\begin{definition}[Trapez]\label{def:Trapez}
     Wir nennen ein Viereck mit zwei Parallelen Seiten \enquote{Trapez}.
 \end{definition}
+
+\begin{align}\label{eqn:Trapez}
+  A_T &= \frac{(a+c) h_a}{2} \\
+  U_T &= a+b+c+d
+\end{align}
+
+\begin{figure}
+  \centering
+    \begin{longtable}{rcl}
+        \begin{tikzpicture}[scale=0.65]
+            \draw (1,1) -- (8,1) -- (7,4) -- (3,4) -- (1,1);
+            \node at (0.75,0.75) {A};
+            \node at (8.25,0.75) {B};
+            \node at (7.25,4.25) {C};
+            \node at (2.75,4.25) {D};
+
+            \node at (3.5,0.75) {a};
+            \node at (7.25,2.5) {b};
+            \node at (5.5,4.25) {c};
+            \node at (1.75,2.5) {d};
+
+            \draw (1cm,1cm) ++(0:0.5) arc (0:57:0.5cm);
+            \node at (1.3,1.2) {$\scriptstyle \alpha$};
+            \draw (7.21cm,1.51cm) ++(0:0.6) arc (120:180:0.6cm);
+            \node at (7.75,1.2) {$\scriptstyle \beta$};
+            \draw (6cm,4cm) ++(0:0.5) arc (180:287:0.5cm);
+            \node at (6.75,3.8) {$\scriptstyle \gamma$};
+            \draw (2.225cm,3.595cm) ++(0:0.5) arc (-122:0:0.5cm);
+            \node at (3.1,3.8) {$\scriptstyle \delta$};
+
+            \draw[dashed] (5,1) -- (5,4);
+            \node at (4.75,2.5) {$h_a$};
+            \draw (4.5,1.5) ++(0:0.5) arc (90:180:0.5cm);
+            \node at (4.8,1.2) {$\cdot$};
+        \end{tikzpicture}
+          &
+            \begin{tikzpicture}
+                \node at (0cm, 0cm) {};
+                \node at (0.25cm, 1.5cm) {=};
+                \node at (0.5cm,2.5cm) {};
+            \end{tikzpicture}
+          &
+        \begin{tikzpicture}[scale=0.65]
+            \draw (1,1) -- (8,1) -- (7,4) -- (3,4) -- (1,1);
+            \node at (0.75,0.75) {A};
+            \node at (8.25,0.75) {B};
+            \node at (7.25,4.25) {C};
+            \node at (2.75,4.25) {D};
+
+            \node at (3.5,0.75) {a};
+            \node at (7.25,2.5) {b};
+            \node at (5.5,4.25) {a};
+            \node at (1.75,2.5) {b};
+
+            \draw (1cm,1cm) ++(0:0.5) arc (0:57:0.5cm);
+            \node at (1.3,1.2) {$\scriptstyle \alpha$};
+            \draw (7.21cm,1.51cm) ++(0:0.6) arc (120:180:0.6cm);
+            \node at (7.75,1.2) {$\scriptstyle \beta$};
+            \draw (6cm,4cm) ++(0:0.5) arc (180:287:0.5cm);
+            \node at (6.75,3.8) {$\scriptstyle \alpha$};
+            \draw (2.225cm,3.595cm) ++(0:0.5) arc (-122:0:0.5cm);
+            \node at (3.1,3.8) {$\scriptstyle \gamma$};
+
+            \draw[dashed] (5,1) -- (5,4);
+            \node at (4.75,2.5) {$h_a$};
+            \draw (4.5,1.5) ++(0:0.5) arc (90:180:0.5cm);
+            \node at (4.8,1.2) {$\cdot$};
+        \end{tikzpicture}
+    \end{longtable}
+  \caption{Planskizze Trapez}\label{fig:Trapez}
+\end{figure}
+
+Beachte dass in der Formel $A_T = \frac{(a+c) h_a}{2}$ nur die Seiten gewählt werden können, die parallel sind, also gelten muss $a \| c$. Der Term $(a+c) h$ ist die Fläche des Parallelogramms, das durch das Verdoppeln des Trapezes entsteht. Entsprechend ist diese Fläche des größeren Parallelogramms durch zwei zu teilen:
+\begin{figure}
+  \centering
+    \begin{tikzpicture}[scale=0.75]
+        \draw (1,1) -- (8,1) -- (7,4) -- (3,4) -- (1,1);
+        \node at (0.75,0.75) {A};
+        \node at (8.25,0.75) {B (C')};
+        \node at (7.25,4.25) {C (B')};
+        \node at (2.75,4.25) {D};
+
+        \node at (3.5,0.75) {a};
+        \node at (7.25,2.5) {b};
+        \node at (5.5,4.25) {c};
+        \node at (1.75,2.5) {d};
+
+        \draw (1cm,1cm) ++(0:0.5) arc (0:57:0.5cm);
+        \node at (1.3,1.2) {$\scriptstyle \alpha$};
+        \draw (7.21cm,1.51cm) ++(0:0.6) arc (120:180:0.6cm);
+        \node at (7.75,1.2) {$\scriptstyle \beta$};
+        \draw (6cm,4cm) ++(0:0.5) arc (180:287:0.5cm);
+        \node at (6.75,3.8) {$\scriptstyle \gamma$};
+        \draw (2.225cm,3.595cm) ++(0:0.5) arc (-122:0:0.5cm);
+        \node at (3.1,3.8) {$\scriptstyle \delta$};
+
+        \draw[dashed] (5,1) -- (5,4);
+        \node at (4.75,2.5) {$h_a$};
+        \draw (4.5,1.5) ++(0:0.5) arc (90:180:0.5cm);
+        \node at (4.8,1.2) {$\cdot$};
+
+        \draw (8,1) -- (12,1) -- (14,4) -- (7,4);
+        \node at (10,0.75) {c'};
+        \node at (10.5,4.25) {a'};
+        \node at (7.75,2.5) {b'};
+        \node at (13.25,2.5) {d'};
+        \node at (11,2.5) {${A_T}' = \frac{1}{2} A_P$};
+        
+        \node at (12.25, 0.75) {D'};
+        \node at (14.25, 4.25) {A'};
+    \end{tikzpicture}
+  \caption{Berechnung von $A_T$ als $\frac{1}{2} A_P$}\label{fig:TrapezATausAP}
+\end{figure}
+
+
 
 
 \subsection{Kreis}\index{Kreis}\label{Kreis}
