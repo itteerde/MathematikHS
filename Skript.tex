@@ -376,6 +376,13 @@ Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen ge
 \end{enumerate}
 
 
+\section{Modelle und Wissenschaften}\label{ModelleUndWissenschaften}
+
+Die Realität (Wirklichkeit/ Welt/ Natur) ist immer zu komplex um sie vollständig zu beschreiben. Ein Teil der wissenschaftlichen Methodik ist es für die Beobachtungen und vermuteten Zusammenhänge in der Realität \textbf{vereinfachte} (\textbf{abstrahierte}) \textbf{Modelle} zu konstruieren, die \textbf{Vorhersagen} über die Realität ermöglichen. Treffen diese Vorhersagen ein, so geht man \textbf{vorläufig} davon aus, dass das Modell geeignet ist. Man stellt die \textbf{Hypothese} auf dass sich die Realität wie das Modell (im einfachsten Fall eine Formel) verhält. Ein widerspruchsfreies System von Modellen und Methoden damit umzugehen, das sich vielfach bewährt hat, und zu dem die Realität in keinem einzigen bekannten Fall im Widerspruch steht, nennen wir \textbf{Theorie}. Eine wissenschaftliche Theorie ist die höchste Sicherheit, die wir über Realität erreichen können.
+
+Darüber hinaus können wir in der Mathematik dadurch dass wir das Modell definieren sicheres Wissen über das Modell gewinnen (beweisen). Wir wissen jedoch nie sicher, dass das Modell auch wirklich etwas mit der Realität zu tun hat. Es gibt immer die Möglichkeit dass im nächsten Augenblick die Realität ein Ereignis zeigt, dass der Theorie widerspricht. In dem Augenblick wird die Theorie verworfen und man muss nach einer neuen (oft einer Verbesserung der alten) Theorie suchen, die auch das zur alten Theorie widersprüchliche \textbf{Phänomen} erklärt (genauer: mit der Beobachtung vereinbar ist). Gibt es mehrere Theorien, die sich zur Zeit nicht experimentell falsifizieren (als falsch widerlegen) lassen, so geht man i.d.R. von der Theorie aus, die am wenigsten kompliziert ist.
+
+
 \chapter{Mengen}
 
 Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mittelbar für die Prüfung relevant sind. Wir benutzen sie aber bei Erklärungen und auch bei Definitionen und führen sie deshalb (nicht rigoros) ein.
@@ -2171,10 +2178,10 @@ In der prüfungsrelevanten Geometrie konstruieren und berechnen wir Dreiecke, an
 \section{Geraden und Strecken}\index{Gerade}\index{Strecke}
 
 \begin{definition}[Gerade]\index{Gerade}\label{def:Gerade}
-    Eine gerade, unendlich lange, unendlich dünne und in beide Richtungen unbegrenzte Linie nennen \enquote{Gerade}.
+    Eine gerade, unendlich lange, unendlich dünne und in beide Richtungen unbegrenzte Linie nennen wir \enquote{Gerade}.
 \end{definition}
 
-Eine Gerade ist damit ein rein mathematisches Objekt. In der Natur kennen wir nichts was unendlich lang ist und sehen nichts was Breite und Länge von 0 hat.
+Eine Gerade ist damit ein rein mathematisches Objekt. In der Natur kennen wir nichts was unendlich lang ist und sehen nichts was Breite und Länge von 0 hat. Idealisierung und Vereinfachung, wir nennen das \textbf{Modellbildung}\index{Modell}, ist eine der mächtigen Methoden, die den (natur-)wissenschaftlichen Fortschritt ermöglichen.
 
 \begin{satz}[Winkelsumme am Schnittpunkt von Geraden]
     Die Summe der Winkel am Schnittpunkt zweier Geraden beträgt 360.
@@ -2185,10 +2192,10 @@ Eine Gerade ist damit ein rein mathematisches Objekt. In der Natur kennen wir ni
   \begin{tikzpicture}
         \draw (1,1) -- (5,5);
         \draw (1,3) -- (5,3);
-        
+
         \node at (0.75,0.75) {a};
         \node at (0.75,3) {b};
-        
+
         \node at (2.75,3.2) {$\delta$};
         \node at (3.5,3.2) {$\gamma$};
         \node at (3.2,2.75) {$\beta$};
@@ -2213,15 +2220,15 @@ Beachte dass jeweils zwei benachbarte Winkel zusammen 180° ergeben. Da zwei ben
   \centering
     \begin{tikzpicture}
         \draw (1,0.75) -- (4,0.75);
-        \draw (1,2) -- (4,2);  
+        \draw (1,2) -- (4,2);
         \draw (2.5,0.25) -- (2.5,2.5);
-        
+
         \node at (0.75,0.75) {a};
         \node at (0.75,2) {b};
         \node at (2.5,2.75) {c};
         \node at (2.3,0.9) {$\cdot$};
         \node at (2.3,1.8) {$\cdot$};
-        
+
         \draw (2.0,1.5) ++(0:0.5) arc (-90:-180:0.5);
         \draw (2.0,1.25) ++(0:0.5) arc (90:180:0.5);
 
@@ -2717,7 +2724,7 @@ Beachte dass in der Formel $A_T = \frac{(a+c) h_a}{2}$ nur die Seiten gewählt w
         \node at (7.75,2.5) {b'};
         \node at (13.25,2.5) {d'};
         \node at (11,2.5) {${A_T}' = \frac{1}{2} A_P$};
-        
+
         \node at (12.25, 0.75) {D'};
         \node at (14.25, 4.25) {A'};
     \end{tikzpicture}
@@ -2754,6 +2761,48 @@ Wir nennen den Raum/ Rauminhalt eines Körpers (\enquote{Wie viel Masse hat/ ent
 \begin{definition}[Oberfläche]
     Wir nennen die Summe der Flächeninhalte der Flächen, die einen Körper begrenzen, \enquote{Oberfläche}.
 \end{definition}
+
+
+\subsection{Fläche zu Körper extrudieren}\index{Extrudieren}\label{Extrudieren}
+
+Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudieren}. Wir \enquote{ziehen die Fläche senkrecht nach oben} bis wir mit einer zweiten Grundfläche abschließen.
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \draw (1,1) -- (11,1) -- (11,11) -- (1,11) -- (1,1);
+        \draw (1,11) -- (11,11) -- (16,16) -- (6,16) -- (1,11);
+        \draw (1,2) -- (11,2) -- (16,7) -- (6,7) -- (1,2);
+        \draw (1,1) -- (1,11);
+        \draw (6,7) -- (6,16);
+        \draw (11,1) -- (11,11);
+        \draw (16,6) -- (16,16);
+  
+        \draw (1,1) -- (11,1) -- (11,2) -- (1,2);
+        
+        \draw (1.5,2.5) -- (11.5,2.5);
+        \draw (2,3) -- (12,3);
+        \draw (2.5,3.5) -- (12.5,3.5);
+        \draw (5,6) -- (15,6);
+        \draw (5.5,6.5) -- (15.5,6.5);
+        
+        \draw (2,2) -- (7,7);
+        \draw (3,2) -- (8,7);
+        \draw (7,2) -- (12,7);
+        \draw (8,2) -- (13,7);
+        \draw (9,2) -- (14,7);
+        \draw (10,2) -- (15,7);
+        
+        \draw (4,2) -- (5.5,3.5);
+        \draw (5,2) -- (6.5,3.5);
+        \draw (6,2) -- (7.5,3.5);
+        
+        \draw  (8,6) -- (9,7);
+        \draw  (9,6) -- (10,7);
+        \draw  (10,6) -- (11,7);
+  \end{tikzpicture}
+  \caption{Extrudieren}\label{fig:extrudieren}
+\end{figure}
 
 
 
