@@ -2767,16 +2767,35 @@ Wir nennen den Raum/ Rauminhalt eines Körpers (\enquote{Wie viel Masse hat/ ent
 
 Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudieren}. Wir \enquote{ziehen die Fläche senkrecht nach oben} bis wir mit einer zweiten Grundfläche abschließen.
 
+\begin{beispiel}[extrudieren]
+    Wir extrudieren die Fläche $A_Q$ (s. \ref{fig:extrudieren}, S. \pageref{fig:extrudieren}). Beachte dass die erste der vier Teil-Abbildungen die \textbf{Fläche} ist, kein \textbf{Körper}. Es macht wenig Sinn dort von einem Volumen zu sprechen. Wenn überhaupt wäre es null. In der zweiten Teil-Abbildung fügen wir die \textbf{dritte Dimension} erst wirklich hinzu. Wir \enquote{ziehen die Grundfläche nach oben} und erhalten so das Volumen , hier von Quadern, $V_Q = a \cdot b \cdot c$. Beachte dass jede Höhe möglich wäre. Nichts verhindert für die letzte Ebene statt Würfel Quader mit einem Bruchteil als Höhe zu nehmen. Durch das Extrudieren entsteht also ein Volumen in $\mathbb{R}^3$.
+\end{beispiel}
+
 \begin{figure}
   \centering
   \begin{tikzpicture}[scale=0.35]
+    \draw (1,1) -- (1,11);
+    \draw (1,11) -- (6,16);
+    \draw (6,16) -- (16,16);
+    \draw (16,16) -- (11,11);
+    \draw (1,11) -- (11,11);
+    \draw (6,16) -- (6,6);
+    \draw (16,16) -- (16,6);
     \foreach \x in {0,1,...,9}{%top face
         \foreach \y in {0,0.5,...,4.5}{
             \draw[fill=gray!10] (\x + \y + 1, \y + 1) -- (\x + \y + 2, \y + 1) -- (\x + \y + 2.5, \y + 1.5) -- (\x + \y + 1.5, \y + 1.5) -- (\x + \y + 1, \y + 1);
         }
     }
+    \draw (11,11) -- (11,1);
   \end{tikzpicture}
   \begin{tikzpicture}[scale=0.35]
+    \draw (1,1) -- (1,11);
+    \draw (1,11) -- (6,16);
+    \draw (6,16) -- (16,16);
+    \draw (16,16) -- (11,11);
+    \draw (1,11) -- (11,11);
+    \draw (6,16) -- (6,6);
+    \draw (16,16) -- (16,6);
     \foreach \x in {0,1,...,9}{%front face
         \draw[fill=gray!15] (\x + 1, 1) -- (\x + 2, 1) -- (\x + 2, 2) -- (\x + 1, 2) -- (\x + 1, 1);
     }
@@ -2788,9 +2807,17 @@ Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudie
             \draw[fill=gray!10] (\x + \y + 1, \y + 2) -- (\x + \y + 2, \y + 2) -- (\x + \y + 2.5, \y + 2.5) -- (\x + \y + 1.5, \y + 2.5) -- (\x + \y + 1, \y + 2);
         }
     }
+    \draw (11,11) -- (11,1);
   \end{tikzpicture}
   
   \begin{tikzpicture}[scale=0.35]
+    \draw (1,1) -- (1,11);
+    \draw (1,11) -- (6,16);
+    \draw (6,16) -- (16,16);
+    \draw (16,16) -- (11,11);
+    \draw (1,11) -- (11,11);
+    \draw (6,16) -- (6,6);
+    \draw (16,16) -- (16,6);
     \foreach \x in {0,1,...,9}{%front face
         \foreach \y in {0,1,...,3}{
             \draw[fill=gray!15] (\x + 1, \y + 1) -- (\x + 2, \y + 1) -- (\x + 2, \y + 2) -- (\x + 1, \y + 2) -- (\x + 1, \y + 1);
@@ -2806,6 +2833,7 @@ Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudie
             \draw[fill=gray!10] (\x + \y + 1, \y + 5) -- (\x + \y + 2, \y + 5) -- (\x + \y + 2.5, \y + 5.5) -- (\x + \y + 1.5, \y + 5.5) -- (\x + \y + 1, \y + 5);
         }
     }
+    \draw (11,11) -- (11,1);
   \end{tikzpicture}
   \begin{tikzpicture}[scale=0.35]
     \foreach \x in {0,1,...,9}{%front face
