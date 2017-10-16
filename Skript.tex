@@ -2748,6 +2748,36 @@ Der \textbf{Kreis} ist die einzige Fläche, die für den Hauptschulabschluss rel
 \end{align}
 
 
+\subsection{(zusammengesetzte) Figuren (in der Ebene)}
+
+Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementaren Flächen zu tun. In der Regel treffen wir auf Flächen, die wir erst aus solchen zusammensetzen oder ausschneiden müssen.
+
+\begin{beispiel}[zusammengesetzte Figur]
+    \begin{figure}
+      \centering
+      \begin{tikzpicture}[scale=0.9]
+        \draw[fill=gray!15] (1,5) -- (1,9) -- (3,11) -- (4,11) -- (3.5,10.5) -- (4,10) -- (5,11) -- (6,11) -- (4.5,9.5) -- (5,9) -- (7,11) -- (8,11) -- (5.5,8.5) -- (6,8) -- (9,11) -- (10,11)  arc (90:0:3) -- (10,8) -- (10,7) -- (13,7) -- (13,6) -- (10,6) -- (10,5) -- (13,5) -- (13,4)-- (10,4)-- (10,3)-- (13,3)-- (13,2) -- (6,1) -- (6,3) -- (4,3) -- (4,4) arc (-90:180:1.5) -- (2.5,3) -- (2,3) -- (1,5);
+        
+        \draw[<->] (1,0.5) -- (10,0.5) node[midway,fill=white] {\footnotesize 9m};%rotate=90, anchor=center, 
+        \draw[<->] (2.5,5.5) -- (5.5,5.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
+        \draw[<->] (10,0.5) -- (13,0.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
+        \draw[<->] (13.5,1) -- (13.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 10m};%
+        \draw[<->] (13.25,2) -- (13.25,3) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,3) -- (13.25,4) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,4) -- (13.25,5) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,5) -- (13.25,6) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,6) -- (13.25,7) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,7) -- (13.25,8) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,8) -- (13.25,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 3m};%
+      \end{tikzpicture}
+      \caption{Zusammengesetzte Figuren}\label{fig:ZusammengesetzteFiguren}
+    \end{figure}
+\end{beispiel}
+
+
+
+
+
 
 \section{Körper}
 
@@ -2809,7 +2839,7 @@ Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudie
     }
     \draw (11,11) -- (11,1);
   \end{tikzpicture}
-  
+
   \begin{tikzpicture}[scale=0.35]
     \draw (1,1) -- (1,11);
     \draw (1,11) -- (6,16);
