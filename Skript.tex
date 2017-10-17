@@ -2718,15 +2718,19 @@ Der \textbf{Kreis} ist die einzige Fläche, die für den Hauptschulabschluss rel
 Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementaren Flächen zu tun. In der Regel treffen wir auf Flächen, die wir erst aus solchen zusammensetzen oder ausschneiden müssen.
 
 \begin{beispiel}[zusammengesetzte Figur]
-    \begin{figure}
+    Dieses Beispiel ist \textbf{viel} komplizierter als die, die Euch in der Prüfung begegnen können. Das bedeutet wer das Beispiel lösen kann bekommt mit dem Thema \enquote{zusammengesetzte Figuren} in der Prüfung keine Probleme.
+    
+    Es gibt unendlich viele korrekte Möglichkeiten eine Figur in kleinere elementare Flächen zu zerlegen. Sinnvoll sind regelmäßig einige. Die folgende Lösung ist also ebenfalls nur beispielhaft für dieses Beispiel. Herauskommen muss natürlich bei allen korrekten Aufteilungen und korrektem Rechnen immer der gleiche Flächeninhalt.
+
+    \begin{figure}[ht]
       \centering
       \begin{tikzpicture}[scale=0.9]
-        \draw[fill=gray!15] (1,5) -- (1,9) -- (3,11) -- (4,11) -- (3.5,10.5) -- (4,10) -- (5,11) -- (6,11) -- (4.5,9.5) -- (5,9) -- (7,11) -- (8,11) -- (5.5,8.5) -- (6,8) -- (9,11) -- (10,11)  arc (90:0:3) -- (10,8) -- (10,7) -- (13,7) -- (13,6) -- (10,6) -- (10,5) -- (13,5) -- (13,4)-- (10,4)-- (10,3)-- (13,3)-- (13,2) -- (6,1) -- (6,3) -- (4,3) -- (4,4) arc (-90:180:1.5) -- (2.5,3) -- (2,3) -- (1,5);
-        
-        \draw[<->] (1,0.5) -- (10,0.5) node[midway,fill=white] {\footnotesize 9m};%rotate=90, anchor=center, 
+        \draw[fill=gray!15] (1,5) -- (1,9) -- (3,11) -- (4,11) -- (4,10) -- (5,10) -- (5,11) -- (6,11) -- (6,9) -- (7,9) -- (7,11) -- (8,11) -- (8,8) -- (9,8) -- (9,11) -- (10,11)  arc (90:0:3) -- (10,8) -- (10,7) -- (13,7) -- (13,6) -- (10,6) -- (10,5) -- (13,5) -- (13,4)-- (10,4)-- (10,3)-- (13,3)-- (13,2) -- (6,1) -- (6,3) -- (4,3) -- (4,4) arc (-90:180:1.5) -- (2.5,3) -- (2,3) -- (1,5);
+
+        \draw[<->] (1,0.5) -- (10,0.5) node[midway,fill=white] {\footnotesize 9m};%rotate=90, anchor=center,
         \draw[<->] (2.5,5.5) -- (5.5,5.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
         \draw[<->] (10,0.5) -- (13,0.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
-        \draw[<->] (13.5,1) -- (13.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 10m};%
+        %\draw[<->] (13.5,1) -- (13.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 10m};%
         \draw[<->] (13.25,2) -- (13.25,3) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
         \draw[<->] (13.25,3) -- (13.25,4) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
         \draw[<->] (13.25,4) -- (13.25,5) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
@@ -2734,10 +2738,203 @@ Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementar
         \draw[<->] (13.25,6) -- (13.25,7) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
         \draw[<->] (13.25,7) -- (13.25,8) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
         \draw[<->] (13.25,8) -- (13.25,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 3m};%
+
+        \draw[<->] (1,11.25) -- (3,11.25) node[midway,fill=white] {\footnotesize 2m};%rotate=90, anchor=center,
+        \draw[<->] (3,11.25) -- (4,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (4,11.25) -- (5,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (5,11.25) -- (6,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (6,11.25) -- (7,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (7,11.25) -- (8,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (8,11.25) -- (9,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (9,11.25) -- (10,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (4.5,10) -- (4.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (6.5,9) -- (6.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
+        \draw[<->] (8.5,8) -- (8.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 3m};%
+
+        \draw[<->] (1,2.75) -- (2.5,2.75) node[midway,fill=white] {\footnotesize 1,5m};%rotate=90, anchor=center,
+        \draw[<->] (2.5,2.75) -- (4,2.75) node[midway,fill=white] {\footnotesize 1,5m};%rotate=90, anchor=center,
+        \draw[<->] (4,2.75) -- (6,2.75) node[midway,fill=white] {\footnotesize 2m};%rotate=90, anchor=center,
+
+        \draw[<->] (0.75,1) -- (0.75,3) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
+        \draw[<->] (0.75,3) -- (0.75,5) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
+        \draw[<->] (0.75,5) -- (0.75,9) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 4m};%
+        \draw[<->] (0.75,9) -- (0.75,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
       \end{tikzpicture}
-      \caption{Zusammengesetzte Figuren}\label{fig:ZusammengesetzteFiguren}
+      \caption{Zusammengesetzte Figuren, Aufgabe}\label{fig:ZusammengesetzteFiguren}
     \end{figure}
+    
+    \begin{figure}[ht]
+      \centering
+      \begin{tikzpicture}[scale=0.9]
+        \draw[fill=gray!15] (1,5) -- (1,9) -- (3,11) -- (4,11) -- (4,10) -- (5,10) -- (5,11) -- (6,11) -- (6,9) -- (7,9) -- (7,11) -- (8,11) -- (8,8) -- (9,8) -- (9,11) -- (10,11)  arc (90:0:3) -- (10,8) -- (10,7) -- (13,7) -- (13,6) -- (10,6) -- (10,5) -- (13,5) -- (13,4)-- (10,4)-- (10,3)-- (13,3)-- (13,2) -- (6,1) -- (6,3) -- (4,3) -- (4,4) arc (-90:180:1.5) -- (2.5,3) -- (2,3) -- (1,5);
+
+        \draw[<->] (1,0.5) -- (10,0.5) node[midway,fill=white] {\footnotesize 9m};%rotate=90, anchor=center,
+        \draw[<->] (2.5,5.5) -- (5.5,5.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
+        \draw[<->] (10,0.5) -- (13,0.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
+        %\draw[<->] (13.5,1) -- (13.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 10m};%
+        \draw[<->] (13.25,2) -- (13.25,3) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,3) -- (13.25,4) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,4) -- (13.25,5) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,5) -- (13.25,6) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,6) -- (13.25,7) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,7) -- (13.25,8) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (13.25,8) -- (13.25,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 3m};%
+
+        \draw[<->] (1,11.25) -- (3,11.25) node[midway,fill=white] {\footnotesize 2m};%rotate=90, anchor=center,
+        \draw[<->] (3,11.25) -- (4,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (4,11.25) -- (5,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (5,11.25) -- (6,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (6,11.25) -- (7,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (7,11.25) -- (8,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (8,11.25) -- (9,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (9,11.25) -- (10,11.25) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (4.8,10) -- (4.8,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 1m};%
+        \draw[<->] (6.8,9) -- (6.8,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
+        \draw[<->] (8.8,8) -- (8.8,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 3m};%
+
+        \draw[<->] (1,2.75) -- (2.5,2.75) node[midway,fill=white] {\footnotesize 1,5m};%rotate=90, anchor=center,
+        \draw[<->] (2.5,2.75) -- (4,2.75) node[midway,fill=white] {\footnotesize 1,5m};%rotate=90, anchor=center,
+        \draw[<->] (4,2.75) -- (6,2.75) node[midway,fill=white] {\footnotesize 2m};%rotate=90, anchor=center,
+
+        \draw[<->] (0.75,1) -- (0.75,3) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
+        \draw[<->] (0.75,3) -- (0.75,5) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
+        \draw[<->] (0.75,5) -- (0.75,9) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 4m};%
+        \draw[<->] (0.75,9) -- (0.75,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
+
+        \draw[dashed] (10,11) -- (10,8);
+        \node at (11.5,9.5) {$A_1$};
+
+        \draw[dashed] (6,3) -- (10,3);
+        \node at (9,2) {$A_2$};
+
+        \draw[dashed] (1,9) -- (10,9);
+        \draw[dashed] (3,11) -- (10,11);
+        \node at (3,10) {$A_3$};
+
+        \draw[dashed] (1,3) -- (13,3) -- (13,8) -- (1,8) -- (1,3);
+        \node at (8,5.5) {$A_4$};
+        \node at (3.5,8.5) {$A_5$};
+
+        \node at (11.5,7.5) {$A_6$};
+        \node at (11.5,5.5) {$A_6$};
+        \node at (11.5,3.5) {$A_6$};
+
+        \node at (4.4,10.5) {$A_7$};
+        \node at (6.4,10.5) {$A_8$};
+        \node at (8.4,10.5) {$A_9$};
+
+        \draw[dashed] (2,3) -- (2,8);
+        \node at (1.5,6) {$A_{10}$};
+
+        \draw[dashed] (2.5,3) -- (4,3)-- (4,5.5) -- (2.5,5.5) -- (2.5,3);
+        \node at (3.25,4) {$A_{11}$};
+        \node at (4,6) {$A_{12}$};
+      \end{tikzpicture}
+      \caption{Aufteilung in elementare Flächen}\label{fig:ZusammengesetzteFiguren}
+    \end{figure}
+
+    \textbf{gs.: Die Fläche $A_{\Sigma}$ der zusammengesetzten Figur.}
+    
+    Zunächst teilen wir die Fläche in Teilflächen auf. $A_{\Sigma} = A_1 + A_2 + A_3 + A_4 + A_5 + A_{10} - 3 A_6 - A_7 - A_8 - A_9 - A_{11} - A_{12}$. In diesem Beispiel kombinieren wir überschneidungsfreies Zusammenlegen mit Ausschneiden. Beachte in diesem Beispiel besonders die Flächen  $A_{11} und A_{12}$, die aus $A_4$ ausgeschnitten werden. Wir müssen sie so schneiden, dass sie keine Überschneidung haben, da wir sonst (aufwändig) korrigieren müssen um die Überschneidung nicht doppelt abzuziehen.
+    
+    Als nächstes bestimmen wir die einzelnen Teilflächen. Für einen ausführliche Musterlösung (z.B. als Übung für die mündliche Prüfung) geben wir zunächst die Formel der Fläche an, setzen dann ein und rechnen aus. Die fertigen Teilflächen werden dann in die Formel eingesetzt, die wir im ersten Schritt erhalten haben.
+    
+    \begin{align}
+      A_1 &= \frac{1}{4} A_K \\
+       A_K &= \pi r^2 \\
+       &= \pi \cdot (3\text{m})^2\\
+       A_1 &= \frac{1}{4} \pi \cdot 9\text{m}^2\\
+       A_1 & \approx 7,07\text{m}^2
+    \end{align}
+    
+    \begin{align}
+      A_2 &= A_T \\
+       &= \frac{(a+c)h}{2}\\
+       &= \frac{(1\text{m}+2\text{m}) \cdot 7\text{m}}{2}\\
+       &= 10,5\text{m}^2
+    \end{align}
+    
+    \begin{align}
+      A_3 &= A_T \\
+       &= \frac{(a+c)h}{2}\\
+       &= \frac{(7\text{m}+9\text{m}) \cdot 3\text{m}}{2}\\
+       &= 24\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_4 &= A_R \\
+       &= a \cdot b\\
+       &= 11\text{m} \cdot 5\text{m}\\
+       &= 55\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_5 &= A_R \\
+       &= a \cdot b\\
+       &= 9\text{m} \cdot 1\text{m}\\
+       &= 9\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_6 &= A_R \\
+       &= a \cdot b\\
+       &= 3\text{m} \cdot 1\text{m}\\
+       &= 3\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_7 &= A_Q \\
+       &= a^2\\
+       &= 1\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_8 &= A_R \\
+       &= a \cdot b\\
+       &= 2\text{m} \cdot 1\text{m}\\
+       &= 2\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_9 &= A_R \\
+       &= a \cdot b\\
+       &= 3\text{m} \cdot 1\text{m}\\
+       &= 3\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_{10} &= A_T \\
+       &= \frac{(a+c)h}{2}\\
+       &= \frac{(6\text{m}+4\text{m}) \cdot 1,5\text{m}}{2}\\
+       &= 7,5\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_{11} &= A_R \\
+       &= a \cdot b\\
+       &= 1,5\text{m} \cdot 2,5\text{m}\\
+       &= 3,75\text{m}^2
+    \end{align}
+
+    \begin{align}
+      A_{12} &= \frac{3}{4} A_K \\
+       A_K &= \pi r^2 \\
+       &= \pi \cdot (1,5\text{m})^2\\
+       A_1 &= \frac{3}{4} \pi \cdot 2,25\text{m}^2\\
+       A_1 & \approx 5,3\text{m}^2
+    \end{align}
+    
+    \begin{align}
+      A_{\Sigma} & \approx 7,07\text{m}^2 + 10,5\text{m}^2 + 24\text{m}^2\\
+       &\quad + 55\text{m}^2 + 9\text{m}^2 - 3(3\text{m}^2) - 1\text{m}^2 - 2\text{m}^2\\
+       &\quad - 3\text{m}^2 + 7,5\text{m}^2 - 3,75\text{m}^2 - 5,3\text{m}^2\\
+       & \approx 89,02\text{m}^2
+    \end{align}
+    
+    Ohne Ausschnitte und großzügig einen Rahmen ziehend wäre es ein Rechteck mit 12m mal 10m, also 120m\textsuperscript{2}. Das klingt plausibel. Durch die ordentliche Notation sollten wir in einer Prüfung auf jeden Fall viele Teilpunkte bekommen und können darauf hoffen auch Fehler zu finden falls wir nochmal über die Rechnung drüber schauen.\proofsquare
 \end{beispiel}
+
+Die Geometrie ist für viele von Euch wahrscheinlich auch ein gutes Thema für die mündliche Prüfung, da man sehr deutlich \enquote{sieht} was man tut und anhand der Zeichnung meistens selbst sieht falls man in die falsche Richtung läuft oder abwegige Ergebnisse bekommt. Außerdem dauert das Zeichnen recht lange, so dass man in der Regel nur ein oder zwei Aufgaben in der kurzen mündlichen Prüfung zu zeigen braucht.
 
 
 
