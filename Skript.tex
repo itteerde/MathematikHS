@@ -94,7 +94,9 @@
 \do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-}%
 \def\UrlBigBreaks{\do\_}
 
-
+\def\centerarc[#1](#2)(#3:#4:#5)% Syntax: [draw options] (center) (initial angle:final angle:radius)
+    { \draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5); }
+    
 \newcommand{\uu}[1]{\underline{#1}}
 \newcommand{\ii}[1]{\textit{#1}}
 \newcommand{\tm}{\textsuperscript{\tiny{TM}}}
@@ -2397,7 +2399,7 @@ Anhand der Zeichnung bestätigt sich, dass $h_a=h_c$, d.h. wir haben ein Trapez.
    \node at (-1,3) {\footnotesize $h_c$};
    \draw (Ha) ++(1.0,0.4) arc (20:110:1);
    \draw (Hc) ++(-1.0,-0.4) arc (205:295:1);
-   
+
    \node (Hb)[label=145:$\cdot$] at (6.4,0.15) {};
    \node (Hd)[label=45:$\cdot$] at (-6.2,1.5) {};
    \draw (Hb) -- (Hd);
@@ -2723,7 +2725,7 @@ Beachte dass damit alle Quadrate Rechtecke sind, aber nur einige Rechtecke Quadr
   \caption{Planskizze Dreieck}\label{fig:DreieckPlanskizze}
 \end{figure}
 
-Wir führen über die Inhalte der Nichtschüler-Prüfung auch den \textsc{Satz des Pythagoras} ein, weil dieser erstens sehr hilfreich ist, auch im Alltag, und weil er zweitens in der Prüfung an der Hauptschule vorkommt, und damit die normale Erwartungshaltung, z.B. der ausbildenden Betriebe, ist, dass dieser über 2500 Jahre alte Satz bekannt ist.
+Wir führen über die Inhalte der Nichtschüler-Prüfung auch den \textsc{Satz des Pythagoras} ein, weil dieser erstens sehr hilfreich ist, auch im Alltag, und weil er zweitens in der Prüfung an der Hauptschule vorkommt, und damit die normale Erwartungshaltung, z.B. der ausbildenden Betriebe, ist, dass dieser über 2500 Jahre alte Satz bekannt ist. Darüber hinaus ist es einer der Sätze mit den einfachsten Beweisen. Zumindest können wir dazu ein oder zwei Beweise angeben um zu zeigen was Mathematik eigentlich bedeutet als beweisende Wissenschaft.
 
 \begin{satz}[Winkelsumme Dreieck]
     Die Summe der Innenwinkel im Dreieck beträgt 180°.
@@ -3259,6 +3261,52 @@ Zeichnungen geben Objekte der Realität häufig nicht in ihrer natürlichen Grö
 Mit Geodreieck und Zirkel kann man aus genügend Angaben über ein Dreieck dieses konstruieren.\footnote{Die Konstruktion von Dreiecken ist sobald man sie einmal gelernt hat sehr einfach und wird in der Prüfung mit gemessen am Aufwand (Zeit und Schwierigkeit) mit sehr vielen Punkten belohnt.} Wir führen hier ausführlich die (zumindest scheinbar) verschiedenen Probleme auf, die bei der Konstruktion von Dreiecken (in der Prüfung) vorkommen können.
 
 \subsection{Drei Seiten}
+
+Sind drei Seitenlängen eines Dreiecks bekannt nehmen wir eine beliebige, zeichnen eine Strecke für diese Seite mit genug Platz um die beiden anderen Seiten von dieser ausgehend mit dem Zirkel zu bestimmen.
+
+\begin{beispiel}[Konstruktion Dreieck bei drei gegebenen Seitenlängen]
+\textbf{Aufgabe:} Konstruiere das Dreieck mit Seitenlängen $a=6\text{cm}$, $b=5\text{cm}$ und $c=8\text{cm}$.
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[scale=0.5]
+        \node[label=235:A] (A) at (0,0) {$\times$};
+        \node[label=325:B] (B) at (8,0) {$\times$};
+        \node (c) at (4,-0.25) {c};
+        \draw (A) -- (B);
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=0.5]
+        \node[label=235:A] (A) at (0,0) {$\times$};
+        \node[label=325:B] (B) at (8,0) {$\times$};
+        \node (c) at (4,-0.25) {c};
+        \draw (A) -- (B);
+        \centerarc[gray](A)(25:115:5);
+  \end{tikzpicture}
+  
+  \begin{tikzpicture}[scale=0.5]
+        \node[label=235:A] (A) at (0,0) {$\times$};
+        \node[label=325:B] (B) at (8,0) {$\times$};
+        \node (c) at (4,-0.25) {c};
+        \draw (A) -- (B);
+        \centerarc[gray](A)(25:115:5);
+        \centerarc[gray](B)(120:155:6);
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=0.5]
+        \node[label=235:A] (A) at (0,0) {$\times$};
+        \node[label=325:B] (B) at (8,0) {$\times$};
+        \node (c) at (4,-0.25) {c};
+        \draw (A) -- (B);
+        \centerarc[gray](A)(25:115:5);
+        \centerarc[gray](B)(120:155:6);
+        \node[label=90:C] (C) at (3.31,3.79) {$\times$};
+        \draw (B) -- (C) -- (A);
+        \node (a) at (6,2) {a};
+        \node (b) at (1.45,2.2) {b};
+  \end{tikzpicture}
+
+  \caption{Konstruktion Dreieck mit drei Seiten}\label{fig:DreieckKonstruktionDreiSeiten01}
+\end{figure}
+    
+\end{beispiel}
 
 
 \chapter{Proportionale und Antiproportionale Zuordnungen}\index{proportionale Zuordnung}\index{antiproportionale Zuordnung|see{proportionale Zuordnung}}
