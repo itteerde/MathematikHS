@@ -38,7 +38,7 @@
 \usepackage{longtable}
 
 \usepackage{tikz}
-\usetikzlibrary{shapes,backgrounds,arrows,positioning,calc,decorations.markings,matrix}
+\usetikzlibrary{shapes,backgrounds,arrows,positioning,calc,decorations.markings,matrix,intersections}
 
 
 \usepackage{verse}
@@ -2262,6 +2262,82 @@ Beachte dass jeweils zwei benachbarte Winkel zusammen 180° ergeben. Da zwei ben
     Zwei Geraden in einer Ebene\footnote{I-nsbesondere ist jede 2-dimensionale ebene Fläche (Teil einer) Ebene (der euklidischen Geometrie).} sind entweder parallel oder haben genau einen Schnittpunkt.
 \end{satz}
 
+
+\section{Koordinaten}\label{Koordinaten}\index{Koordinaten}\index{Koordinatensystem}
+
+Um über Geometrie sprechen zu können müssen wir Punkte (z.B. Ecken eines Polygons) so beschreiben können, dass wir verstehen \enquote{wo} sie liegen. Wir nutzen dazu wieder den Zahlenstrahl und zwar nehmen wir für jede Dimension einen Zahlenstrahl (und nennen ihn \textbf{Achse}).
+
+\begin{beispiel}[Koordinatensystem 2D]
+\textbf{Aufgabe:} Zeichne das Polygon $A=(-7,-7)$, $B=(6,-2)$, $C=(7,8)$, $D=(-6,3)$ und bestimme um was für eine Art von Polygon es sich handelt und dessen Flächeninhalt und Umfang. Einige Maße musst Du in Deiner Zeichnung messen.
+
+\textbf{Lösung:} Zunächst wählen wir ein passendes Koordinatensystem aus. Der kleinste x-Wert der Punkte ist -7, der größte 7, der kleinste y-Wert -7 und der größte y-Wert 8. Wir brauchen also fast exakt ein Quadrat um den \textbf{Ursprung} $(0|0)$ herum  mit einer Seitenlänge von 16. Das ist auch gut lesbar, nehmen wir also. Wir zeichnen das Koordinatensystem, tragen die Punkte ein und verbinden benachbarte Punkte (welche das sind entnehmen wir der Konventionen für Namen in Polygonen [z.B. \enquote{Die Seite \enquote{a} ist die Strecke von der Ecke \enquote{A} zur Ecke \enquote{B}.}]).
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[x=.5cm, y=.5cm,domain=-9:9,smooth]
+       %Raster zeichnen
+       \draw [color=gray!50]  [step=5mm] (-11,-10) grid (11,10);
+       % Achsen zeichnen
+       \draw[->,thick] (-10,0) -- (10,0) node[right] {$x$};
+       \draw[->,thick] (0,-9) -- (0,9) node[above] {$y$};
+       % Achsen beschriften
+       \foreach \c in {-8,-6,...,-2,2,4,...,8}{
+         \draw (\c,-.1) -- (\c,.1) node[below=4pt] {$\scriptstyle\c$};
+         \draw (-.1,\c) -- (.1,\c) node[left=4pt] {$\scriptstyle\c$};
+   }
+
+   \node[label=225:A] (A) at (-7,-7) {$\times$};
+   \node[label=315:B] (B) at (6,-2) {$\times$};
+   \node[label=45:C] (C) at (7,8) {$\times$};
+   \node[label=135:D] (D) at (-6,3) {$\times$};
+
+   \draw (A) -- (B) -- (C) -- (D) -- (A);
+
+  \end{tikzpicture}
+  \caption{2-dimensionales Koordinatensystem}\label{fig:koordinatensystem2D}
+\end{figure}
+
+Wir sehen direkt (schon in der Aufgabe), dass es sich um ein \textbf{Viereck} handelt, denn jedes Polygon mit genau vier Ecken ist ein Viereck und wir haben in der Aufgabe ein Polygon mit genau vier Ecken gegeben. Wir überprüfen ob es sich auch um ein \textbf{Trapez} handelt. Nach Definition (des Trapez) brauchen wir dafür zusätzlich zum Viereck noch zwei parallele Seiten. In Frage kommen die Seiten, die keine gemeinsamen Ecken haben, also fragen wir ob $a \| c$ und ob $b \| d$.
+
+An der Zeichnung können wir dies messen indem wir versuchen eine gemeinsame Höhe für beide Seiten zu zeichnen, d.h. ist eine Senkrechte auf $a$ auch senkrecht auf $c$, ist $h_a = h_c$?
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[x=.5cm, y=.5cm,domain=-9:9,smooth]
+       %Raster zeichnen
+       \draw [color=gray!50]  [step=5mm] (-11,-10) grid (11,10);
+       % Achsen zeichnen
+       \draw[->,thick] (-10,0) -- (10,0) node[right] {$x$};
+       \draw[->,thick] (0,-9) -- (0,9) node[above] {$y$};
+       % Achsen beschriften
+       \foreach \c in {-8,-6,...,-2,2,4,...,8}{
+         \draw (\c,-.1) -- (\c,.1) node[below=4pt] {$\scriptstyle\c$};
+         \draw (-.1,\c) -- (.1,\c) node[left=4pt] {$\scriptstyle\c$};
+   }
+
+   \node[label=225:A] (A) at (-7,-7) {$\times$};
+   \node[label=315:B] (B) at (6,-2) {$\times$};
+   \node[label=45:C] (C) at (7,8) {$\times$};
+   \node[label=135:D] (D) at (-6,3) {$\times$};
+
+   \draw (A) -- (B) -- (C) -- (D) -- (A);
+
+   \node (Ha)[label=45:$\cdot$] at (2,-3.53846) {};
+   \node (Hc)[label=240:$\cdot$] at (-1,4.92308) {};
+   \draw (Ha) -- (Hc);
+   \node at (2,-2) {\footnotesize $h_a$};
+   \node at (-1,3) {\footnotesize $h_c$};
+   \draw (Ha) ++(1.0,0.4) arc (20:110:1);
+   \draw (Hc) ++(-1.0,-0.4) arc (205:295:1);
+
+  \end{tikzpicture}
+  \caption{2-dimensionales Koordinatensystem}\label{fig:koordinatensystem2D}
+\end{figure}
+
+
+\end{beispiel}
+
+
 \section{Flächen}
 
 
@@ -2720,19 +2796,19 @@ Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementar
 
 \begin{beispiel}[Prüfungsaufgabe]
     In einer Prüfung der letzten Jahre war die Figur die Innenfläche (Fußballplatz und Laufbahn) eines Stadions.
-    
+
 \begin{figure}
   \centering
   \begin{tikzpicture}
         \draw[fill=green] (5,2) -- (10.25,2) -- (10.25,5.4) -- (5,5.4) -- (5,2);
         \draw[color=white] (5,4.5) -- (5.8,4.5) -- (5.8,2.62) -- (5,2.62);
-        
+
         \draw (5,1.75) -- (10.25,1.75) arc (-90:90:1.95) -- (5,5.65) arc (90:270:1.95);
         \draw (5,1.5) -- (10.25,1.5) arc (-90:90:2.2) -- (5,5.9) arc (90:270:2.2);
   \end{tikzpicture}
   \caption{Figur (Prüfungsaufgabe)}\label{fig:FigurPruefungsaufgabeStadion}
 \end{figure}
-    
+
 \end{beispiel}
 
 
