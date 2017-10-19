@@ -3287,7 +3287,7 @@ Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudie
 Ein Zylinder ist also eine \enquote{runde Stange} mit glatten Enden. Schneidet/ bohrt man einen gleich langen Zylinder mit kleinerem Durchmesser aus einem größeren, so erhält man ein Rohr mit dem Durchmesser des kleineren Zylinders als Innendurchmesser und dem Durchmesser des größeren Zylinders als Außendurchmesser.
 
 
-\subsection{Maßstab}\index{Maßstab}\label{Maßstab}
+\section{Maßstab}\index{Maßstab}\label{Maßstab}
 
 Zeichnungen geben Objekte der Realität häufig nicht in ihrer natürlichen Größe wieder. Große Objekte werden oft verkleinert dargestellt, sehr kleine vergrößert. Um aus solch einer nicht maßstabsgetreuen Zeichnung die wirklichen Strecken zu ermitteln müssen wir die Messungen an der Zeichnung mit dem Maßstab umrechnen. Eine Entfernung von 7cm auf einer Fahrradkarte im Maßstab 1:100000 sind z.B. in Wirklichkeit 7cm mal 100000, also 700000cm = 7km. Gebräuchlich sind Maßstäbe 1:n, sprich \enquote{eins zu n} für verkleinerte Darstellungen wie auf Landkarten sowie n:1 für vergrößerte Darstellungen, z.B. mikroskopische Lebewesen in einem Biologie-Buch. Häufig wird der Maßstab auch gezeichnet und eine Strecke am Rand der Abbildung, die z.B. 1cm lang ist mit 1mm beschriftet. Das bedeutet, dass die Abbildung im Maßstab 10:1 vergrößert dargestellt ist, z.B. ein Käfer wiederum im Biologie-Buch.
 
@@ -3382,6 +3382,28 @@ Sind drei Seitenlängen eines Dreiecks bekannt:
   \caption{Lösung}\label{fig:DreieckKonstruktionDreiSeiten02}
 \end{figure}
 
+\end{beispiel}
+
+
+\subsection{eine Seite und zwei Winkel}
+
+Sind zwei Winkel gegeben, so haben wir eigentlich den Fall eine Seite und drei Winkel, denn der fehlende Winkel ist die Winkelsumme minus beide gegebenen Winkel.
+
+\begin{beispiel}[eine Seite und zwei Winkel]
+    \textbf{Aufgabe:} Konstruiere das Dreieck mit $c=7cm$, $\alpha=40°$ und $\beta=50°$.
+    
+    Dieser Fall ist der einfachere von zwei etwas unterschiedlichen Fällen von einer Seite und zwei Winkeln. Wir haben eine Seite und beide an den Eckpunkten der Seite liegende Winkel. Wir zeichnen die Seite, messen die Winkel und zeichnen in den durch die Winkel vorgegebenen Richtungen Geraden. Der Schnittpunkt der beiden Geraden gibt uns den dritten Punkt.
+    
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \node[label=225:A] (A) at (0,0) {$\times$};
+        \node[label=315:B] (B) at (7,0) {$\times$};
+        \draw (A) -- (B);
+  \end{tikzpicture}
+  \caption{eine Seite und beide an ihren Eckpunkten liegende Winkel}\label{fig:DreieckSeiteUndBeideDaranLiegendenWinkel}
+\end{figure}
+    
 \end{beispiel}
 
 
