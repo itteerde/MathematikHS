@@ -96,7 +96,7 @@
 
 \def\centerarc[#1](#2)(#3:#4:#5)% Syntax: [draw options] (center) (initial angle:final angle:radius)
     { \draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5); }
-    
+
 \newcommand{\uu}[1]{\underline{#1}}
 \newcommand{\ii}[1]{\textit{#1}}
 \newcommand{\tm}{\textsuperscript{\tiny{TM}}}
@@ -3262,7 +3262,13 @@ Mit Geodreieck und Zirkel kann man aus genügend Angaben über ein Dreieck diese
 
 \subsection{Drei Seiten}
 
-Sind drei Seitenlängen eines Dreiecks bekannt nehmen wir eine beliebige, zeichnen eine Strecke für diese Seite mit genug Platz um die beiden anderen Seiten von dieser ausgehend mit dem Zirkel zu bestimmen.
+Sind drei Seitenlängen eines Dreiecks bekannt:
+\begin{enumerate}
+  \item Eine beliebige Seite zeichnen, im Beispiel die Seite c. Die beiden Ecken in denen die Seite endet können direkt benannt werden.
+  \item Den Zirkel auf die Länge der zweiten Seite, die an einem der beiden bekannten Punkte anfängt, einstellen, im Beispiel b, und einen großzügigen Bogen in die Richtung schlagen in der die Ecke sein muss (zwar gibt es oberhalb und unterhalb von c je einen Punkt, der die Längen der Seiten einhalten würde, würden wir diesen für C wählen würden wir aber die Konventionen für die Namen verletzen, da dann ABC nicht gegen den Uhrzeiger zu einander liegen würden. Im Beispiel zeichnen wir den Bogen also oberhalb von c.
+  \item Den Zirkel auf die noch nicht benutzte Seitenlänge einstellen und am entsprechenden noch nicht benutzten Punkt einstechen und einen Bogen schlagen, der den ersten Bogen schneidet. Hier liegt der dritte Eckpunkt des Dreiecks.
+  \item Den dritten Punkt, die beiden Seiten zu ihm und falls verlangt andere Beschriftungen hinzufügen (ist für eine Zeichnung nicht angegeben was zu beschriften ist beschriften wir Eckpunkte, Seiten und Winkel und geben die Längen der Seiten und die Gradzahlen der Winkel an.).
+\end{enumerate}
 
 \begin{beispiel}[Konstruktion Dreieck bei drei gegebenen Seitenlängen]
 \textbf{Aufgabe:} Konstruiere das Dreieck mit Seitenlängen $a=6\text{cm}$, $b=5\text{cm}$ und $c=8\text{cm}$.
@@ -3281,7 +3287,7 @@ Sind drei Seitenlängen eines Dreiecks bekannt nehmen wir eine beliebige, zeichn
         \draw (A) -- (B);
         \centerarc[gray](A)(25:115:5);
   \end{tikzpicture}
-  
+
   \begin{tikzpicture}[scale=0.5]
         \node[label=235:A] (A) at (0,0) {$\times$};
         \node[label=325:B] (B) at (8,0) {$\times$};
@@ -3305,7 +3311,47 @@ Sind drei Seitenlängen eines Dreiecks bekannt nehmen wir eine beliebige, zeichn
 
   \caption{Konstruktion Dreieck mit drei Seiten}\label{fig:DreieckKonstruktionDreiSeiten01}
 \end{figure}
-    
+
+\textbf{Lösungsschritte} (s. Abb. \ref{fig:DreieckKonstruktionDreiSeiten01})\textbf{:}
+\begin{enumerate}
+  \item Wir zeichnen eine gerade Strecke von 8cm am unteren Ende des Blattes und nennen sie c. Wir tragen die Punkte A und B ein.
+  \item Wir stellen den Zirkel auf die Länge der zweiten Seite an A, der Seite b=5cm ein und schlagen einen großzügigen Bogen nach oben (nach unten würden wir die Namenskonventionen für Dreiecke verletzen).
+  \item Wir stellen den Zirkel auf die Länge der zweiten Seite an B, der Seite a=6cm ein und schlagen einen Bogen, der den ersten Bogen schneidet. Dort tragen wir den Punkt C ein und verbinden die Punkte A und C zur Seite b und B und C zur Seite a.
+  \item Wir tragen geforderte Beschriftungen ein, falls nichts anders angegeben ist die Namen der Eckpunkte A, B und C, der Seiten a, b und c, jeweils mit Seitenlängen (oder führen die Maße unter oder neben der Zeichnung auf) und die Winkel $\alpha$, $\beta$ und $\gamma$.
+\end{enumerate}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \node[label=235:A] (A) at (0,0) {$\times$};
+        \node[label=325:B] (B) at (8,0) {$\times$};
+        \node (c) at (4,-0.25) {c};
+        \draw (A) -- (B);
+        \centerarc[gray](A)(25:115:5);
+        \centerarc[gray](B)(120:155:6);
+        \node[label=90:C] (C) at (3.31,3.79) {$\times$};
+        \draw (B) -- (C) -- (A);
+        \node (a) at (6,2) {a};
+        \node (b) at (1.45,2.2) {b};
+        \centerarc[black](A)(0:48:1);
+        \centerarc[black](B)(140:180:1);
+        \centerarc[black](C)(230:322:1);
+        
+        \node at (0.5,0.25) {$\alpha$};
+        \node at (7.25,0.25) {$\beta$};
+        \node at (3.31,3.25) {$\gamma$};
+        
+        \node[text width=3cm] at (-1,2.5) {a=6cm\\b=5cm\\c=8cm\\$\alpha \approx 48°$\\$\beta \approx 40°$\\$\gamma \approx 92°$};
+  \end{tikzpicture}
+  \caption{Lösung}\label{fig:DreieckKonstruktionDreiSeiten02}
+\end{figure}
+
+\textbf{Häufige Fehler:}
+\begin{itemize}
+  \item Zu kurze Zirkelbogen die sich nicht treffen. Lösung: Den ersten Bogen durch einen gesuchten Punkt sehr großzügig schlagen, so dass der Punkt ganz sicher irgendwo auf dem Bogen liegt, z.B. hier einen Halbkreis von A aus beginnend auf der Seite c und gegen den Uhrzeigersinn schlagend (C muss über c liegen, da sonst die Namen der Punkte nicht gemäß Konvention wären).
+  \item Auf der falschen Skala auf dem Geodreieck Grad messen. Lösung: ein komplett geschlossener Winkel (also kein Winkel) hat null Grad, wird geöffnet und hat im rechten Winkel $90°$ und über der Geraden $180°$. Dementsprechend Plausibilität anhand größer oder kleiner $90°$ prüfen beim Messen.
+  \item Ungenauigkeit beim Zeichnen. Lösung: einen großen Maßstab für die Zeichnung wählen (je größer desto genauer) und sorgfältig arbeiten. In der Prüfung sollen schon beim zweiten Millimeter oder Grad Abweichung eines zu bestimmenden Wertes Punkte abgezogen werden. Plausibilität prüfen, z.B. ob die Winkelsumme im Dreieck zwischen 178 und 182 Grad liegt (179 und 181 falls man sicher gehen will und ausschließen dass man seine gesamte Ungenauigkeit an einem Winkel hat und damit mehr als ein Grad Fehler bei diesem Winkel).
+\end{itemize}
 \end{beispiel}
 
 
