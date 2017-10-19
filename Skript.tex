@@ -3159,7 +3159,7 @@ Wir nennen den Raum/ Rauminhalt eines Körpers (\enquote{Wie viel Masse hat/ ent
 
 \begin{beispiel}[Oberfläche Würfel]
     \textbf{Aufgabe:} Berechne die Oberfläche eines Würfels mit einer Seitenlänge von $a=3\text{cm}$.
-    
+
     Ein Würfel hat sechs Seiten. Alle sechs Seiten sind gleiche Quadrate mit der Fläche $a^2$. Somit ist die Oberfläche des Würfels $A_O = 6a^2$ und bei $a=3\text{cm}$ $A_O=6 (3\text{cm})^2)$, also $6 \cdot 9\text{cm}^2$ gleich $54\text{cm}^2$.
 \end{beispiel}
 
@@ -3329,16 +3329,16 @@ Sind drei Seitenlängen eines Dreiecks bekannt:
         \node[label=325:B] (B) at (8,0) {$\times$};
         \node (c) at (4,-0.25) {c};
         \draw (A) -- (B);
-        \centerarc[gray](A)(25:115:5);
-        \centerarc[gray](B)(120:155:6);
+        \centerarc[gray!50](A)(25:115:5);
+        \centerarc[gray!50](B)(120:155:6);
   \end{tikzpicture}
   \begin{tikzpicture}[scale=0.5]
         \node[label=235:A] (A) at (0,0) {$\times$};
         \node[label=325:B] (B) at (8,0) {$\times$};
         \node (c) at (4,-0.25) {c};
         \draw (A) -- (B);
-        \centerarc[gray](A)(25:115:5);
-        \centerarc[gray](B)(120:155:6);
+        \centerarc[gray!50](A)(25:115:5);
+        \centerarc[gray!50](B)(120:155:6);
         \node[label=90:C] (C) at (3.31,3.79) {$\times$};
         \draw (B) -- (C) -- (A);
         \node (a) at (6,2) {a};
@@ -3363,8 +3363,8 @@ Sind drei Seitenlängen eines Dreiecks bekannt:
         \node[label=325:B] (B) at (8,0) {$\times$};
         \node (c) at (4,-0.25) {c};
         \draw (A) -- (B);
-        \centerarc[gray](A)(25:115:5);
-        \centerarc[gray](B)(120:155:6);
+        \centerarc[gray!50](A)(25:115:5);
+        \centerarc[gray!50](B)(120:155:6);
         \node[label=90:C] (C) at (3.31,3.79) {$\times$};
         \draw (B) -- (C) -- (A);
         \node (a) at (6,2) {a};
@@ -3391,19 +3391,51 @@ Sind zwei Winkel gegeben, so haben wir eigentlich den Fall eine Seite und drei W
 
 \begin{beispiel}[eine Seite und zwei Winkel]
     \textbf{Aufgabe:} Konstruiere das Dreieck mit $c=7cm$, $\alpha=40°$ und $\beta=50°$.
-    
+
     Dieser Fall ist der einfachere von zwei etwas unterschiedlichen Fällen von einer Seite und zwei Winkeln. Wir haben eine Seite und beide an den Eckpunkten der Seite liegende Winkel. Wir zeichnen die Seite, messen die Winkel und zeichnen in den durch die Winkel vorgegebenen Richtungen Geraden. Der Schnittpunkt der beiden Geraden gibt uns den dritten Punkt.
-    
+
 \begin{figure}
   \centering
   \begin{tikzpicture}
         \node[label=225:A] (A) at (0,0) {$\times$};
         \node[label=315:B] (B) at (7,0) {$\times$};
         \draw (A) -- (B);
+        \node (c) at (3.5,-0.25) {c};
+
+        \centerarc[gray!50](A)(0:40:1);
+        \draw[gray!50] (A) -- (8,6.7128);
+        \node at (.6,0.25) {$\alpha$};
+        \centerarc[gray!50](B)(130:180:1);
+        \draw[gray!50] (B) -- (3,4.76701);
+        \node at (6.4,0.25) {$\beta$};
   \end{tikzpicture}
   \caption{eine Seite und beide an ihren Eckpunkten liegende Winkel}\label{fig:DreieckSeiteUndBeideDaranLiegendenWinkel}
 \end{figure}
-    
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \node[label=225:A] (A) at (0,0) {$\times$};
+        \node[label=315:B] (B) at (7,0) {$\times$};
+        \draw (A) -- (B);
+        \node (c) at (3.5,-0.25) {c};
+
+        \centerarc[gray!50](A)(0:40:1);
+        \draw[gray!50] (A) -- (8,6.7128);
+        \node at (.6,0.25) {$\alpha$};
+        \centerarc[gray!50](B)(130:180:1);
+        \draw[gray!50] (B) -- (3,4.76701);
+        \node at (6.4,0.25) {$\beta$};
+        \node[label=90:C] (C) at (4.105,3.45) {$\times$};
+        \draw (A) -- (C) -- (B);
+        \centerarc[gray!50](C)(220:310:1);
+        \node (gamma) at (4,2.9) {$\gamma$};
+        \node (a) at (5.75,2) {a};
+        \node (b) at (1.85,2) {b};
+  \end{tikzpicture}
+  \caption{eine Seite und beide an ihren Eckpunkten liegende Winkel}\label{fig:DreieckSeiteUndBeideDaranLiegendenWinkel2}
+\end{figure}
+
 \end{beispiel}
 
 
