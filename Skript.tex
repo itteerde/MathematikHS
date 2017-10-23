@@ -2618,7 +2618,7 @@ Wir führen über die Inhalte der Nichtschüler-Prüfung auch den \textsc{Satz d
 
 \subsubsection{weiter Gehendes}
 
-Die Inhalte dieses Abschnittes sind nicht notwendig für die Prüfung. Der \textsc{Satz des Pythagoras} ist jedoch so nützlich im Alltag, dass wir ihn einführen möchten und der \textsc{Kosinussatz} ist nützlich für Proberechnungen mit dem Taschenrechner bei Aufgaben zum Dreieck, die mit Geodreieck und Zirkel gelöst werden sollen.
+Die Inhalte dieses Abschnittes sind nicht notwendig für die Prüfung. Der \textsc{Satz des Pythagoras} ist jedoch so nützlich im Alltag, dass wir ihn einführen möchten und der \textsc{Kosinussatz} ist nützlich für Proberechnungen mit dem Taschenrechner bei Aufgaben zum Dreieck, die mit Geodreieck und Zirkel gelöst werden sollen. Der nächste Schritt (genauer der zwischen \textsc{Satz des Pythagoras} und \textsc{Kosinussatz}) wäre die \enquote{Trigonometrie}, Sinus, Cosinus, Tangens, ..., die wir aber in der Tat für eher weniger alltäglich relevant halten und nicht vorziehen vor den Mathematikunterricht der Berufs- oder Realschule, wo dies jeweils behandelt werden sollte.
 
 \begin{satz}[Satz des Pythagoras]\index{Satz des Pythagoras}\label{satz:SatzDesPythagoras}
     In einem rechtwinkligen Dreieck ist die Summe der Quadrate der Katheten gleich der Summe der Hypothenuse.
@@ -3164,6 +3164,59 @@ Wir nennen den Raum/ Rauminhalt eines Körpers (\enquote{Wie viel Masse hat/ ent
 \end{beispiel}
 
 
+\subsection{Koordinaten in 3d}
+
+Wir haben für die Angabe eines Punktes in der 2-dimensionalen Ebene einen zweistelligen Tupel (ein Paar) benutzt: $(x|y)$. Für die dritte Dimension benutzen wir entsprechend einen dreistelligen Tupel (einen Tripel): $(x|y|z)$. Etwas schwieriger wird die graphische Darstellung. Da wir auf der Oberfläche des Papiers schreiben und zeichnen fehlt uns die dritte Dimension. Wir müssen diese \enquote{auf die Ebene projizieren}.
+
+\begin{beispiel}[Zeichnung von Körpern]
+\begin{figure}
+  \centering
+    \begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,>=stealth]
+        % The axes
+        \draw[->] (xyz cs:x=-13.5) -- (xyz cs:x=13.5) node[above] {$x$};
+        \draw[->] (xyz cs:y=-13.5) -- (xyz cs:y=13.5) node[right] {$z$};
+        \draw[->] (xyz cs:z=-13.5) -- (xyz cs:z=13.5) node[above] {$y$};
+        % The thin ticks
+        \foreach \coo in {-13,-12,...,13}
+        {
+          \draw (\coo,-1.5pt) -- (\coo,1.5pt);
+          \draw (-1.5pt,\coo) -- (1.5pt,\coo);
+          \draw (xyz cs:y=-0.15pt,z=\coo) -- (xyz cs:y=0.15pt,z=\coo);
+        }
+        % The thick ticks
+        \foreach \coo in {-10,-5,5,10}
+        {
+          \draw[thick] (\coo,-3pt) -- (\coo,3pt) node[below=6pt] {\coo};
+          \draw[thick] (-3pt,\coo) -- (3pt,\coo) node[left=6pt] {\coo};
+          \draw[thick] (xyz cs:y=-0.3pt,z=\coo) -- (xyz cs:y=0.3pt,z=\coo) node[below=8pt] {\coo};
+        }
+        % Dashed lines for the points P, Q
+        \draw[dashed]
+          (xyz cs:z=-5) --
+          +(0,7) coordinate (u) --
+          (xyz cs:y=7) --
+          +(-5,0) --
+          ++(xyz cs:x=-5,z=-5) coordinate (v) --
+          +(0,-7) coordinate (w) --
+          cycle;
+        \draw[dashed] (u) -- (v);
+        \draw[dashed] (-5,7) -- (-5,0) -- (w);
+        \draw[dashed] (3,0) |- (0,5);
+
+        % Dots and labels for P, Q
+        \node[fill,circle,inner sep=1.5pt,label={left:$Q(-5,-5,7)$}] at (v) {};
+        \node[fill,circle,inner sep=1.5pt,label={above:$P(3,0,5)$}] at (3,5) {};
+        % The origin
+        \node[align=center] at (3,-3) (ori) {(0,0,0)};
+        \draw[->,help lines,shorten >=3pt] (ori) .. controls (1,-2) and (1.2,-1.5) .. (0,0,0);
+    \end{tikzpicture}
+  \caption{Koordinaten in 3d}\label{fig:KoordinatenIn3d}
+\end{figure}
+
+Selbst \enquote{3-dimensional} zeichnen zu können ist nicht notwendig für die Prüfung. Ihr solltet aber 3-dimensionale Zeichnungen lesen können und Ihr müsst mit den Koordinaten rechnerisch umgehen können. Das prüfungsrelevante Wissen wird somit komplett getestet durch die Bearbeitung einer Aufgabe mit einem Körper, dessen Punkte einer gegebenen Zeichnung zu entnehmen sind. Zu beachten ist dabei, dass wir uns nicht darauf verlassen können welche Achse in welche Richtung zeigt. So ist die Abbildung zwar eine weit verbreitete, in der schulischen Physik in Deutschland wird jedoch eine andere (eine der Drehungen des 3-dimensionalen Kreuzes der Achsen) verwendet. Die Koordinaten müssen also jeweils aufmerksam von den Achsen abgelesen werden.\footnote{Für tieferes Verständnis sei erwähnt, dass es überhaupt nicht möglich ist in der 2-dimensionalen Projektion dreidimensional Punkte sauber zu unterscheiden. Überlege hierzu was \enquote{vor} und \enquote{hinter} dem Punkt liegt (es kann nur eine Gerade abgelesen werden statt einem Punkt, die Gerade \enquote{von unendlich hinter dem Punkt durch den Punkt und weiter durch den Punkt auf dem Bildschirm}). In der Abbildung wird dies dadurch geklärt, dass man annimmt, dass die gestrichelten Linien senkrecht auf den Achsen stehen.}
+\end{beispiel}
+
+
 \subsection{Fläche zu Körper extrudieren}\index{Extrudieren}\label{Extrudieren}
 
 Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudieren}. Wir \enquote{ziehen die Fläche senkrecht nach oben} bis wir mit einer zweiten Grundfläche abschließen.
@@ -3453,6 +3506,53 @@ Sind zwei Winkel gegeben, so haben wir eigentlich den Fall eine Seite und drei W
 
 \chapter{Proportionale und Antiproportionale Zuordnungen}\index{proportionale Zuordnung}\index{antiproportionale Zuordnung|see{proportionale Zuordnung}}
 
+Wir geben eine präzise Definition an, erwarten das aber von Euch nicht unbedingt zu verstehen. Zunächst reicht \enquote{je mehr desto mehr} und \enquote{je weniger desto weniger} für \textbf{proportionale Zuordnungen} und \enquote{je mehr desto weniger} und \enquote{je weniger desto mehr} für \textbf{antiproportionale Zuordnungen}, zusammen mit \enquote{auf einer Seite der Tabelle teilen und das Ergebnis so auf die andere Seite übertragen, dass die Regeln je ... desto ... eingehalten wird}.
+
+\begin{definition}[proportionale Zuordnung]
+    Wir nennen eine Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$, $x \mapsto y$ für die $f(x)=y \Leftrightarrow r \cdot f(x)= r\cdot y$ gilt eine \enquote{proportionale Zuordnung}
+\end{definition}
+
+\begin{definition}[antiproportionale Zuordnung]
+    Wir nennen eine Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$, $x \mapsto y$ für die $f(x)=y \Leftrightarrow \frac{1}{r} f(x)= r\cdot y$ gilt eine \enquote{antiproportionale Zuordnung}
+\end{definition}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \draw (2,0.75) -- (2,3);
+        \draw (1,2) -- (3,2);
+        \node at (1,2.5) {Arbeiter};
+        \node at (3,2.5) {Stunden};
+        \node (5) at (1.5,1.5) {5};
+        \node (10) at (2.5,1.5) {10};
+        \node (x) at (1.5,1) {x};
+        \node (4 )at (2.5,1) {4};
+        \draw[bend left=45] (5) -> (x.west);
+  \end{tikzpicture}
+  \caption{Tabelle proportionale Zuordnung}\label{fig:ProportionaleZuordnung}
+\end{figure}
+
+
+In $\mathbb{R}$ ist eine proportionale Zuordnung also eine lineare Gleichung und eine antiproportionale Zuordnung eine Funktion der Form $\frac{a}{x} + c$. Beachte aber auch, dass häufig bei diesen Zuordnungen nur ganzzahlige Ergebnisse sinnvoll sind und entsprechen auf- oder abgerundet werden muss.
+
+\begin{beispiel}[Antiproportionale Zuordnung]
+    \textbf{Aufgabe:} Fünf Bauarbeiter brauchen 10 Stunden um eine Mauer fertigzustellen. Wie viele Arbeiter braucht man um in 4 Stunden fertig zu werden?
+    
+    \textbf{Lösung:} Je mehr Arbeiter arbeiten desto weniger Stunden brauchen sie. Es handelt sich also um eine antiproportionale Zuordnung.
+    
+    \centering
+    \begin{tabular}{|c|c|}
+      \hline
+      % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+      Anzahl Arbeiter & Stunden bis Fertigstellung\\
+      \hline
+      5 & 10 \\
+      x & 4 \\
+      \hline
+    \end{tabular}
+    
+    Wie verändert sich die Seite auf der wir beide Daten haben? Wir teilen eine Zahl dieser Seite durch die andere: $10:4=2,5$ oder $4:10=0,4$. Mit einem dieser Faktoren multiplizieren wir die Zahl auf der anderen Seite: $5 \cdot 2,5 = 12,5$. Es werden weniger Stunden, also erwarten wir (weil antiproportional) mehr Arbeiter. Das passt und ist ein (erstmal) korrektes Ergebnis. Die Alternative wäre gewesen $4:10=0,4$, so dass $5 \cdot 0,4 = 0,2$. Das ist je weniger Stunden desto weniger Arbeiter und damit proportional und nicht antiproportional. D.h. wir multiplizieren mit $\frac{1}{0,4}$, was gleich teilen durch 0,4 ist: $5:0,4=12,5$. Die (gänzlich unmathematische) Regel \enquote{teile auf der kompletten Seite eine Zahl durch die andere und multipliziere oder dividiere auf der anderen Seit mit dem Ergebnis so dass das passende je ... desto ... eingehalten wird} passt.
+\end{beispiel}
 
 \chapter{Graphische Darstellungen}
 
