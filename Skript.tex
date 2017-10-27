@@ -196,6 +196,7 @@
 \newcommand{\meineChance}{\textit{Meine Chance}\xspace\index{Meine Chance}}
 
 \newcommand{\anweisungArbeitsblatt}{Löse für $x$ auf kariertem Papier. Achte auf eine gut lesbare/ nachvollziehbare Notation und Aufteilung. Nummeriere die Lösungen wie auf dem Arbeitsblatt und gibt sie mit dem Arbeitsblatt ab. Wenn Du die Aufgaben in einer Gruppe bearbeitest notiere dennoch selbst die Lösungen und gibt sie ab, so dass die Dozenten Tipps zur Notation geben können. In diesem Fall gibt bitte zusätzlich zu Deinem Namen an wer in der Gruppe zusammen gearbeitet hat.}
+\newlength\myLength
 
 \tikzstyle{every node}=[font=\small]
 \tikzstyle{every node}=[inner sep=1pt]
@@ -343,9 +344,21 @@ Der vorliegende Text ist eine Mischung aus Lehrbuch, wie es in Schulen eingesetz
 
 Die \textbf{Mathematik} im Hauptschulabschluss\footnote{Für den Realschulabschluss kommt schon einiges zu Funktionen, auch wenn man noch ohne das durch die Prüfung kommt.} verstehen wir als \textbf{Zählen}\index{zählen}, \textbf{Messen}\index{messen}, (elementares) \textbf{Rechnen}\index{rechnen} und die \textbf{Kommunikation} dessen.
 
-Während die Schule in der Tat häufig auf das Rechnen konzentriert ist, ist die Aufgabe der Mathematik eine weiter gehende (für die allerdings rechnen zu können Voraussetzung ist). Die Mathematik erlaubt uns Probleme der Wirklichkeit zu lösen indem wir sie abstrahieren und in dem Modell eine Lösung finden, die wir zurück auf die Realität übertragen können und die in der Weise erfolgreich ist, dass sie einen Vorgang beschreiben kann inklusive Vorhersagen für die Zukunft. Eine frühe Erfolgsgeschichte der Mathematik ist zum Beispiel zukünftige Positionen der Planeten des Sonnensystems vorherzusagen, Sonnenfinsternisse, Mondphasen, Jahreszeiten und so weiter. Die selbe Mathematik, die für diese astronomischen Berechnungen benutzt wird erlaubte viel später Flugbahnen, zunächst von Artillerie-Geschossen, später auch der Apollo-Missionen, die 1969 Menschen ermöglicht hat auf dem Mond zu gehen, fahren, Mondgestein zur Erde zurück zu bringen usw. Auch die gesamte Informatik, also alles was mit Computern und ihren Berechnungen zu tun hat - inklusive der zugrundeliegenden Theorie - ist eine Abspaltung der Mathematik, die so relevant geworden ist, dass wir ihr einen eigenen Namen gegeben haben.
+Während die Schule in der Tat häufig auf das Rechnen konzentriert ist, ist die Aufgabe der Mathematik eine weiter gehende (für die allerdings rechnen zu können Voraussetzung ist). Die Mathematik erlaubt uns \textbf{Probleme der Wirklichkeit} zu lösen indem wir sie \textbf{abstrahieren und in dem Modell eine Lösung finden}, die wir zurück auf die Realität übertragen können und die in der Weise erfolgreich ist, dass sie einen Vorgang beschreiben kann inklusive Vorhersagen für die Zukunft\footnote{die deutlich häufiger als zufällig zu erwarten eintreffen}. Eine frühe Erfolgsgeschichte der Mathematik ist zum Beispiel zukünftige Positionen der Planeten des Sonnensystems vorherzusagen, Sonnenfinsternisse, Mondphasen, Jahreszeiten und so weiter. Die selbe Mathematik, die für diese astronomischen Berechnungen benutzt wird erlaubte viel später Flugbahnen, zunächst von Artillerie-Geschossen, später auch der Apollo-Missionen, die 1969 Menschen ermöglicht hat auf dem Mond zu gehen, fahren, Mondgestein zur Erde zurück zu bringen usw. Auch die gesamte Informatik, also alles was mit Computern und ihren Berechnungen zu tun hat, inklusive der zugrundeliegenden Theorie, ist eine Abspaltung der Mathematik, die so relevant geworden ist, dass wir ihr einen eigenen Namen gegeben haben. Mathematik und Philosophie sind das Fundament auf das sich alle Wissenschaften (außer Theologie, die, obwohl historisch eine der ersten akademischen Disziplinen, der Autor nicht zu den Wissenschaften zählt) stützen und die Menschheit zu den Fortschritten der letzten 2500 Jahre, insbesondere aber der letzten 500 Jahre, gebracht haben.
 
-Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen gestellt werden, so dass die Teilnehmer ihre Abschlüsse schaffen. Darüber hinaus bereiten wir diejenigen, die nicht voll ausgelastet sind mit der Mathematik des Hauptschulabschlusses, auch darauf vor in den Jahren nach dem Abschluss etwas schwierigere Probleme bewältigen zu können. Viele Teilnehmer an \meineChance werden nach dem Hauptschulabschluss eine technische Ausbildung machen, die sehr viel mehr Mathematik benötigt im Abschluss der Berufsausbildung und an der Berufsschule als der Hauptschulabschluss und werden in der Praxis auch hin und wieder selbst Modelle modellieren müssen und mit ihrer Berechnung Entscheidungen im Beruf treffen. Auch daraufhin wollen wir ein Stück weit vorbereiten durch Beispiele aus dem Alltag und möglicher beruflicher Zukunft.
+Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen gestellt werden, so dass die Teilnehmer ihre Abschlüsse schaffen. Darüber hinaus bereiten wir diejenigen, die nicht voll ausgelastet sind mit der Mathematik des Hauptschulabschlusses, auch darauf vor in den Jahren nach dem Abschluss etwas schwierigere Probleme bewältigen zu können. Viele Teilnehmer an \meineChance werden nach dem Hauptschulabschluss eine technische Ausbildung machen, die sehr viel mehr Mathematik benötigt im Abschluss der Berufsausbildung und an der Berufsschule als der Hauptschulabschluss und werden in der Praxis auch hin und wieder selbst Modelle modellieren müssen und mit ihrer Berechnung Entscheidungen im Beruf treffen. Auch daraufhin wollen wir ein Stück weit vorbereiten durch Beispiele aus dem Alltag und möglicher beruflicher Zukunft. Darüber hinaus kommt für einige Teilnehmer vielleicht der Realschulabschluss in Frage.
+
+\begin{beispiel}[Was ist Mathematik? Enigma!]
+    Würde man den Autor fragen wer den zweiten Weltkrieg gewonnen hat, dann würde er vielleicht sagen: \enquote{Alan Turing}. Die meisten Menschen haben keine Ahnung wer das ist. Turing war ein Mathematiker, der das Team geleitet hat, das die Verschlüsselung der Deutschen gebrochen hat indem es die ersten praktisch genutzten Computer entwickelt hat. Vielleicht würde er auch sagen: \enquote{Die Mathematiker und Physiker des Manhattan-Projektes}, die Entwickler der ersten Atombomben. Vielleicht würde er auch gute Laune haben und fragen: \enquote{In welchem Universum?} und damit auf Mathematiker und Physiker des 20. Jahrhunderts referenzieren, die das gesamte Weltbild der (gebildeten) Menschheit gleich mehrfach umgestoßen haben.
+\end{beispiel}
+
+\begin{beispiel}[Heizung...]
+    Seit einigen Jahren baut man Heizungen (abgesehen von Fernwärme) so, dass sie möglichst exakt die Leistung haben, die für die Räumlichkeiten benötigt wird. In einfachen Fällen wie einem Einfamilienhaus reicht es vielleicht die Volumina der Etagen zu berechnen. Im gewerblichen Bereich braucht man in der Regel wesentlich genauere Modelle, die bei aller Software-Unterstützung doch immerhin noch das mathematische Verständnis voraussetzen diese unterstützende Software mit den korrekten Zahlen zu füttern.
+\end{beispiel}
+
+\begin{beispiel}[Regale]
+    Der Autor kennt dieses Beispiel nur aus Erzählungen... Im Alter von fünf Jahren hat der Autor sein neues Zimmer im neu gebauten Haus seiner Eltern bezogen. Zu den ersten Schritten das neue Zuhause einzurichten gehörte, dass der Vater des Autors ein Regal an die Wand schraubte für fast alles Spielzeug des Autors. Die Mutter des Autors kritisierte seinen Vater deutlich, lautstark und wohl wenig angemessen für die Wahl von langen und dicken Schrauben, also ziemlich tiefen und großen Löchern in der Wand. Der Vater des Autors ignorierte die Einwände (und benutzte Dübel, die nicht für Innenausstattung gedacht waren), schraubte Befestigungen, die zusätzlich zu Brettern und Spielzeug noch wenigstens eine Tonne Zugkraft aushalten würden. WTF?! Eine Tonne? Nun ja, bereits am ersten Abend zogen die vielleicht 20kg des Autors über einen Hebel der Länge der Bretter gegen einen kürzeren Arm weniger Zentimeter Abstand von Winkel zu Schrauben. Der Autor schätzt etwa 8000 Newton Zugkraft (entspricht 800kg an der Schraube hängend) aufgebracht zu haben bis er auf dem Schrank neben dem Regal angelangt war. Die Erfahrung eines Sturzes, gefolgt von einer Dusche aus Spielzeug und Regalbrettern, ist dem Autor erspart geblieben (auch dazu lernen Schlosser in Deutschland einiges an klassischer Mechanik)...
+\end{beispiel}
 
 
 \section{Wieso müssen wir Mathematik lernen?}\label{MathematikWieso}
@@ -3875,12 +3888,12 @@ Ausgangspunkt für die Überlegungen zur Bedeutung von und Umgang mit Heterogeni
 
 Eine strukturelle Vereinfachung, die jedoch eher zu Lasten der Lernenden gehen wird, ist, dass die Prüfungen als Nichtschüler mit sich bringen, dass die Bewertung (und das Bestehen) alleine von Kompetenzerwerb und -nachweis abhängen und es kaum\footnote{Theoretisch keinen, praktisch durch Berücksichtigung des Hintergrundes in der mündlichen Prüfung.} Raum für eine Würdigung der Fortschritte gibt.
 
-Der organisatorische Schwerpunkt zur Berücksichtigung der Besonderheiten wird auf Tutorien liegen, die weitgehend kooperative Lernumgebung bieten sollen, als Ergänzung zum klassischen vortragenden und diskutierenden Unterricht (Zu den Gründen vgl. \citep[S.7ff]{Leiss2014}, besonders betont sei hier die Eigenverantwortung der Lernenden, die im klassischen Setting leicht an die Lehrperson zurückgegeben werden kann.).
+Der organisatorische Schwerpunkt zur Berücksichtigung der Besonderheiten wird auf Tutorien liegen, die weitgehend kooperative Lernumgebung bieten sollen, als Ergänzung zum klassischen vortragenden und diskutierenden Unterricht (Zu den Gründen vgl. \citep[S.7ff]{Leiss2014}, besonders betont sei hier die Eigenverantwortung der Lernenden, die im klassischen Setting leicht an die Lehrperson zurückgegeben werden kann.). In der Hinsicht sei nochmal in Erinnerung gerufen, dass es sich um Erwachsenenbildung handelt und die Teilnehmer für sich selbst Verantwortung übernehmen müssen, bei deren Ausprägung Dozenten beratend unterstützen sollen, nicht jedoch die als Fremde mit vielen alltäglichen Problemen der Integration kämpfenden Teilnehmer einladen sollten Verantwortung abzugeben, sondern dazu sich selbst um Unterstützung zu kümmern, die dann natürlich jeweils verfügbar sein muss um Resignation zu verhindern.
 
 Gerade in einer Lern- und Lehrsituation hoher Heterogenität kann eine systematische Beobachtung und Dokumentation wertvoll sein um im Team der Lehrenden einander ergänzende Maßnahmen durchzuführen. Dokumentation erleichtert u.a. individuelle Schwächen aufzudecken, die im Laufe der Maßnahme zu korrigieren sind. Vorerst ist das Werkzeug dafür der Modulplan der für den Abschluss vorausgesetzten Kompetenzen, zusammenfassend jedem Teilnehmer als Lernprotokoll/ Fortschrittskontrolle ausgehändigt, sowie für die laufende Vorbereitung des Unterrichts als \textit{Microsoft Excel} spreadsheet für den gesamten Jahrgang fortwährend geführt.
 
 
-\chapter{Tutorium, Lern- und Übungsgruppen}
+\chapter{Tutorium, Lern- und Übungsgruppen}\index{Tutorium}\label{Tutorium}
 
 Kaum jemand kann Mathematik gut alleine lernen. Mathematik so zu lernen, dass man sie operativ kompetent anwenden kann, erfordert i.d.R. dass man die Inhalte selbst erklären kann. So lange das nicht gelingt fehlen üblicherweise Aspekte des Sachverhalts. Schon deshalb rein egoistisch ist es für alle Teilnehmer sinnvoll sich gegenseitig die Inhalte beizubringen, sie gemeinsam einzuüben und zu vertiefen und sie für andere zu präsentieren/ referieren. Jeder Teilnehmer muss an einem Tutorium teilnehmen, das als betreute Lerngruppe verstanden wird. Verglichen mit dem universitären Lehren der Mathematik handelt es sich eher um Lerngruppen. Wir nennen es Tutorien, um es von überhaupt nicht betreutem Lernen in eigener Regie der Teilnehmer zu unterscheiden.
 
@@ -4021,6 +4034,61 @@ Alle diese Vokabeln müssen gelernt werden! Zusätzlich werden noch viele gebrau
   123.245 \text{mg} + 7,8 \text{g} + 12,634 \text{kg} + 0,00075 \text{t} &=& x \text{mg} \\
   6123 \text{mg} + 7,8 \text{g} + 2.123,4 \text{kg} + 0,0075 \text{t} &=& x \text{g}
 \end{eqnarray}
+
+
+\newpage
+\section{Geometrie 1 - elementare Flächen}
+
+\anweisungArbeitsblatt
+
+\begin{uebung}[Flächeninhalt]
+
+    Gesucht ist jeweils der Flächeninhalt. Wichtig ist neben dem richtigen Ergebnis auch das Einüben einer ordentlichen Notation. Löse ausführlich mit Lösungsweg.
+
+    \setlength\myLength{1.05cm}
+    \begin{figure}%[ht!]
+        \centering
+        \subfloat{
+            \begin{tikzpicture}
+                \node[label=225:A] (A) at (0,0) {$\times$};
+                \node[label=315:B] (B) at (3,0) {$\times$};
+                \node[label=90:C] (C) at (2,3) {$\times$};
+
+                \draw (A) -- (B) -- (C) -- (A);
+                \draw[<->] (0,-0.25) -- (3,-0.25) node[midway,fill=white] {\footnotesize 3cm};%rotate=90, anchor=center,
+                \draw[<->] (3.25,0) -- (3.25,3) node[rotate=90, anchor=center,midway,fill=white] {\footnotesize 3cm};
+            \end{tikzpicture}
+        }
+        \subfloat{
+            \begin{tikzpicture}
+                \node[label=225:A] (A) at (0,0) {$\times$};
+            \end{tikzpicture}
+        }
+        \subfloat{
+            \begin{tikzpicture}
+                \node[label=225:A] (A) at (0,0) {$\times$};
+            \end{tikzpicture}
+        }\\
+        \centering
+        \subfloat{
+            \begin{tikzpicture}
+                \node[label=225:A] (A) at (0,0) {$\times$};
+            \end{tikzpicture}
+        }
+        \subfloat{
+            \begin{tikzpicture}
+                \node[label=225:A] (A) at (0,0) {$\times$};
+            \end{tikzpicture}
+        }
+        \subfloat{
+            \begin{tikzpicture}
+                \node[label=225:A] (A) at (0,0) {$\times$};
+            \end{tikzpicture}
+        }
+        \caption{Flächeninhalt elementarer Flächen}\label{fig:2017102501}
+    \end{figure}
+\end{uebung}
+
 
 
 \newpage
