@@ -328,8 +328,9 @@
 
 \section{An die Teilnehmer}
 
-Dieser Text soll dem ganzen Projekt nützlich sein. Der Text richtet sich an Euch, die Teilnehmer, und an die Dozenten/ Lehrer/ Betreuer. Der Teil \enquote{Konzept} ist für die Dozenten geschrieben und in großen Teilen für Euch unverständlich. Das ist kein Problem. Was Ihr heute nicht versteht hilft vielleicht in einem Jahr, vor der Prüfung, oder in vier Jahren vor der Prüfung in der Ausbildung. Der Teil \enquote{Fachliche Inhalte} (s. \ref{FachlicheInhalte}, S. \pageref{FachlicheInhalte}) muss (bis zur Prüfung) vollständig gelernt werden, ausgenommen die Abschnitte, bei denen dabei steht, dass Du sie nicht lernen muss.
+Dieser Text soll dem ganzen Projekt nützlich sein. Der Text richtet sich an Euch, die Teilnehmer, und an die Dozenten/ Lehrer/ Betreuer. Der Teil \enquote{Konzept} ist für die Dozenten geschrieben und in großen Teilen für Euch unverständlich. Das ist kein Problem. Was Ihr heute nicht versteht hilft vielleicht in einem Jahr, vor der Prüfung, oder in vier Jahren vor der Prüfung in der Ausbildung. Der Teil \enquote{Fachliche Inhalte} (s. \ref{FachlicheInhalte}, S. \pageref{FachlicheInhalte}) muss (bis zur Prüfung) vollständig gelernt werden, ausgenommen die Abschnitte, bei denen dabei steht, dass Du sie nicht lernen muss. Fußnoten\footnote{Das hier ist eine Fußnote.} sind für eine perfekte Prüfung nicht notwendig. Sie dienen dem Verständnis über die Prüfungen hinaus und richten sich an Dozenten und Lehrer (einiges im Text ist \enquote{falsch}, wird aber in der Hauptschule so erwartet (z.B. Umgang mit Massen und Gewichten), tut aber ohne erklärende Fußnote dem Dozenten weh...).
 
+Bis zur Prüfung solltet Ihr alle Übungen hier und die alten Prüfungen (\enquote{Stark-Hefte}) sicher beherrschen um eine gute oder sehr gute Note in der Prüfung zu erreichen. Bei einem vollständigen Verständnis dieses Skripts und guten Ergebnissen in den alten Prüfungen sollte auch der Übergang in die Ausbildung mit Mathematik in der Berufsschule und einer Naturwissenschaft zu schaffen sein.
 
 \section{An Dozenten/ Lehrer/ Berater...}
 
@@ -364,6 +365,7 @@ Wir konzentrieren uns stark auf die Arten von Aufgaben, die in den Prüfungen ge
 \section{Wieso müssen wir Mathematik lernen?}\label{MathematikWieso}
 
 \begin{enumerate}
+    \item Weil die Mathematik in der Abschlussprüfung geprüft werden muss, mit Prüfungen, die für ganz Hessen vom Kultusministerium (Ministerium für Bildung und...) festgelegt werden, und ohne deren Bestehen man keinen Schulabschluss bekommen kann (vgl. \citep{LehrplanMathematikHauptschuleHessen2017}).
     \item Mathematik spielt in (fast?) allen Ausbildungsberufen eine Rolle, in einigen eine wichtige, z.B. in allen technischen Berufen zusätzlich zur Mathematik selbst in der Physik, in allen handwerklichen in Form zumindest der Geometrie, oft aber auch dort wieder Physik, nämlich klassische Mechanik. In allen kaufmännischen Berufen (und dazu gehören in diesem Sinn alle Berufe, die eine Büro-/ Verwaltungstätigkeit beinhalten) wird u.a. Zinsrechnung gebraucht, die unmittelbar an die Mathematik im Projekt anschließt.
     \item Mathematik erlaubt es sicheres Wissen zu erlangen, z.B. sicher sein zu können dass ein Vertrag billiger ist als ein anderer.
     \item Mathematik erlaubt es zwingend zu argumentieren, z.B. nachzuweisen dass ein Angebot eines Konkurrenten günstiger ist (und der Verkäufer dem man das zeigt vielleicht auf diesen Preis herunter geht).
@@ -382,7 +384,7 @@ Die Realität (Wirklichkeit/ Welt/ Natur) ist immer zu komplex um sie vollständ
 Darüber hinaus können wir in der Mathematik dadurch dass wir das Modell definieren sicheres Wissen über das Modell gewinnen (beweisen). Wir wissen jedoch nie sicher, dass das Modell auch wirklich etwas mit der Realität zu tun hat. Es gibt immer die Möglichkeit dass im nächsten Augenblick die Realität ein Ereignis zeigt, dass der Theorie widerspricht. In dem Augenblick wird die Theorie verworfen und man muss nach einer neuen (oft einer Verbesserung der alten) Theorie suchen, die auch das zur alten Theorie widersprüchliche \textbf{Phänomen} erklärt (genauer: mit der Beobachtung vereinbar ist). Gibt es mehrere Theorien, die sich zur Zeit nicht experimentell falsifizieren (als falsch widerlegen) lassen, so geht man i.d.R. von der Theorie aus, die am wenigsten kompliziert ist.
 
 
-\chapter{Mengen}
+\chapter{Mengen}\label{chapter:Mengen}
 
 Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mittelbar für die Prüfung relevant sind. Wir benutzen sie aber bei Erklärungen und auch bei Definitionen und führen sie deshalb (nicht rigoros) ein.
 
@@ -390,8 +392,16 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
     Wir nennen Eine \enquote{Ansammlung/ Sammlung} von \enquote{Dingen} eine Menge. Die Dinge in einer Menge nennen wir die \enquote{Elemente} der Menge. Wir schreiben $m \in \mathbb{M}$ falls das Element $m$ in der Menge $\mathbb{M}$ enthalten ist und $m \notin \mathbb{M}$ falls das Element $m$ nicht in der Menge $\mathbb{M}$ enthalten ist.
 \end{definition}
 
+\begin{definition}[Teilmenge]\index{Teilmenge}\index{Element}
+    Wir nennen eine Menge $M_t$ \enquote{Teilmenge} der Menge $M$ wenn alle Elemente der Menge $M_t$ in der Menge $M$ enthalten ist. Wir schreiben $M_t \subset M$ oder $M_t \subseteq M$ und lesen \enquote{$M_t$ ist eine Teilmenge von $M$}.
+\end{definition}
 
-\chapter{Zahlen}
+\begin{definition}[Vereinigung]\index{Vereinigung}
+    Wir nennen die Menge $M_\cup$, die genau\footnote{genau diese und keine darüber hinaus, alle diese und nur genau alle diese} alle Elemente aus den Mengen $M_1$ und $M_2$ enthält \enquote{Vereinigung} von $M_1$ und $M_2$ und schreiben $M_\cup = M_1 \cup M_2$.
+\end{definition}
+
+
+\chapter{Zahlen}\label{chapter:Zahlen}
 
 \section{Natürliche Zahlen ($\mathbb{N}$)}\index{natürliche Zahlen}
 
@@ -400,13 +410,21 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
 
 \section{Teilbarkeit}\index{Teilbarkeit}\label{def:teilbarkeit}
 
-\begin{definition}[Teilbarkeit]
-    Wir sagen dass eine natürliche Zahl $a$ ($a \neq 1, a \neq b$)\footnote{Wir nennen 1 und die Zahl selbst \textbf{triviale} Teiler und führen sie nicht auf und schließen sie aus der Menge der Teiler aus, weil sie bei \textbf{jeder} Zahl auftauchen und damit nur die Lesbarkeit verschlechtern ohne Information zu gewinnen.} eine natürliche Zahl $b$ \textbf{teilt} wenn $b \div a$ eine natürliche Zahl ist. Wir sagen \enquote{a teilt b} und schreiben \enquote{\glsdisp{symb:teilt}{$a | b$}} und \enquote{a teilt nicht b} und schreiben \glsdisp{symb:teiltnicht}{\enquote{$a \nmid b$}}.
+\begin{definition}[Teilbarkeit]\index{Teilbarkeit}
+    Wir sagen dass eine natürliche Zahl $a$ ($a \neq 1, a \neq b$)\footnote{Wir nennen 1 und die Zahl selbst \textbf{triviale} Teiler und führen sie nicht auf und schließen sie aus der Menge der Teiler aus, weil sie bei \textbf{jeder} Zahl auftauchen und damit nur die Lesbarkeit verschlechtern ohne Information zu gewinnen. Beachte dass die trivialen Teiler trotzdem Teiler sind und z.B. in der Literatur in der \enquote{Teilermenge} auftauchen falls sie nicht explizit ausgeschlossen werden.} eine natürliche Zahl $b$ \textbf{teilt} wenn $b \div a$ eine natürliche Zahl ist. Wir sagen \enquote{a teilt b} und schreiben \enquote{\glsdisp{symb:teilt}{$a | b$}} und \enquote{a teilt nicht b} und schreiben \glsdisp{symb:teiltnicht}{\enquote{$a \nmid b$}}.
 \end{definition}
 
-\begin{beispiel}[Teilbarkeit]
+\begin{beispiel}[Teilbarkeit]\index{Teilbarkeit}
     $2 | 4$, $1 | 2$, $3 \nmid 4$, $3 | 9$, $3 \nmid 7$, $3 | 27$, $15 | 60$, $3 \nmid 10$, $10 | 10$, $ 5 \nmid 7$, $16 | 32$.
 \end{beispiel}
+
+\begin{uebung}[Teilbarkeit und Dezimal- vs. 60er-System]\index{Teilbarkeit}
+    Liste die Teiler von 60, 10, 120 und 100 auf und denke darüber nach wieso die Babylonier ein 60er-System statt eines 10er-Systems verwendet haben (und wir das bei den Stunden [und etwas weniger offensichtlich bei den Tagen] beibehalten haben).
+\end{uebung}
+
+\begin{uebung}[Teilermengen]
+    Liste die Teiler der folgenden Zahlen auf: $12$, $30$, $24$, $33$, $47$, $51$, $25$, $49$, $8640$.
+\end{uebung}
 
 
 \subsection{Größter gemeinsamer Teiler (ggT)}\index{ggT}
