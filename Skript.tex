@@ -386,10 +386,10 @@ Darüber hinaus können wir in der Mathematik dadurch dass wir das Modell defini
 
 \chapter{Mengen}\label{chapter:Mengen}
 
-Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mittelbar für die Prüfung relevant sind. Wir benutzen sie aber bei Erklärungen und auch bei Definitionen und führen sie deshalb (nicht rigoros) ein.
+Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mittelbar für die Prüfung relevant sind. Wir benutzen sie aber bei Erklärungen und auch bei Definitionen und führen sie deshalb (nicht rigoros) ein. Mengen sind grafisch mit Venn-Diagrammen (s. \ref{VennDiagramme}, S. \pageref{VennDiagramme}) darstellbar, die auch für Beweise verwendet werden dürfen.
 
 \begin{definition}[Menge]\index{Menge}
-    Wir nennen Eine \enquote{Ansammlung/ Sammlung} von \enquote{Dingen} eine Menge. Die Dinge in einer Menge nennen wir die \enquote{Elemente} der Menge. Wir schreiben $m \in \mathbb{M}$ falls das Element $m$ in der Menge $\mathbb{M}$ enthalten ist und $m \notin \mathbb{M}$ falls das Element $m$ nicht in der Menge $\mathbb{M}$ enthalten ist.
+    Wir nennen eine \enquote{Ansammlung/ Sammlung} von \enquote{Dingen} eine Menge. Die Dinge in einer Menge nennen wir die \enquote{Elemente} der Menge. Wir schreiben $m \in \mathbb{M}$ (und sagen \enquote{m ist Element von M} oder \enquote{m ist in M enthalten}.) falls das Element $m$ in der Menge $\mathbb{M}$ enthalten ist, und $m \notin \mathbb{M}$ (und sagen \enquote{m ist nicht Element von M} oder \enquote{m ist nicht in M enthalten}) falls das Element $m$ nicht in der Menge $\mathbb{M}$ enthalten ist.
 \end{definition}
 
 \begin{definition}[Teilmenge]\index{Teilmenge}\index{Element}
@@ -399,6 +399,16 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
 \begin{definition}[Vereinigung]\index{Vereinigung}
     Wir nennen die Menge $M_\cup$, die genau\footnote{genau diese und keine darüber hinaus, alle diese und nur genau alle diese} alle Elemente aus den Mengen $M_1$ und $M_2$ enthält \enquote{Vereinigung} von $M_1$ und $M_2$ und schreiben $M_\cup = M_1 \cup M_2$.
 \end{definition}
+
+\begin{definition}[Schnittmenge]\index{Schnittmenge}
+    Wir nennen eine Menge $M_\cap$, die genau die Elemente enthält, die sowohl in der Menge $M_1$ als auch in der Menge $M_2$ enthalten sind, \enquote{Schnittmenge} oder \enquote{Schnitt} der Mengen $M_1$ und $M_2$ und schreiben $M_\cap = M_1 \cap M_2$.
+\end{definition}
+
+\begin{beispiel}[Mengen]
+    Sei $M_1$ die Menge $M_1 = \{1,2,4,5,6\}$ und $M_2$ die Menge $M_2 = \{2,4,6,8\}$.
+
+    Dann sind $M_a = \{1,4\}$, $M_b = \{2,4\}$ Teilmengen von $M_1$, in mathematischer Notation $M_a \subset M_1$ und $M_b \subset M_1$. $M_a$ ist auch Teilmenge von $M_1$, geschrieben $M_a \subset M_1$, aber ist nicht Teilmenge von $M_2$, geschrieben $M_a \not\subset M_2$ oder $M_a \nsubseteq M_2$, weil 1 in $M_b$ enthalten ist, nicht aber in $M_2$. $\{1,2\}$ ist Teilmenge von $\{1,2\}$, geschrieben $\{1,2\} \subset \{1,2\}$. Die Möglichkeit der Gleichheit/ Identität betont man mit den Symbolen $\not\subset$ und $\nsubseteq$. Eine Menge ohne Elemente nennen wir \enquote{leere Menge}\index{leere Menge} und schreiben \glsdisp{symb:LeereMenge}{$\varnothing$} (auch $\emptyset$). Z.B. ist die Schnittmenge $M_\cap = \{1,2\} \cap \{3,4\}$ leer, geschrieben als $\{1,2\} \cap \{3,4\} = \varnothing$ oder $\{ \; \}$.
+\end{beispiel}
 
 
 \chapter{Zahlen}\label{chapter:Zahlen}
@@ -940,7 +950,7 @@ Das \enquote{$1 \times 1$}, sprich \enquote{ein mal eins}, wird perfekt auswendi
 };
 \end{tikzpicture}
 
-Die perfekte Beherrschung des \enquote{$1 \times 1$} ist \textbf{notwendige Voraussetzung} für sicheres und schnelles schriftliches Rechnen.
+Die perfekte Beherrschung des \enquote{$1 \times 1$} ist \textbf{notwendige Voraussetzung} für sicheres und schnelles schriftliches Rechnen. Wer Probleme mit dem Lernen hat meldet sich bei den Dozenten, um verschiedene Methoden zu lernen zu besprechen und ggf. Material zum Lernen zu bekommen.
 
 \chapter{Schriftlich Rechnen}\index{Schriftlich Rechnen}
 
@@ -2297,14 +2307,14 @@ Wir bezeichnen \textbf{Drehungen} durch \textbf{Winkel}, gemessen in \textbf{Gra
     Wir nennen einen Winkel $\varphi$ mit $180° < \varphi < 360°$ \enquote{\textbf{Überstumpfer Winkel}}.\index{Überstumpfer Winkel}
 \end{definition}
 
-Wir benutzen in der Regel für die Winkel an den Punkten $A, B, C, D$ in Vierecken $\alpha$, $\beta$, $\gamma$ und $\delta$. Entsprechend $\alpha$, $\beta$, $\gamma$ an $A, B, C$ im Dreieck. Diese Vereinbarung der Symbole solltet Ihr einhalten und wird in den Prüfungen eingehalten, so dass sie mit unseren Planskizzen übereinstimmt.
+Wir benutzen in der Regel für die Winkel an den Punkten $A, B, C, D$ in Vierecken \glsdisp{symb:alpha}{$\alpha$}, \glsdisp{symb:beta}{$\beta$}, \glsdisp{symb:gamma}{$\gamma$} und \glsdisp{symb:delta}{$\delta$}. Entsprechend \glsdisp{symb:alpha}{$\alpha$}, \glsdisp{symb:beta}{$\beta$}, \glsdisp{symb:gamma}{$\gamma$} an $A, B, C$ im Dreieck. Diese Vereinbarung der Symbole solltet Ihr einhalten und wird in den Prüfungen eingehalten, so dass sie mit unseren Planskizzen\index{Planskizze} übereinstimmt.
 
 \begin{satz}[Winkelsumme am Schnittpunkt von Geraden]
-    Die Summe der Winkel am Schnittpunkt zweier Geraden beträgt 360° (wir nennen einen Winkel, der genau ein ganzer Kreis ist \textbf{Vollwinkel}).
+    Die Summe der Winkel am Schnittpunkt zweier Geraden beträgt 360° (wir nennen einen Winkel, der genau ein ganzer Kreis ist \textbf{Vollwinkel})\index{Vollwinkel}.
 \end{satz}
 
 \begin{satz}[Winkelsumme über einer Geraden]
-    Die Summe der Winkel über einer Geraden beträgt 180° (wir nennen einen Winkel, der genau ein halber Kreis ist \textbf{Gestreckter Winkel}).
+    Die Summe der Winkel über einer Geraden beträgt 180°\index{Winkelsumme!an Geraden} (wir nennen einen Winkel, der genau ein halber Kreis ist \textbf{Gestreckter Winkel})\index{gestreckter Winkel}.
 \end{satz}
 
 \begin{figure}
@@ -2329,7 +2339,7 @@ Wir benutzen in der Regel für die Winkel an den Punkten $A, B, C, D$ in Viereck
   \caption{Winkelsumme am Schnittpunkt von Geraden: u.a. $\alpha + \beta = 180°$ und $\alpha = \gamma$ sowie $\beta = \delta$}\label{fig:WinkelsummeSchnittpunkt}
 \end{figure}
 
-Beachte dass jeweils zwei benachbarte Winkel zusammen 180° ergeben. Da zwei benachbarte Winkel den Halbkreis über einer Gerade schlagen ist ihre Summe 180°. Die gegenüber liegenden Winkel sind gleich.
+Beachte dass jeweils zwei benachbarte Winkel zusammen 180° ergeben. Da zwei benachbarte Winkel den Halbkreis über einer Gerade schlagen ist ihre Summe 180°. Die gegenüber liegenden Winkel sind gleich.\index{Winkelsumme!an Geraden}
 
 
 \begin{beispiel}[Winkel]\index{Winkel}
@@ -2580,7 +2590,7 @@ Beachte dass somit alle Rechtecke Vierecke sind, aber nur einige Vierecke Rechte
   \caption{Planskizze Rechteck}\label{fig:RechteckPlanskizze}
 \end{figure}
 
-Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) gegen den \glsdisp{Uhrzeigersinn}{\textbf{Uhrzeigersinn}} $A$, $B$, $C$ und $D$. Die gerade Strecke von $A$ nach $B$, $\overline{AB}$, nennen wir \enquote{die Seite $a$}. Die gerade Strecke von $B$ nach $C$, $\overline{BC}$, nennen wir \enquote{die Seite $b$}. Die gerade Strecke von $C$ nach $D$, $\overline{CD}$, nennen wir \enquote{die Seite $c$}. Die gerade Strecke von $D$ nach $C$, $\overline{DC}$, nennen wir \enquote{die Seite $c$}. Die gerade Strecke von $D$ nach $A$, $\overline{DA}$, nennen wir \enquote{die Seite $d$}. Den Winkel am Punkt $A$ nennen wir \glsdisp{symb:alpha}{$\alpha$}, sprich \enquote{alpha}. Den Winkel am Punkt $B$ nennen wir \glsdisp{symb:beta}{$\beta$}, sprich \enquote{beta}. Den Winkel am Punkt $C$ nennen wir \glsdisp{symb:gamma}{$\gamma$}, sprich \enquote{gamma}. Den Winkel am Punkt $D$ nennen wir \glsdisp{symb:delta}{$\delta$}, sprich \enquote{delta}.
+Wir nennen die Punkte eines Rechtecks (s. Abb. \ref{fig:RechteckPlanskizze}) gegen den \glsdisp{Uhrzeigersinn}{\textbf{Uhrzeigersinn}} $A$, $B$, $C$ und $D$. Die gerade Strecke von $A$ nach $B$, $\overline{AB}$, nennen wir \enquote{die Seite $a$}. Die gerade Strecke von $B$ nach $C$, $\overline{BC}$, nennen wir \enquote{die Seite $b$}. Die gerade Strecke von $C$ nach $D$, $\overline{CD}$, nennen wir \enquote{die Seite $c$}. Die gerade Strecke von $D$ nach $C$, $\overline{DC}$, nennen wir \enquote{die Seite $c$}. Die gerade Strecke von $D$ nach $A$, $\overline{DA}$, nennen wir \enquote{die Seite $d$}. Den Winkel am Punkt $A$ nennen wir \glsdisp{symb:alpha}{$\alpha$}, sprich \enquote{\glsdisp{symb:alpha}{alpha}}. Den Winkel am Punkt $B$ nennen wir \glsdisp{symb:beta}{$\beta$}, sprich \enquote{beta}. Den Winkel am Punkt $C$ nennen wir \glsdisp{symb:gamma}{$\gamma$}, sprich \enquote{gamma}. Den Winkel am Punkt $D$ nennen wir \glsdisp{symb:delta}{$\delta$}, sprich \enquote{delta}.
 
 \begin{eqnarray}\label{eqn:RechteckFormeln}
     A_R &=& a b\\
@@ -3485,7 +3495,7 @@ Sind drei Seitenlängen eines Dreiecks bekannt:
   \item Wir zeichnen eine gerade Strecke von 8cm am unteren Ende des Blattes und nennen sie c. Wir tragen die Punkte A und B ein.
   \item Wir stellen den Zirkel auf die Länge der zweiten Seite an A, der Seite b=5cm ein und schlagen einen großzügigen Bogen nach oben (nach unten würden wir die Namenskonventionen für Dreiecke verletzen).
   \item Wir stellen den Zirkel auf die Länge der zweiten Seite an B, der Seite a=6cm ein und schlagen einen Bogen, der den ersten Bogen schneidet. Dort tragen wir den Punkt C ein und verbinden die Punkte A und C zur Seite b und B und C zur Seite a.
-  \item Wir tragen geforderte Beschriftungen ein, falls nichts anders angegeben ist die Namen der Eckpunkte A, B und C, der Seiten a, b und c, jeweils mit Seitenlängen (oder führen die Maße unter oder neben der Zeichnung auf) und die Winkel $\alpha$, $\beta$ und $\gamma$.
+  \item Wir tragen geforderte Beschriftungen ein, falls nichts anders angegeben ist die Namen der Eckpunkte A, B und C, der Seiten a, b und c, jeweils mit Seitenlängen (oder führen die Maße unter oder neben der Zeichnung auf) und die Winkel \glsdisp{symb:alpha}{$\alpha$}, $\beta$ und $\gamma$.
 \end{enumerate}
 
 \begin{figure}
@@ -3522,7 +3532,7 @@ Sind drei Seitenlängen eines Dreiecks bekannt:
 Sind zwei Winkel gegeben, so haben wir eigentlich den Fall eine Seite und drei Winkel, denn der fehlende Winkel ist die Winkelsumme minus beide gegebenen Winkel.
 
 \begin{beispiel}[eine Seite und zwei Winkel]
-    \textbf{Aufgabe:} Konstruiere das Dreieck mit $c=7cm$, $\alpha=40°$ und $\beta=50°$.
+    \textbf{Aufgabe:} Konstruiere das Dreieck mit $c=7cm$, \glsdisp{symb:alpha}{$\alpha=40°$} und $\beta=50°$.
 
     Dieser Fall ist der einfachere von zwei etwas unterschiedlichen Fällen von einer Seite und zwei Winkeln. Wir haben eine Seite und beide an den Eckpunkten der Seite liegende Winkel. Wir zeichnen die Seite, messen die Winkel und zeichnen in den durch die Winkel vorgegebenen Richtungen Geraden. Der Schnittpunkt der beiden Geraden gibt uns den dritten Punkt.
 
@@ -3736,7 +3746,7 @@ Ein Kreisdiagramm stellt insgesamt immer hundert Prozent, also eine Gesamtheit d
 \subsection{Flächendiagramm}\index{Flächendiagramm}
 
 
-\subsection{Venn-Diagramm}\index{Venn-Diagramm}
+\subsection{Venn-Diagramm}\index{Venn-Diagramm}\label{VennDiagramme}
 
 Mit einem \textbf{Venn-Diagramm} können wir Mengen hinsichtlich ihrer Schnitte darstellen. Venn-Diagramme können für (rigorose) Beweise benutzt werden. Die Mengen\footnote{Es können beliebig viele Mengen sein, wirklich übersichtlich sind i.d.R. nur bis zu drei Mengen (ggf. plus Komplementärmenge in der alle dargestellten Mengen liegen).} Werden als Kreise dargestellt, die sich teilweise überschneiden.
 
@@ -3957,6 +3967,8 @@ Wenn man (in der Prüfung) Zeit hat kann man seine eigenen Ergebnisse überprüf
 \chapter{Algorithmen}\index{Algorithmen}
 
 \section{Was sind Algorithmen?}
+
+Wir nennen Vorschriften, die genau abgearbeitet ein Ergebnis erreichen, einen \enquote{Algorithmus}. Ein Rezept in einem Kochbuch können wir als Algorithmus bezeichnen. Uns interessieren hier mathematische Algorithmen, wie das Verfahren einen größten gemeinsamen Teiler (ggT) oder Primzahlen zu finden. Die Werkzeuge Computer und Taschenrechner können z.B. nichts anderes als Algorithmen anzuwenden - das dann allerdings schneller als wir und ohne Fehler.
 
 \section{ggT - Euklidischer Algorithmus}
 
