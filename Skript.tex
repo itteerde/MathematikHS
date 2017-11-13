@@ -541,7 +541,7 @@ Genau genommen ersetzen wir wie im Beispiel zu sehen, in diesem Fall mit einer r
 
 \section{Dezimalsystem}\index{Dezimalsystem}\label{Dezimalsystem}
 
-Weltweit hat sich das \textbf{Dezimalsystem} für sowohl alltägliche als auch wissenschaftlich-technische Rechnungen durchgesetzt. Ausnahmen sind Rechnungen mit Zeiten mit Maßeinheiten größer als Sekunden und die technische Umsetzung in der Informatik (Binärsystem).
+Weltweit hat sich das \textbf{Dezimalsystem} für sowohl alltägliche als auch wis\-sen\-schaft\-lich-\-tech\-nische Rechnungen durchgesetzt. Ausnahmen sind Rechnungen mit Zeiten mit Maßeinheiten größer als Sekunden und die technische Umsetzung in der Informatik (Binärsystem).
 
 Ein Stellenwertsystem funktioniert wie folgt: Es gibt eine 1er-Stelle ($10^0=1$). D.h. die Zahl Eins schreiben wir \enquote{1} da $1 \cdot 10^0 = 1$. Die nächstgrößere Stelle (nach links gehend) ist im Dezimalsystem die 10er-Stelle ($10^1=10$). Es folgen nach links die 100er-Stelle, die 1000er-Stelle usw. Jede Stelle ist im Dezimalsystem\footnote{Das Dezimalsystem ist ein Stellenwert-System mit der Basis 10. Ein wichtiges, aber nicht prüfungsrelevantes, Stellenwertsystem ist das Binärsystem mit 2 als Basis. Das ist das Stellenwertsystem, das allen Computern zugrunde liegt - und damit auch Eurem Taschenrechner. Das Dezimalsystem nutzen wir ziemlich sicher nur weil wir 10 Finger haben und der Anfang des Umgangs mit Zahlen ziemlich sicher das Zählen mit zehn Fingern war.} 10 mal so groß wie ihr rechter Nachbar. Das gilt auch von der 1er-Stelle nach rechts. Die nächste Stelle rechts ist die $\frac{1}{10}$-Stelle, dann die $\frac{1}{100}$-Stelle, die $\frac{1}{1000}$-Stelle und so weiter. Nach links also mal zehn und nach rechts geteilt durch zehn.
 
@@ -566,17 +566,17 @@ $10^0$ ist gleich eins. Das akzeptieren wir bitte, weil es in die Reihe passt un
         \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
         \node at (0.75,10.75) {1};
         \node at (1.25,10.75) {5};
-        \node at (1.75,10.65) {,};
-        \node at (2.25,10.75) {7};
-        \node at (2.75,10.75) {3};
-        \node at (3.25,10.75) {$\times$};
-        \node at (3.75,10.75) {2};
-        \node at (4.25,10.65) {,};
-        \node at (4.75,10.75) {7};
-        \node at (5.25,10.75) {1};
-        
+        \node at (1.5,10.65) {,};
+        \node at (1.75,10.75) {7};
+        \node at (2.25,10.75) {3};
+        \node at (2.75,10.75) {$\times$};
+        \node at (3.25,10.75) {2};
+        \node at (3.5,10.65) {,};
+        \node at (3.75,10.75) {7};
+        \node at (4.25,10.75) {1};
+
         \node at (5.75,10.75) {=};
-        
+
         \node at (6.75,10.75) {1};
         \node at (7.25,10.75) {5};
         \node at (7.75,10.65) {,};
@@ -605,6 +605,38 @@ $10^0$ ist gleich eins. Das akzeptieren wir bitte, weil es in die Reihe passt un
         \node at (10.25,9.65) {,};
         \node at (10.75,9.75) {0};
         \node at (11.25,9.75) {1};
+
+        \node at (1.75,9.75) {3};
+        \node at (2.25,9.75) {1};
+        \node at (2.5,9.65) {,};
+        \node at (2.75,9.75) {4};
+        \node at (3.25,9.75) {6};
+
+        \node at (1.75,9.25) {1};
+        \node at (2.25,9.25) {1};
+        \node at (2.5,9.15) {,};
+        \node at (2.75,9.25) {0};
+        \node at (3.25,9.25) {1};
+        \node at (3.75,9.25) {1};
+
+        \node at (2.25,8.75) {0};
+        \node at (2.5,8.65) {,};
+        \node at (2.75,8.75) {1};
+        \node at (3.25,8.75) {5};
+        \node at (3.75,8.75) {7};
+        \node at (4.25,8.75) {3};
+        
+        \draw (0.25,8.25) -- (7.75,8.25);
+       
+        \node at (1.75,7.75) {4};
+        \node at (2.25,7.75) {2};
+        \node at (2.5,7.65) {,};
+        \node at (2.75,7.75) {6};
+        \node at (2.85,8.35) {\tiny{1}};
+        \node at (3.25,7.75) {2};
+        \node at (3.75,7.75) {8};
+        \node at (4.25,7.75) {3};
+
   \end{tikzpicture}
   \caption{Dezimalsystem: Multiplikation mit Kommata}\label{fig:Dezimalsystem02}
 \end{figure}
