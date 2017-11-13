@@ -543,7 +543,7 @@ Genau genommen ersetzen wir wie im Beispiel zu sehen, in diesem Fall mit einer r
 
 Weltweit hat sich das \textbf{Dezimalsystem} für sowohl alltägliche als auch wissenschaftlich-technische Rechnungen durchgesetzt. Ausnahmen sind Rechnungen mit Zeiten mit Maßeinheiten größer als Sekunden und die technische Umsetzung in der Informatik (Binärsystem).
 
-Ein Stellenwertsystem funktioniert wie folgt: Es gibt eine 1er-Stelle ($10^0=1$). D.h. die Zahl Eins schreiben wir \enquote{1} da $1 \cdot 10^0 = 1$. Die nächstgrößere Stelle (nach links gehend) ist im Dezimalsystem die 10er-Stelle ($10^1=10$). Es folgen nach links die 100er-Stelle, die 1000er-Stelle usw. Jede Stelle ist 10 mal so groß wie ihr rechter Nachbar. Das gilt auch von der 1er-Stelle nach rechts. Die nächste Stelle rechts ist die $\frac{1}{10}$-Stelle, dann die $\frac{1}{100}$-Stelle, die $\frac{1}{1000}$-Stelle und so weiter. Nach links also mal zehn und nach rechts geteilt durch zehn.
+Ein Stellenwertsystem funktioniert wie folgt: Es gibt eine 1er-Stelle ($10^0=1$). D.h. die Zahl Eins schreiben wir \enquote{1} da $1 \cdot 10^0 = 1$. Die nächstgrößere Stelle (nach links gehend) ist im Dezimalsystem die 10er-Stelle ($10^1=10$). Es folgen nach links die 100er-Stelle, die 1000er-Stelle usw. Jede Stelle ist im Dezimalsystem\footnote{Das Dezimalsystem ist ein Stellenwert-System mit der Basis 10. Ein wichtiges, aber nicht prüfungsrelevantes, Stellenwertsystem ist das Binärsystem mit 2 als Basis. Das ist das Stellenwertsystem, das allen Computern zugrunde liegt - und damit auch Eurem Taschenrechner. Das Dezimalsystem nutzen wir ziemlich sicher nur weil wir 10 Finger haben und der Anfang des Umgangs mit Zahlen ziemlich sicher das Zählen mit zehn Fingern war.} 10 mal so groß wie ihr rechter Nachbar. Das gilt auch von der 1er-Stelle nach rechts. Die nächste Stelle rechts ist die $\frac{1}{10}$-Stelle, dann die $\frac{1}{100}$-Stelle, die $\frac{1}{1000}$-Stelle und so weiter. Nach links also mal zehn und nach rechts geteilt durch zehn.
 
 $10^0$ ist gleich eins. Das akzeptieren wir bitte, weil es in die Reihe passt und die Dozenten sagen dass das richtig ist, ohne es rigoros einzuführen. $10^1=10$, $10^2=100$, $10^5=100.000$, $10^{-1}=\frac{10}{1}$, $10^{-3}=\frac{1}{1000}$, $10^{-6}=\frac{1}{1.000.000}$, ... Auch hier verzichten wir auf eine Definition und verlassen uns darauf dass die Regel mit Übung natürlich wird.
 
@@ -559,13 +559,59 @@ $10^0$ ist gleich eins. Das akzeptieren wir bitte, weil es in die Reihe passt un
     \end{align}
 \end{beispiel}
 
+\begin{beispiel}[Multiplikation mit Dezimalsystem]
 \begin{figure}
   \centering
   \begin{tikzpicture}
         \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
+        \node at (0.75,10.75) {1};
+        \node at (1.25,10.75) {5};
+        \node at (1.75,10.65) {,};
+        \node at (2.25,10.75) {7};
+        \node at (2.75,10.75) {3};
+        \node at (3.25,10.75) {$\times$};
+        \node at (3.75,10.75) {2};
+        \node at (4.25,10.65) {,};
+        \node at (4.75,10.75) {7};
+        \node at (5.25,10.75) {1};
+        
+        \node at (5.75,10.75) {=};
+        
+        \node at (6.75,10.75) {1};
+        \node at (7.25,10.75) {5};
+        \node at (7.75,10.65) {,};
+        \node at (8.25,10.75) {7};
+        \node at (8.75,10.75) {3};
+        \node at (9.25,10.75) {$\times$};
+        \node at (9.75,10.75) {2};
+        \node at (6.25,10.25) {+};
+        \node at (6.75,10.25) {1};
+        \node at (7.25,10.25) {5};
+        \node at (7.75,10.15) {,};
+        \node at (8.25,10.25) {7};
+        \node at (8.75,10.25) {3};
+        \node at (9.25,10.25) {$\times$};
+        \node at (9.75,10.25) {0};
+        \node at (10.25,10.15) {,};
+        \node at (10.75,10.25) {7};
+        \node at (6.25,9.75) {+};
+        \node at (6.75,9.75) {1};
+        \node at (7.25,9.75) {5};
+        \node at (7.75,9.65) {,};
+        \node at (8.25,9.75) {7};
+        \node at (8.75,9.75) {3};
+        \node at (9.25,9.75) {$\times$};
+        \node at (9.75,9.75) {0};
+        \node at (10.25,9.65) {,};
+        \node at (10.75,9.75) {0};
+        \node at (11.25,9.75) {1};
   \end{tikzpicture}
-  \caption{Dezimalsystem}\label{fig:Dezimalsystem01}
+  \caption{Dezimalsystem: Multiplikation mit Kommata}\label{fig:Dezimalsystem02}
 \end{figure}
+
+Wir rechnen ein Produkt aus zwei Faktoren mit Kommata aus, \enquote{Dezimalbrüche}. $\prod = a \cdot b$, $a=15,73$, $b=2,71$. Wir schreiben die Faktoren ordentlich auf, so dass wir eine Spalte im karierten Papier pro Stelle haben (ob das Komma [interessant ist für die Nutzung der Spalten nur der zweite Faktor] eine eigene Spalte bekommt ist Geschmackssache. Wir schauen uns die Zahlen genauer an um sowohl etwas über das (10er-) Stellenwertsystem zu lernen, was bei der Prozentrechnung sehr hilfreich sein wird, als auch einen Schritt in Richtung Überschlagsrechnen zu gehen. Mit Prozent oder Hundertstel schätzt sich einfacher als mit Komma-Zahlen. $15,73 \cdot 100 = 1573$. $2,71 \cdot 100 = 271$. Also $15,73=\frac{1573}{100}$ und $2,71=\frac{271}{100}$. In der Bruchrechnung lernen wir dass zwei Brüche $a, b$ miteinander multipliziert werden indem $\frac{p}{q} = \frac{z_a}{n_a} \cdot \frac{z_b}{n_b} = \frac{z_a \cdot z_b}{n_a \cdot n_b}$, also die Zähler miteinander multipliziert werden und die Nenner miteinander multipliziert werden. $\frac{1573}{100} \cdot \frac{271}{100} = \frac{1573 \cdot 271}{100 \cdot 100}$. Also ist $15,73 \cdot 2,71 = \frac{1573 \cdot 271}{100 \cdot 100} = \frac{426.283}{10.000}$. Wir erwarten also dass es als Dezimalbruch $15,73 \cdot 2,71 = 42,6283$ ist.
+
+\end{beispiel}
 
 
 \chapter{Überschlagsrechnen}\index{Überschlagsrechnen}\label{Überschlagsrechnen}
@@ -3991,7 +4037,13 @@ Wieso brauchen wir überhaupt ein eigenes Skript? Schließlich machen Millionen 
 
 Der Autor erwartet aufgrund der Art und Weise wie die Gruppe der Teilnehmer zusammengekommen ist nicht nur erhebliche Heterogenität, sondern auch eine durchschnittliche Begabung der Teilnehmer, die über die deutsche Hauptschulklasse, wo diese überhaupt noch existiert, deutlich hinaus geht. Dem sollte Rechnung getragen werden durch individuell angemessene Abstraktionsniveaus, die der Text besonders unterstützen soll, da wo die Binnendifferenzierung an ihre Grenzen stößt, begabtere Teilnehmer dann aber erwartungsgemäß mit dem Text arbeiten können sollten, so wie das selbstständige Lernen und Üben mit Lehrbücher für sie eine grundlegende Fähigkeit ist, ohne die sie eine ihren Potentialen entsprechende Bildungs- und Berufslaufbahn nicht realisieren können werden\footnote{Das beginnt in einem wachsenden Teil der Ausbildungsberufe bereits in Berufsschule und Prüfungsvorbereitung, nicht nur aber besonders, in den jungen technischen Berufen von den vielfältigen Elektronikern, die den Elektriker abgelöst haben über Mechatroniker bis hin zum Fachinformatiker.}.
 
-Mit der verfügbaren Literatur der Schulbuchverlage würde das bestenfalls dazu führen dass wir mit fünf Büchern unterrichten würden, wahrscheinlich würde es mehr in Richtung von zehn Büchern gehen. Das tatsächlich inhaltlich völlig ausreichende Angebot an Lehrbüchern, die sich eher begleitend an die Oberstufe richten, oder gleich explizit für den Übergang in die Universität gedacht sind, hilft uns nur dabei das Vorgehen der Dozenten zu planen. Die Teilnehmer selbst können davon nicht selbständig profitieren, da z.B. \citep{Arens2015} zwar alle Inhalte enthält, für die Teilnehmer aber völlig unmöglich zu lesen ist. Die \enquote{Stark-Hefte} \citep{StarkHSAMaHe2018}, \citep{StarkRSAMaHe2018}) bieten eine sehr gute Prüfungsvorbereitung, setzen aber (vernünftigerweise) auf ein Vorwissen auf, das im speziellen Kontext nicht vorausgesetzt werden kann. Sie sind dennoch, zusammen mit den alten Prüfungen der Nichtschülerprüfungen und den Lehrplänen (s. \citep{LehrplanMathematikHauptschuleHessen2017}, \citep{LehrplanMathematikRealschuleHessen2017}) die Basis auf der das Konzept steht. Solche Materialien sind jedoch nicht hinreichend, sondern nur notwendig, und müssen durch die Dozenten generell für die komplette Gruppe und aufgrund der Heterogenität auch individuell ergänzt werden, insbesondere aber nicht nur hinsichtlich vorausgesetzten mathematischen Kompetenzen bis zurück in die Elementarbildung. Alternativ zum eigenen Text wäre sehr wahrscheinlich eine umfangreiche Sammlung von kopiertem Material möglich, die sicherlich erklärt und ergänzt durch Vorträge der Dozenten hinreichend sein können - mindestens für den Hauptschulabschluss, so wie das mit dem letzten Jahrgang auch in hervorragender Weise demonstriert worden ist. Spätestens mit der nochmals erheblich ausgedehnten Spreizung der Gruppe für Realschulabschlüsse stößt ein solches Vorgehen nach Ansicht des Autors aber an Grenzen, unserer Einschätzung nach auch grundsätzlich, sicher aber vor dem Hintergrund der nun vorhandenen Dozenten. Generell hält der Autor das Ansinnen mehrerer Teilnehmer, vom zweiten Tag an explizit vertreten, ein Buch haben zu wollen, durchaus für berechtigt und darüber hinaus auch sehr sinnvoll. Angenommen die Einschätzung des Autors träfe zu, dass alternativ nur erheblicher Aufwand (nochmals mehr als bisher, s. Heterogenität durch Realschulabschluss!) der Dozenten verbunden mit zumindest duzenden, unserer Einschätzung nach weit über hundert Kopien, zielführend wäre, ist es angesichts der Ressourcen des Dozententeams und der unzureichenden Fähigkeiten der Teilnehmer eine umfangreiche Lose-Blatt-Sammlung zu beherrschen, unserer Ansicht nach defacto zwingend einen zusammenhängenden gebundenen Text selbst zur Verfügung zu stellen.
+Mit der verfügbaren Literatur der Schulbuchverlage würde das bestenfalls dazu führen dass wir mit fünf Büchern unterrichten würden, wahrscheinlich würde es mehr in Richtung von zehn Büchern gehen. Das tatsächlich inhaltlich völlig ausreichende Angebot an Lehrbüchern, die sich eher begleitend an die Oberstufe richten, oder gleich explizit für den Übergang in die Universität gedacht sind, hilft uns nur dabei das Vorgehen der Dozenten zu planen. Die Teilnehmer selbst können davon nicht selbständig profitieren, da z.B. \citep{Arens2015} zwar alle Inhalte enthält, für die Teilnehmer aber völlig unmöglich zu lesen ist.
+
+Die \enquote{Stark-Hefte} \citep{StarkHSAMaHe2018}, \citep{StarkRSAMaHe2018}) bieten eine sehr gute Prüfungsvorbereitung, setzen aber (vernünftigerweise) auf ein Vorwissen auf, das im speziellen Kontext nicht vorausgesetzt werden kann. Sie sind dennoch, zusammen mit den alten Prüfungen der Nichtschülerprüfungen und den Lehrplänen (s. \citep{LehrplanMathematikHauptschuleHessen2017}, \citep{LehrplanMathematikRealschuleHessen2017}) die Basis auf der das Konzept steht. Solche Materialien sind jedoch nicht hinreichend, sondern nur notwendig, und müssen durch die Dozenten generell für die komplette Gruppe und aufgrund der Heterogenität auch individuell ergänzt werden, insbesondere aber nicht nur hinsichtlich vorausgesetzten mathematischen Kompetenzen bis zurück in die Elementarbildung.
+
+Alternativ zum eigenen Text wäre sehr wahrscheinlich eine umfangreiche Sammlung von kopiertem Material möglich, die sicherlich erklärt und ergänzt durch Vorträge der Dozenten hinreichend sein können - mindestens für den Hauptschulabschluss, so wie das mit dem letzten Jahrgang auch in hervorragender Weise demonstriert worden ist. Spätestens mit der nochmals erheblich ausgedehnten Spreizung der Gruppe für Realschulabschlüsse stößt ein solches Vorgehen nach Ansicht des Autors aber an Grenzen, unserer Einschätzung nach auch grundsätzlich, sicher aber vor dem Hintergrund der nun vorhandenen Dozenten. Noch beherrschbar wäre zwei Gruppen zu trennen von denen eine den Hauptschulabschluss in Angriff nimmt und eine den Realschulabschluss. Das erscheint uns aber weder gruppendynamisch noch hinsichtlich der Durchlässigkeit, die bei eine frühen Trennung notwendig wäre, nicht als erstrebenswert\footnote{Diesen Weg müsste man wohl gehen wenn die Ressourcen des Teams für den zur Zeit verfolgten Weg nicht ausreichen würden.}.
+
+Generell hält der Autor das Ansinnen mehrerer Teilnehmer, vom zweiten Tag an explizit vertreten, ein Buch haben zu wollen, durchaus für berechtigt und darüber hinaus auch sehr sinnvoll. Angenommen die Einschätzung des Autors träfe zu, dass alternativ nur erheblicher Aufwand (nochmals mehr als bisher, s. Heterogenität durch Realschulabschluss!) der Dozenten verbunden mit zumindest duzenden, unserer Einschätzung nach weit über hundert Kopien, zielführend wäre, ist es angesichts der Ressourcen des Dozententeams und der unzureichenden Fähigkeiten der Teilnehmer eine umfangreiche Lose-Blatt-Sammlung zu beherrschen, unserer Ansicht nach defacto zwingend einen zusammenhängenden gebundenen Text selbst zur Verfügung zu stellen.
 
 
 \chapter{Eckpfeiler der Konzeption}\label{Eckpfeiler}
