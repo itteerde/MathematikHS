@@ -2961,6 +2961,16 @@ Der \textbf{Kreis} ist die einzige Fläche, die für den Hauptschulabschluss rel
 
 Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementaren Flächen zu tun. In der Regel treffen wir auf Flächen, die wir erst aus solchen zusammensetzen oder ausschneiden müssen.
 
+Aufgaben der Art \enquote{zusammengesetzte Figur} lösen wir indem wir sie in elementare Flächen zerlegen (wenn wir die Fläche berechnen sollen):
+\begin{enumerate}
+  \item \textbf{Zerlegung in elementare Flächen:} Wir \enquote{puzzeln} die Figur aus elementaren Flächen, d.h. wir legen (ohne Überschneidung) aus elementaren Flächen zusammen oder schneiden elementare Flächen aus der Figur aus.
+  \item \textbf{Aufstellen der Summenformel:} Wir schreiben die gesamte Fläche $A_\Sigma$ als Summe aus elementaren Flächen. Zusammen gelegte Flächen addieren wird, weggeschittene subtrahieren wir.
+  \item \textbf{Berechnen der Unbekannten aus der Summenformel:} Wir schreiben für jede elementare Fläche die Formel, setzen ein und rechnen aus.
+  \item \textbf{Berechnen der Summenformel:} Wir rechnen die Summe aus und erhalten die Lösung der Aufgabe.
+\end{enumerate}
+
+
+
 
 \begin{beispiel}
     Zeichne die abgebildete Figur (s. Abb. \ref{fig:BeispielEbeneFlaeche001}) im Maßstab 1:100 ab und berechne die Fläche.
@@ -2984,20 +2994,12 @@ Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementar
             \draw[<->] (0.5,1) -- (0.5,4) node[rotate=90, anchor=center,midway,fill=white] {\footnotesize 6m};%rotate=90, anchor=center,
             \draw[<->] (1,0.5) -- (5.5,0.5) node[midway,fill=white] {\footnotesize 9m};%rotate=90, anchor=center,
 
-            \node at (3.25,2.5) {$A_1$};
+            \node at (3.25,2.5) {$A_3$};
             \node at (3.25,6.25) {$A_2$};
-            \node at (3.25,10.125) {$A_3$};
+            \node at (3.25,10.125) {$A_1$};
       \end{tikzpicture}
       \caption{zeichne im Maßstab und berechne die Fläche}\label{fig:BeispielEbeneFlaeche001}
     \end{figure}
-
-    Aufgaben der Art \enquote{zusammengesetzte Figur} lösen wir indem wir sie in elementare Flächen zerlegen (wenn wir die Fläche berechnen sollen):
-    \begin{enumerate}
-      \item Zerlegung in elementare Flächen.
-      \item Aufstellen der Summenformel.
-      \item Berechnen der Unbekannten aus der Summenformel.
-      \item Berechnen der Summenformel.
-    \end{enumerate}
 
     \subsubsection{1.) Zerlegung in elementare Flächen}
     Wir setzen die Figur aus einem Halbkreis $A_1$, einem Rechteck $A_2$ und einem Dreieck $A_3$ zusammen.
@@ -3025,7 +3027,7 @@ Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementar
 
 
 \begin{beispiel}
-    Berechne die Fläche der abgebildeten Figur.
+    Berechne die Fläche der abgebildeten Figur (s. Abb. \ref{fig:BeispielEbeneFläche02}).
     
     \begin{figure}
       \centering
@@ -3061,24 +3063,33 @@ Im Berufsleben, oder z.B. auch als Heimwerker, haben wir es selten mit elementar
       \end{tikzpicture}
       \caption{Flächenberechnung einer ebenen Figur}\label{fig:BeispielEbeneFläche02}
     \end{figure}
-\end{beispiel}
-
-
-\begin{beispiel}[Prüfungsaufgabe]
-    In einer Prüfung der letzten Jahre war die Figur die Innenfläche (Fußballplatz und Laufbahn) eines Stadions.
-
-\begin{figure}
-  \centering
-  \begin{tikzpicture}
-        \draw[fill=green] (5,2) -- (10.25,2) -- (10.25,5.4) -- (5,5.4) -- (5,2);
-        \draw[color=white] (5,4.5) -- (5.8,4.5) -- (5.8,2.62) -- (5,2.62);
-
-        \draw (5,1.75) -- (10.25,1.75) arc (-90:90:1.95) -- (5,5.65) arc (90:270:1.95);
-        \draw (5,1.5) -- (10.25,1.5) arc (-90:90:2.2) -- (5,5.9) arc (90:270:2.2);
-  \end{tikzpicture}
-  \caption{Figur (Prüfungsaufgabe)}\label{fig:FigurPruefungsaufgabeStadion}
-\end{figure}
-
+    
+    \subsubsection{1.) Zerlegung in elementare Flächen}
+    
+    Wir zerlegen die Figur in das Rechteck $A_1$, die Ausschnitte aus $A_1$, das Rechteck $A_2$ und den Halbkreis $A_3$, und den Halbkreis $A_4$.
+    
+    \subsubsection{2.) Aufstellen der Summenformel}
+    
+    \begin{equation*}
+        A_\Sigma = A_1 - A_2 - A_3 + A_4
+    \end{equation*}
+    
+    \subsubsection{3.) Berechnen der Unbekannten in der Summenformel}
+    
+    \begin{longtable}{l}
+        $A_1 = A_R = a \cdot b = 14,5\text{m} \cdot 10\text{m} = 145\text{m}^2$\\
+        $A_2 = A_R = a \cdot b = 2\text{m} \cdot 1,5\text{m} = 3\text{m}^2$\\
+        $A_3 = \frac{1}{2} A_K = \frac{1}{2} \cdot \pi r^2 \approx \frac{1}{2} \cdot 3,14 \cdot (1,5\text{m})^2 \approx 3,5\text{m}^2$\\
+        $A_4 = \frac{1}{2} A_K = \frac{1}{2} \cdot \pi r^2 \approx \frac{1}{2} \cdot 3,14 \cdot (5\text{m})^2 \approx 39,25\text{m}^2$
+    \end{longtable}
+    
+    \subsubsection{4.) Ausrechnen der Summenformel}
+    
+    \begin{longtable}{lcl}
+        $A_\Sigma$ & = & $A_1 - A_2 - A_3 + A_4$\\
+        & $\approx$ & $145\text{m}^2 - 3\text{m}^2 - 3,5\text{m}^2 + 39,25\text{m}^2$\\
+        & $\approx$ & $178 \text{m}^2$
+    \end{longtable}
 \end{beispiel}
 
 
@@ -4165,149 +4176,6 @@ Wir nennen Vorschriften, die genau abgearbeitet ein Ergebnis erreichen, einen \e
 
 
 
-
-\part{Konzept}\label{Konzept}
-
-
-\chapter{Umgang mit diesem Text}
-
-Der vorliegende Text richtet sich sowohl an die Teilnehmer als auch an die Dozenten. Für die Teilnehmer sind viele Teile des Textes zunächst unverständlich. Der Text sollte dem Rechnung tragen indem er
-\begin{enumerate}
-  \item erst nach einigen Monaten Deutschunterricht im Projekt ausgegeben wird,
-  \item das Ausgeben des Textes begleitet wird mit deutlichen Hinweisen darauf wie mit dem Text verfahren werden sollte und wie es mit dem zunächst zu erwartenden Unverständnis aussieht,
-  \item der Unterricht nachdem der Text ausgegeben wurde sich häufig auf den Text bezieht, und den Umgang mit (mathematischem) Fachtext übt.
-\end{enumerate}
-
-Wieso brauchen wir überhaupt ein eigenes Skript? Schließlich machen Millionen die Abschlüsse und mehrere (Schulbuch-) Verlage bringen Serien für diese Abschlüsse heraus.
-
-Der Autor erwartet aufgrund der Art und Weise wie die Gruppe der Teilnehmer zusammengekommen ist nicht nur erhebliche Heterogenität, sondern auch eine durchschnittliche Begabung der Teilnehmer, die über die deutsche Hauptschulklasse, wo diese überhaupt noch existiert, deutlich hinaus geht. Dem sollte Rechnung getragen werden durch individuell angemessene Abstraktionsniveaus, die der Text besonders unterstützen soll, da wo die Binnendifferenzierung an ihre Grenzen stößt, begabtere Teilnehmer dann aber erwartungsgemäß mit dem Text arbeiten können sollten, so wie das selbstständige Lernen und Üben mit Lehrbücher für sie eine grundlegende Fähigkeit ist, ohne die sie eine ihren Potentialen entsprechende Bildungs- und Berufslaufbahn nicht realisieren können werden\footnote{Das beginnt in einem wachsenden Teil der Ausbildungsberufe bereits in Berufsschule und Prüfungsvorbereitung, nicht nur aber besonders, in den jungen technischen Berufen von den vielfältigen Elektronikern, die den Elektriker abgelöst haben über Mechatroniker bis hin zum Fachinformatiker.}.
-
-Mit der verfügbaren Literatur der Schulbuchverlage würde das bestenfalls dazu führen dass wir mit fünf Büchern unterrichten würden, wahrscheinlich würde es mehr in Richtung von zehn Büchern gehen. Das tatsächlich inhaltlich völlig ausreichende Angebot an Lehrbüchern, die sich eher begleitend an die Oberstufe richten, oder gleich explizit für den Übergang in die Universität gedacht sind, hilft uns nur dabei das Vorgehen der Dozenten zu planen. Die Teilnehmer selbst können davon nicht selbständig profitieren, da z.B. \citep{Arens2015} zwar alle Inhalte enthält, für die Teilnehmer aber völlig unmöglich zu lesen ist.
-
-Die \enquote{Stark-Hefte} \citep{StarkHSAMaHe2018}, \citep{StarkRSAMaHe2018}) bieten eine sehr gute Prüfungsvorbereitung, setzen aber (vernünftigerweise) auf ein Vorwissen auf, das im speziellen Kontext nicht vorausgesetzt werden kann. Sie sind dennoch, zusammen mit den alten Prüfungen der Nichtschülerprüfungen und den Lehrplänen (s. \citep{LehrplanMathematikHauptschuleHessen2017}, \citep{LehrplanMathematikRealschuleHessen2017}) die Basis auf der das Konzept steht. Solche Materialien sind jedoch nicht hinreichend, sondern nur notwendig, und müssen durch die Dozenten generell für die komplette Gruppe und aufgrund der Heterogenität auch individuell ergänzt werden, insbesondere aber nicht nur hinsichtlich vorausgesetzten mathematischen Kompetenzen bis zurück in die Elementarbildung.
-
-Alternativ zum eigenen Text wäre sehr wahrscheinlich eine umfangreiche Sammlung von kopiertem Material möglich, die sicherlich erklärt und ergänzt durch Vorträge der Dozenten hinreichend sein können - mindestens für den Hauptschulabschluss, so wie das mit dem letzten Jahrgang auch in hervorragender Weise demonstriert worden ist. Spätestens mit der nochmals erheblich ausgedehnten Spreizung der Gruppe für Realschulabschlüsse stößt ein solches Vorgehen nach Ansicht des Autors aber an Grenzen, unserer Einschätzung nach auch grundsätzlich, sicher aber vor dem Hintergrund der nun vorhandenen Dozenten. Noch beherrschbar wäre zwei Gruppen zu trennen von denen eine den Hauptschulabschluss in Angriff nimmt und eine den Realschulabschluss. Das erscheint uns aber weder gruppendynamisch noch hinsichtlich der Durchlässigkeit, die bei eine frühen Trennung notwendig wäre, nicht als erstrebenswert\footnote{Diesen Weg müsste man wohl gehen wenn die Ressourcen des Teams für den zur Zeit verfolgten Weg nicht ausreichen würden.}.
-
-Generell hält der Autor das Ansinnen mehrerer Teilnehmer, vom zweiten Tag an explizit vertreten, ein Buch haben zu wollen, durchaus für berechtigt und darüber hinaus auch sehr sinnvoll. Angenommen die Einschätzung des Autors träfe zu, dass alternativ nur erheblicher Aufwand (nochmals mehr als bisher, s. Heterogenität durch Realschulabschluss!) der Dozenten verbunden mit zumindest duzenden, unserer Einschätzung nach weit über hundert Kopien, zielführend wäre, ist es angesichts der Ressourcen des Dozententeams und der unzureichenden Fähigkeiten der Teilnehmer eine umfangreiche Lose-Blatt-Sammlung zu beherrschen, unserer Ansicht nach defacto zwingend einen zusammenhängenden gebundenen Text selbst zur Verfügung zu stellen.
-
-
-\chapter{Eckpfeiler der Konzeption}\label{Eckpfeiler}
-
-\section{Zielsetzungen}\label{Konzept:Zielsetzungen}
-
-Das Ziel des Mathematik-Unterrichts in der Hauptschule ist: \enquote{Am Ende der Hauptschulzeit sollen Hauptschülerinnen und Hauptschüler in der Lage sein zu begreifen, dass Mathematik ein praktisches \enquote{Denkwerkzeug} zur Bewältigung des Alltags- und Berufsleben ist. Das Beherrschen von z.B. Überschlagsrechnen, Prozentrechnen, Wahrscheinlichkeitsrechnen, Einsicht in die modernen Strukturen der Wirtschaft stärken die Persönlichkeit und Entscheidungskompetenz. Ein Mathematikunterricht, der Fertigkeiten übt und Ergbnisse immer wieder sichert, neue Sachaufgaben im Laufe der Schulzeit vernetzt, Freude am Üben und Erproben weckt und die Entwicklung von Eigenstrategien stärkt, ist das langfristige dynamische Ziel.} (\citep{LehrplanMathematikHauptschuleHessen2017})
-
-Dieses Ziel hinsichtlich der Kompetenzen, die (auch) durch den Unterricht der Mathematik erworben werden sollen, bricht der Lehrplan \citep{LehrplanMathematikHauptschuleHessen2017} herunter in fünf Ziele (die etwas die Unterscheidung von Zielen der Entwicklung des Unterrichts und des Erwerbs von Kompetenzen durch die Schüler vermissen lässt):
-\enquote{
-\begin{enumerate}
-  \item Transparenz: \enquote{Warum lernen wir gerade diese Inhalte und wo können wir sie gebrauchen?} [...]
-  \item Fertigkeiten/ Fähigkeiten: Das Beherrschen von Grundwissen, Techniken und Lösungsstrategien.
-  \item Ergebnissicherung und Anwendungssicherheit für das spätere Berufs- und Alltagsleben.
-  \item Verzahnung und Querverbindungen [...]
-  \item Vernetzung [...]
-\end{enumerate}
-} (\citep[S. 4]{LehrplanMathematikHauptschuleHessen2017})
-
-Wir halten das auch für die Teilnehmer für eine sinnvolle Zusammenfassung der Ziele und gehen davon aus, dass dies in der Tat die minimale Basis sein kann, da die Heterogenität der Gruppe auch mit sich bringt, dass viele Teilnehmer intellektuell deutlich über dem deutschen Hauptschulniveau liegen, und weil diese mit diesen Kompetenzen selbst systematisch neues zu erschließen eine robuste Basis für die weitere Entwicklung bekommen sollen. Das Primärziel des Abschlusses darf nicht aus den Augen verloren werden, für die meisten Teilnehmer sollte dies aber wirklich nur der erste Schritt sein.
-
-Die Inhalte der Mathematik der Hauptschule gemäß Lehrplan sind dieser Befähigung einfacher alltäglicher Anforderungen, die ohne elementare Mathematik nicht zu verstehen sind, plus ein Minimum an ökonomischen Anwendungen zu verstehen, jedoch nicht entsprechend, sondern bilden auch für dieses Niveau nur eine Basis, die bestenfalls auf eine Vervollständigung durch die Berufsausbildung vorbereitet\footnote{So fehlen u.a. Satz des Pythagoras für jede handwerkliche Tätigkeit, Zinseszins und jede physikalische Anwendung}. Eine tatsächlich für die weitere nicht akademische Bildung solide Basis, die auch zumindest eine solche als Ausgangspunkt für selbstständiges lebenslanges Lernen möglich macht, ergibt sich inhaltlich erst aus dem Realschulabschluss\footnote{... wo, zumindest die fakultativen Inhalte einbezogen, die euklidische Geometrie, so weit sie jeder handwerkliche oder technische Beruf benötigt, und Exponentialfunktionen, ohne die kein Zinseszins gerechnet, geschweige denn verstanden werden kann, theoretisch gelehrt werden, und (nun nur noch inklusive der explizit fakultativen Inhalte) angewendet werden können.}.
-
-Dieser Einschätzung der Diskrepanz zwischen Anspruch und Inhalt folgend bieten wie allen Teilnehmern in der Mathematik so weit gehende Inhalte an, wie jeder Einzelne, angesichts individueller Fähigkeiten und Ressourcen, die ohne den Deutsch-Unterricht zu beeinträchtigen für die Mathematik genutzt werden können, bewältigen kann und will. Dabei steht jeweils folgende Hierarchie der Ziele unverrückbar maßgeblich für jede Entscheidung wem welche Angebote zu machen und von wem welche Leistungen gefordert werden (jedes weiter unten stehende Ziel setzt die Erfüllung aller höher priorisierten zwingend voraus):
-\begin{enumerate}
-  \item Leistungserbringung in der Abschlussprüfung, die unter Beachtung der anderen Fächer dem einzelnen Teilnehmer das Bestehen des Hauptschulabschlusses ermöglicht.
-  \item Mindestens ausreichende Mathematik-Note in der Abschlussprüfung des Hauptschulabschlusses.
-  \item Bezogen auf die Mathematik (inklusive deren Verwendung in anderen Fächern) für einen Übergang in die Berufsschule ausreichendes Niveau theoretischen Wissens und praktischer Anwendung.
-  \item Je nach Zielvereinbarung mit Teilnehmer entweder besser als ausreichende Note im Hauptschulabschluss oder Leistungserbringung in der Abschlussprüfung, die unter Beachtung der anderen Fächer dem einzelnen Teilnehmer das Bestehen des Realschulabschlusses ermöglicht.
-  \item Unterstützung aller über das geplante Curriculum hinausgehenden individuellen Lernziele, insbesondere soweit sich diese vernünftig aus der Karriere-Skizze ergeben, hier seitens der Mathematik-Dozenten für die Lernziele der Mathematik selbst und aller Naturwissenschaften sowie der dafür vorausgesetzten Befähigung Rechner\footnote{Rechner sind in den Abschlussprüfungen der Berufsausbildungen ebenfalls Taschenrechner. Um überhaupt bis zur Prüfung zu kommen spielen aber in vielen Berufen PC-artige Computer eine Rolle, die von den Auszubildenden nicht mehr ignoriert werden kann, selbst wenn sich Lehrpläne formal noch darauf zurückziehen, dass die fakultative Inhalte seien, explizit einräumend dass dies nur der nach wie vor mangelhaften Ausstattung der Schulen geschuldet ist (\citep[S. 6]{LehrplanMathematikRealschuleHessen2017}). Der Autor erlaubt sich das skandalös zu nennen.} zu nutzen.
-\end{enumerate}
-
-
-\section{Eigenverantwortung}\label{Konzept:Eigenverantwortung}
-
-Die Teilnehmer sind Erwachsene, das Projekt ist Erwachsenenbildung. Schon alleine rechtlich ist die Verantwortung damit klar verteilt. Viele Teilnehmer können dieser Eigenverantwortung jedoch zunächst nicht nachkommen. Die Kompetenzen so zu entwickeln, dass das am Ende der Maßnahme für alle gesunden Teilnehmer kein unüberwindbares Problem mehr darstellt ist nächste Priorität nach Erreichen des Schulabschlusses.
-
-
-\chapter{Lernen}
-
-Erfahrungsgemäß sind viele Teilnehmer (etwa die Hälfte, also nicht nur unmotivierte Einzelfälle!) nicht gewohnt zu lernen und zu üben. Das findet u.a. extremen Ausdruck darin, dass weder Vokabeln noch 1x1 gelernt werden. Der Autor hält es für unvermeidbar, tatsächlich notwendig, dass dieses Problem gelöst wird. Nur hochbegabte Teilnehmer\footnote{Und sollten solche dabei sein, dann wäre unverantwortlich ihnen nicht Methoden zu vermitteln, die ihnen erlauben später ihre Begabungen zu realisieren.} können ganz ohne zu lernen die Minimalziele des Projektes erreichen. Abgesehen von besonders individuell belasteten Teilnehmern, die möglicherweise zunächst Zeit zur Bewältigung dieser Belastungen brauchen, wird das perfekt auswendig Lernen des 1x1 in den ersten Wochen als Einstieg ins Lernen benutzt parallel zu den Vokabeln im Deutsch-Unterricht. Wer sich mehrfach diesem Lernen verweigert, muss aus dem Projekt ausgeschlossen werden, um nicht die Gruppe insgesamt davon abzubringen.
-
-
-\chapter{Heterogenität}
-
-Ausgangspunkt für die Überlegungen zur Bedeutung von und Umgang mit Heterogenität der Teilnehmer, bezogen auf den Unterricht in Mathematik, ist zunächst \citep{Leiss2014}. Der Unterricht muss mit bewusster Binnendifferenzierung arbeiten, die über das typische Maß deutscher Schulklassen hinaus geht. Die Herausforderungen im Unterricht in einer Gruppe von Migranten mit unterschiedlichen sprachlichen Niveaus kommt dazu die besondere Problematik der Sprachbarriere hinzu, die aber für den Unterricht in den ersten Monaten keine unüberwindbare Hürde darstellt, da das Material gut visuell gestützt vermittelt werden kann. Entsprechend können Textaufgaben in den ersten Monaten nicht genutzt werden. Die Modellierung muss damit, zumindest als explizites Thema, Richtung Ende der Maßnahme rutschen - auch wenn das u.a. hinsichtlich der Motivation der Themen des Mathematik-Unterrichts nicht ideal ist.
-
-Eine strukturelle Vereinfachung, die jedoch eher zu Lasten der Lernenden gehen wird, ist, dass die Prüfungen als Nichtschüler mit sich bringen, dass die Bewertung (und das Bestehen) alleine von Kompetenzerwerb und -nachweis abhängen und es kaum\footnote{Theoretisch keinen, praktisch durch Berücksichtigung des Hintergrundes in der mündlichen Prüfung.} Raum für eine Würdigung der Fortschritte gibt.
-
-Der organisatorische Schwerpunkt zur Berücksichtigung der Besonderheiten wird auf Tutorien liegen, die weitgehend kooperative Lernumgebung bieten sollen, als Ergänzung zum klassischen vortragenden und diskutierenden Unterricht (Zu den Gründen vgl. \citep[S.7ff]{Leiss2014}, besonders betont sei hier die Eigenverantwortung der Lernenden, die im klassischen Setting leicht an die Lehrperson zurückgegeben werden kann.). In der Hinsicht sei nochmal in Erinnerung gerufen, dass es sich um Erwachsenenbildung handelt und die Teilnehmer für sich selbst Verantwortung übernehmen müssen, bei deren Ausprägung Dozenten beratend unterstützen sollen, nicht jedoch die als Fremde mit vielen alltäglichen Problemen der Integration kämpfenden Teilnehmer einladen sollten Verantwortung abzugeben, sondern dazu sich selbst um Unterstützung zu kümmern, die dann natürlich jeweils verfügbar sein muss um Resignation zu verhindern.
-
-Gerade in einer Lern- und Lehrsituation hoher Heterogenität kann eine systematische Beobachtung und Dokumentation wertvoll sein um im Team der Lehrenden einander ergänzende Maßnahmen durchzuführen. Dokumentation erleichtert u.a. individuelle Schwächen aufzudecken, die im Laufe der Maßnahme zu korrigieren sind. Vorerst ist das Werkzeug dafür der Modulplan der für den Abschluss vorausgesetzten Kompetenzen, zusammenfassend jedem Teilnehmer als Lernprotokoll/ Fortschrittskontrolle ausgehändigt, sowie für die laufende Vorbereitung des Unterrichts als \textit{Microsoft Excel} spreadsheet für den gesamten Jahrgang fortwährend geführt.
-
-
-\chapter{Tutorium, Lern- und Übungsgruppen}\index{Tutorium}\label{Tutorium}
-
-Kaum jemand kann Mathematik gut alleine lernen. Mathematik so zu lernen, dass man sie operativ kompetent anwenden kann, erfordert i.d.R. dass man die Inhalte selbst erklären kann. So lange das nicht gelingt fehlen üblicherweise Aspekte des Sachverhalts. Schon deshalb rein egoistisch ist es für alle Teilnehmer sinnvoll sich gegenseitig die Inhalte beizubringen, sie gemeinsam einzuüben und zu vertiefen und sie für andere zu präsentieren/ referieren. Jeder Teilnehmer muss an einem Tutorium teilnehmen, das als betreute Lerngruppe verstanden wird. Verglichen mit dem universitären Lehren der Mathematik handelt es sich eher um Lerngruppen. Wir nennen es Tutorien, um es von überhaupt nicht betreutem Lernen in eigener Regie der Teilnehmer zu unterscheiden.
-
-
-\section{Lehrerinterventionen}
-
-Da die meisten Teilnehmer noch nie in Gruppen gemeinsam neues Wissen systematisch erschlossen haben ist von Seiten der Dozenten vor allem wichtig gegenzusteuern wenn die Gruppen fragmentieren, insbesondere wenn Einzelne die Gruppenarbeit aufgeben und alleine weiter arbeiten (und natürlich noch mehr wenn eine Mehrheit einer Gruppe eine Minderheit von der Arbeit ausschließt. Bei den Interventionen ist hilfreich die Zwecke von Lerngruppen zu erläutern.
-
-
-\section{Mathematisches Modellieren}
-
-Das Modellieren (einfacher) Probleme sollte von Anfang an geübt werden, so dass textuell gestellte Probleme mit den Inhalten des Unterrichts verbunden werden, die sonst häufig nur als Rechenvorschriften gelernt werden, so dass Textaufgaben in der Prüfung nicht bewältigt werden können, geschweige denn als Basis für wahrscheinliche weitergehende Kontakte mit der Mathematik, insbesondere in der Berufsausbildung, nicht nur aber vor allem in technischen Berufen.
-
-
-\section{Besondere Schwierigkeiten}
-
-Die Herausforderungen für die Teilnehmer unterscheiden sich teilweise deutlich von denen einer stereotypen Klasse der Erwachsenenbildung, wie man sie an Abendschulen vorfindet. Aufgrund der Unterschiede zwischen dem deutschen Schulsystem und den Schulsystemen der Herkunftsländer kommt durchaus vor, dass selbst bei Teilnehmern, die bereits zehn Jahre beschult worden sind, noch einzelne Inhalte fehlen, die in Deutschland heute in der Grundschule vermittelt werden. Andererseits sind einige Fähigkeiten vorhanden, die über die Anforderungen des Hauptschulabschlusses bereits hinausgehen (vgl. Heterogenität).
-
-
-\subsection{Sprachbarriere}
-
-Die Sprachbarriere ist ein wesentliches Hindernis und kann auch nicht mit einem Verweis auf die Universalität der Mathematik erledigt werden. Dennoch kann der Ansicht und Erfahrung des Autors nach der Mathematik-Unterricht vom ersten Tag Kontakt an parallel zum Unterricht in Deutsch als Fremdsprache begonnen werden. Dabei ist lediglich besonderes Augenmerk darauf zu pflegen, dass sehr visuell unterrichtet werden muss mit Vollständigkeit\footnote{Das ist nicht rigoros gemeint, sondern dass alle Argumente nicht textuell visuell an der Tafel darzustellen sind.} des Tafelbildes. Außerdem müssen dort alle Fachbegriffe aufgeführt werden und die Teilnehmer haben ein Fachvokabular zu führen und zu lernen. Das Vermeiden von Fachbegriffen hat nach Ansicht des Autors nur wenig Berechtigung. Während sich das Lernen nur geringfügig beschleunigen lässt werden damit Risiken, für Missverständnisse im Unterricht selbst, und fehlende Fundamente später, in Kauf genommen, die nach Ansicht des Autors unverantwortlich sind.
-
-
-\subsection{Mitschrift}
-
-Das Führen einer zum Lernen, Üben und für die prüfungsvorbereitendes Wiederholung geeigneten Mitschrift gelingt zunächst kaum einem Teilnehmer. Das zu lernen gehört zu den zentralen Zielen der Tutorien. Mathematik ohne vernünftige Mitschrift zu lernen gelingt kaum jemandem.
-
-\begin{enumerate}
-  \item Das Mathematik-Heft muss in jeder Mathematik-Stunde mitgebracht werden.
-  \item Was an die Tafel geschrieben wird, und nicht explizit ausgenommen wird, muss in der Mitschrift notiert werden. Verpasst ein Teilnehmer einen Teil des Mathematik-Unterrichts, so muss er seine Mitschrift mit Hilfe der anderen Teilnehmer ergänzen, also den fehlenden Teil abschreiben.
-  \item Die letzten drei Doppelseiten im Heft sind Formelverzeichnis.
-  \item Die Doppelseite vor dem Formelverzeichnis ist für auswendig zu lernendes Inhalte.
-  \item Die Doppelseite vor dem Verzeichnis der auswendig zu lernenden Inhalte ist Symbolverzeichnis.
-  \item Jeder Teilnehmer hat seine Vokabelliste der Mathematik zu führen.
-\end{enumerate}
-
-
-\subsection{Lernen}
-
-Viele Teilnehmer gehen davon aus, dass es reicht in der Stunde anwesend zu sein. Einige nehmen darüber hinaus an dass man in der Stunde auch aufpassen muss. Kaum jemand arbeitet den Unterricht nach. Es ist zentrales Thema der Tutorien das anders zu lernen. Eine Mathematik-Stunde ist zuhause nachzuarbeiten. Dabei werden viele Teilnehmer mehr Zeit für Nacharbeiten brauchen als der Mathematik-Unterricht selbst dauert.
-
-
-\subsection{Namen und Symbole}
-
-Es ist zu erwarten dass alle Teilnehmer völlig neu, von Grund auf, den Umgang mit Namen und Symbolen in der Mathematik lernen und üben müssen. Offensichtlich ist aus den Herkunfstländern vor allem schriftlich zu rechnen bekannt, viel mehr aber nicht. Bestenfalls werden Probleme noch durch exakte Anwendung von Formeln gelöst, bei denen dann aber i.d.R. nicht bewusst ist, dass Namen sich bei der Anwendung durchaus ändern können. Liegen Seiten eines Rechtecks mit $x$ und $y$ statt $a$ und $b$ vor kann das bereits daran hindern zu begreifen dass die Formel der Fläche des Rechtecks, notiert als $A_R = a \cdot b$ genutzt werden kann.
-
-Hierzu sollte in Tutorien und Unterricht der ersten Monate bewusst flexibel mit Namen und Symbolen hantiert werden um die Miss- und Unverständnisse früh zu eskalieren und zu lösen, so dass in den späteren Monaten der Prüfungsvorbereitung diese Probleme nicht mehr so massiv auftreten (und in Richtung Ausbildung der Umgang mit Mathematik geeignet ist auch Berufe zu lernen, die in normalem Maße Mathematik in der Ausbildung erfordern).
-
-Wir vermeiden dementsprechend \textbf{nicht} die Schwierigkeiten mit Synonymen, kontextbezogen unterschiedlicher Überladung von Symbolen und auch nicht die angemessene Nutzung von Fachwörtern, sondern konfrontieren die Teilnehmer früh mit diesen Herausforderungen und versuchen sie durch Redundanz (z.B. Angabe mehrere Synonyme in einer Aufgabe) und durch Gewöhnung zu beherrschen. Das Minimum sind die Anforderungen der Prüfung. Darüber hinaus sollte der Unterricht im Projekt aber auch den Übergang in die Ausbildung ermöglichen, was offensichtlich selbst bei den besten Absolventen nicht zufriedenstellend geklappt hat für den ersten Jahrgang.
-
-
-\subsection{Definition, Beweis, Anwendung?}
-
-Auch wenn es Erwachsenenbildung ist, in diesem Kontext muss davon ausgegangen werden, dass keinerlei Erfahrung/ Verständnis für (moderne) mathematische Methodik vorhanden ist. Außerdem stellt diese für einige Teilnehmer aufgrund des kulturellen (und religiös dominierten (auswendig) Lernens) eine besondere Herausforderung dar. Während wir auf die Beweise vollständig verzichten ist es der Ansicht des Autors nach nicht sinnvoll auch den Definitionen komplett aus dem Weg zu gehen. Einiges lässt sich nicht griffiger präsentieren als die besseren (und oft vereinfachten) Definitionen. Regelmäßig sollte also in der Mathematik auch in diesem Rahmen der normale fachdidaktische Ablauf genutzt werden, lediglich die Beweise i.d.R. auslassend und nur dort wo sie gut das Verständnis unterstützen (z.B. Herleitung der Polygon-Flächen) (vereinfacht und nicht rigoros) beweisend unterrichtet werden. Ähnlich wie beim Übergang in die Sekundarstufe im regelmäßigen Unterricht in Deutschland sollten Beispiele verwandt werden sobald die Grundlagen gegeben sind - und das nicht beschränkt auf einen Übungsbetrieb, wie man ihn in Deutschland regelmäßig in der Erwachsenenbildung organisieren würde, sondern die Teilnehmer mit Beispielen überschüttend in der Hoffnung dass das natürliche Musterlernen des Menschen eingreift.\footnote{Achtung: Das bedeutet auch dass die Teilnehmer viele false positives lernen, die zeitnahe zu korrigieren sind durch Gegenbeispiele. D.h. alle Beispiele sollten insbesondere bei der Wahl der Zahlen möglichst wenige naheliegende false positives bieten. Beispiele für Rechenregeln sollten so z.B. stets mit Primzahlen beginnen um die Häufigkeit von unbeabsichtigten (Anti-)/ Proportionalitäten im speziellen Fall des Beispiels, die generell nicht gelten, zu vermeiden.}
-
-Der Autor möchte nochmals deutlich betonen dass kritisches Lernen mit Verständnis des Arguments, Erlangen einer begründeten Überzeugung, für viele Teilnehmer so neu ist wie es in Deutschland vor 50 Jahren für die meisten deutschen Schüler beim Übergang in die Sekundarstufe war. Die Früchte des fachdidaktischen Fortschritts dieser Zeit, geschweige denn der Verbesserungen seit \textit{PISA}, sind regelmäßig in diesem Kontext nicht vorhanden und müssen wo effizient\footnote{Bei der Frage ob sich ein grundsätzliches Item zu lehren und lernen lohnt möchte der Autor darauf hinweisen, dass fast alle Teilnehmer nach Erlangen des Schulabschlusses in Ausbildungen mit Mathematik und viele mit Physik, Chemie oder Bilologie in der Berufsschule konfrontiert sind, so dass für die meisten Teilnehmer die Fundamente später noch benötigt werden, so dass der Autor empfiehlt \enquote{im Zweifel richtig} zu unterrichten, also lieber noch etwas mehr Inhalte zu akzeptieren als die Teilnehmer später auflaufen zu sehen.} nachgeholt werden.
-
-
-\chapter{Multimediale Mittel}
-
-Für die Teilnehmer ist (zumindest ganz überwiegend) eine Welt mit Internet und World Wide Web die einzige, die sie kennen. Einige haben selbst überhaupt keine Erfahrungen damit, es ist aber Natürlichkeit wie die Existenz von Fernsehern oder Langstreckenbombern und -drohnen. Sie beherrschen die Mittel nicht, werden aber durch Vermittlung über die Mittel, angeleitet hinsichtlich ihrer Verwendung, nicht überfordert. Kein (gesunder) Deutscher wird durch die Nutzung einer Gabel überfordert, die vor dem Kontakt mit den Römern in Nordeuropa unbekannt war! Multimediale Mittel können somit als ähnlich normal wie ein Kugelschreiber\footnote{Genau wie beim Kugelschreiber kann vorkommen bei Nutzung des Internets vorkommen, dass ein Teilnehmer das noch nie getan hat. Genauso natürlich ist aber eben auch das Lernen der Technologie. Die meisten Teilnehmer benutzen mehrfach pro Tag einen Supercomputer aus Sicht der 80er-Jahre: ihr Smartphone!} genutzt werden - die Schwelle existiert hier eher für uns Dozenten als für die Teilnehmer!
-
-Der Autor experimentiert damit die Inhalte der Mathematik komplett als \textit{Youtube}-Videos verfügbar zu machen. Dem Aufbau dieser unterstützenden Medien kann man dort folgen. Suchen nach \enquote{Erik Itter} oder \enquote{Meine Chance} sollten funktionieren, zur Zeit \enquote{Erik Itter} und dort die Playlists, die mit \enquote{Meine Chance} beginnen.
 
 \part{Material}
 
