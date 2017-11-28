@@ -2969,7 +2969,12 @@ Aufgaben der Art \enquote{zusammengesetzte Figur} lösen wir indem wir sie in el
   \item \textbf{Berechnen der Summenformel:} Wir rechnen die Summe aus und erhalten die Lösung der Aufgabe.
 \end{enumerate}
 
-
+Tipps:
+\begin{itemize}
+  \item (In der Hauptschule) berechnet sich jede Fläche, die einen Bogen hat, durch einen Kreis oder Teil eines Kreises, oft, einen Halbkreis.
+  \item Mit einem großen Rechteck aus dem man Lücken oder Löcher ausschneidet kann man oft die Rechnung vereinfachen/ verkürzen.
+  \item (Scheinbar) schwierige Figuren lassen sich manchmal vereinfachen dadurch dass eine elementare Fläche mehrfach vorkommt.
+\end{itemize}
 
 
 \begin{beispiel}
@@ -3001,34 +3006,34 @@ Aufgaben der Art \enquote{zusammengesetzte Figur} lösen wir indem wir sie in el
       \caption{zeichne im Maßstab und berechne die Fläche}\label{fig:BeispielEbeneFlaeche001}
     \end{figure}
 
-    \subsubsection{1.) Zerlegung in elementare Flächen}
+    \paragraph{1.) Zerlegung in elementare Flächen}
     Wir setzen die Figur aus einem Halbkreis $A_1$, einem Rechteck $A_2$ und einem Dreieck $A_3$ zusammen.
 
-    \subsubsection{2.) Aufstellen der Summenformel}
+    \paragraph{2.) Aufstellen der Summenformel}
     \begin{equation*}
         A_\Sigma = A_1 + A_2 + A_3
     \end{equation*}
 
-    \subsubsection{3.) Berechnen der Unbekannten}
+    \paragraph{3.) Berechnen der Unbekannten}
     \begin{longtable}{l}
         $A_1 = \frac{1}{2} A_K = \frac{1}{2} \pi r^2 \approx \frac{1}{2} \cdot 3,14 \cdot (4,5\text{m})^2 \approx 32\text{m}^2$\\
         $A_2 = A_R = a \cdot b = 9\text{m} \cdot 10\text{m} = 90\text{m}^2$\\
         $A_3 = A_D = \frac{a \cdot h_a}{2} = \frac{9\text{m} \cdot 6\text{m}}{2} = 27\text{m}^2$
     \end{longtable}
-    
-    \subsubsection{4.) Berechnen der Summenformel}
+
+    \paragraph{4.) Berechnen der Summenformel}
     \begin{longtable}{lcl}
         $A_\Sigma$ & = & $A_1 + A_2 + A_3$\\
         & $\approx$ & $149\text{m}^2$
     \end{longtable}
-    
+
     Antwort: Die Figur hat eine Fläche von rund $149\text{m}^2$.\proofsquare
 \end{beispiel}
 
 
 \begin{beispiel}
     Berechne die Fläche der abgebildeten Figur (s. Abb. \ref{fig:BeispielEbeneFläche02}).
-    
+
     \begin{figure}
       \centering
       \begin{tikzpicture}[scale=0.5]%rotate=-90, , transform shape
@@ -3051,11 +3056,11 @@ Aufgaben der Art \enquote{zusammengesetzte Figur} lösen wir indem wir sie in el
             \draw[<->] (9.5,0.5) -- (12.5,0.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
             \draw[<->] (12.5,0.5) -- (15.5,0.5) node[midway,fill=white] {\footnotesize 3m};%rotate=90, anchor=center,
             \draw[<->] (15.5,0.5) -- (20.5,0.5) node[midway,fill=white] {\footnotesize 5m};%rotate=90, anchor=center,
-            
+
             \draw[dashed] (15.5,1) -- (15.5,11);
             \draw[dashed] (4.5,1) -- (6.5,1);
             \draw[dashed] (9.5,1) -- (12.5,1);
-            
+
             \node at (8.25,6) {$A_1$};
             \node at (5.5,1.75) {$A_2$};
             \node at (11,1.75) {$A_3$};
@@ -3063,28 +3068,30 @@ Aufgaben der Art \enquote{zusammengesetzte Figur} lösen wir indem wir sie in el
       \end{tikzpicture}
       \caption{Flächenberechnung einer ebenen Figur}\label{fig:BeispielEbeneFläche02}
     \end{figure}
-    
-    \subsubsection{1.) Zerlegung in elementare Flächen}
-    
+
+    \paragraph{1.) Zerlegung in elementare Flächen}
+
     Wir zerlegen die Figur in das Rechteck $A_1$, die Ausschnitte aus $A_1$, das Rechteck $A_2$ und den Halbkreis $A_3$, und den Halbkreis $A_4$.
-    
-    \subsubsection{2.) Aufstellen der Summenformel}
-    
+
+    \paragraph{2.) Aufstellen der Summenformel}
+
     \begin{equation*}
         A_\Sigma = A_1 - A_2 - A_3 + A_4
     \end{equation*}
+
+    \paragraph{3.) Berechnen der Unbekannten in der Summenformel}
     
-    \subsubsection{3.) Berechnen der Unbekannten in der Summenformel}
-    
+    \paragraph{4.) Ausrechnen der Summenformel}
+
     \begin{longtable}{l}
         $A_1 = A_R = a \cdot b = 14,5\text{m} \cdot 10\text{m} = 145\text{m}^2$\\
         $A_2 = A_R = a \cdot b = 2\text{m} \cdot 1,5\text{m} = 3\text{m}^2$\\
         $A_3 = \frac{1}{2} A_K = \frac{1}{2} \cdot \pi r^2 \approx \frac{1}{2} \cdot 3,14 \cdot (1,5\text{m})^2 \approx 3,5\text{m}^2$\\
         $A_4 = \frac{1}{2} A_K = \frac{1}{2} \cdot \pi r^2 \approx \frac{1}{2} \cdot 3,14 \cdot (5\text{m})^2 \approx 39,25\text{m}^2$
     \end{longtable}
-    
-    \subsubsection{4.) Ausrechnen der Summenformel}
-    
+
+    \paragraph{4.) Ausrechnen der Summenformel}
+
     \begin{longtable}{lcl}
         $A_\Sigma$ & = & $A_1 - A_2 - A_3 + A_4$\\
         & $\approx$ & $145\text{m}^2 - 3\text{m}^2 - 3,5\text{m}^2 + 39,25\text{m}^2$\\
