@@ -3096,14 +3096,14 @@ Tipps:
         $A_\Sigma$ & = & $A_1 - A_2 - A_3 + A_4$\\
         & $\approx$ & $145\text{m}^2 - 3\text{m}^2 - 3,5\text{m}^2 + 39,25\text{m}^2$\\
         & $\approx$ & $178 \text{m}^2$
-    \end{longtable}
+    \end{longtable}\proofsquare
 \end{beispiel}
 
 
 \begin{beispiel}[zusammengesetzte Figur]
-    Dieses Beispiel ist \textbf{viel} komplizierter als die, die Euch in der Prüfung begegnen können. Das bedeutet wer das Beispiel lösen kann bekommt mit dem Thema \enquote{zusammengesetzte Figuren} in der Prüfung keine Probleme.
+    Dieses Beispiel ist \textbf{viel} komplizierter als die, die Euch in der Prüfung begegnen können. Wer das Beispiel selbst lösen kann, bekommt mit dem Thema \enquote{zusammengesetzte Figuren} in der Prüfung keine Probleme. Jeder sollte verstehen wie die Lösung funktioniert.
 
-    Es gibt unendlich viele korrekte Möglichkeiten eine Figur in kleinere elementare Flächen zu zerlegen. Sinnvoll sind regelmäßig einige. Die folgende Lösung ist also ebenfalls nur beispielhaft für dieses Beispiel. Herauskommen muss natürlich bei allen korrekten Aufteilungen und korrektem Rechnen immer der gleiche Flächeninhalt.
+    Es gibt unendlich viele korrekte Möglichkeiten eine Figur in kleinere elementare Flächen zu zerlegen. Sinnvoll sind meistens ein paar davon. Die folgende Lösung ist also nur beispielhaft für diese Aufgabe. Herauskommen muss bei allen korrekten Aufteilungen und korrektem Rechnen immer der gleiche Flächeninhalt.
 
     \begin{figure}[ht]
       \centering
@@ -3134,7 +3134,10 @@ Tipps:
         \draw[<->] (6.5,9) -- (6.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
         \draw[<->] (8.5,8) -- (8.5,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 3m};%
 
-        \draw[<->] (1,2.75) -- (2.5,2.75) node[midway,fill=white] {\footnotesize 1,5m};%rotate=90, anchor=center,
+        \draw[<->] (1,2.75) -- (2,2.75) node[midway,fill=white] {\footnotesize 1m};%rotate=90, anchor=center,
+        \draw[<->] (1,2.25) -- (2.5,2.25) node[midway,fill=white] {\footnotesize 1,5m};%rotate=90, anchor=center,
+        \draw (2.5,2) -- (2.5, 3);
+        \draw (2,2.5) -- (2, 3);
         \draw[<->] (2.5,2.75) -- (4,2.75) node[midway,fill=white] {\footnotesize 1,5m};%rotate=90, anchor=center,
         \draw[<->] (4,2.75) -- (6,2.75) node[midway,fill=white] {\footnotesize 2m};%rotate=90, anchor=center,
 
@@ -3143,7 +3146,7 @@ Tipps:
         \draw[<->] (0.75,5) -- (0.75,9) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 4m};%
         \draw[<->] (0.75,9) -- (0.75,11) node[rotate=90, anchor=center, midway,fill=white] {\footnotesize 2m};%
       \end{tikzpicture}
-      \caption{Zusammengesetzte Figuren, Aufgabe}\label{fig:ZusammengesetzteFiguren}
+      \caption{Zusammengesetzte Figuren, Aufgabe}\label{fig:ZusammengesetzteFigurenKomplexAufg}
     \end{figure}
 
     \begin{figure}[ht]
@@ -3213,99 +3216,40 @@ Tipps:
         \node at (3.25,4) {$A_{11}$};
         \node at (4,6) {$A_{12}$};
       \end{tikzpicture}
-      \caption{Aufteilung in elementare Flächen}\label{fig:ZusammengesetzteFiguren}
+      \caption{Aufteilung in elementare Flächen}\label{fig:ZusammengesetzteFigurenKomplexAufgLoes}
     \end{figure}
 
     \textbf{gs.: Die Fläche $A_{\Sigma}$ der zusammengesetzten Figur.}
+    
+    \paragraph{1.) Summenformel für die Figur aufstellen}
+    
+    Zunächst teilen wir die Fläche in Teilflächen auf, die elementare Flächen sind (für die wir Formeln haben). Dafür gibt es unendlich viele Möglichkeiten. Das hier ist ein Beispiel für eine gute Lösung (s. Abb. \ref{fig:ZusammengesetzteFigurenKomplexLoes}). In diesem Beispiel kombinieren wir überschneidungsfreies Zusammenlegen mit Ausschneiden. Beachte in diesem Beispiel besonders die Flächen  $A_{11} und A_{12}$, die aus $A_4$ ausgeschnitten werden. Wir müssen sie so schneiden, dass sie keine Überschneidung haben, da wir sonst (aufwändig) korrigieren müssen um die Überschneidung nicht doppelt abzuziehen.
+    \begin{align*}
+      A_\Sigma & = & A_1 + A_2 + A_3 + A_4 + A_5 + A_{10} \\
+      & & - 3 A_6 - A_7 - A_8 - A_9 - A_{11} - A_{12}
+    \end{align*}
 
-    Zunächst teilen wir die Fläche in Teilflächen auf. $A_{\Sigma} = A_1 + A_2 + A_3 + A_4 + A_5 + A_{10} - 3 A_6 - A_7 - A_8 - A_9 - A_{11} - A_{12}$. In diesem Beispiel kombinieren wir überschneidungsfreies Zusammenlegen mit Ausschneiden. Beachte in diesem Beispiel besonders die Flächen  $A_{11} und A_{12}$, die aus $A_4$ ausgeschnitten werden. Wir müssen sie so schneiden, dass sie keine Überschneidung haben, da wir sonst (aufwändig) korrigieren müssen um die Überschneidung nicht doppelt abzuziehen.
+    \paragraph{2.) Unbekannte der Summenformel berechnen}
 
     Als nächstes bestimmen wir die einzelnen Teilflächen. Für einen ausführliche Musterlösung (z.B. als Übung für die mündliche Prüfung) geben wir zunächst die Formel der Fläche an, setzen dann ein und rechnen aus. Die fertigen Teilflächen werden dann in die Formel eingesetzt, die wir im ersten Schritt erhalten haben.
 
-    \begin{align}
-      A_1 &= \frac{1}{4} A_K \\
-       A_K &= \pi r^2 \\
-       &= \pi \cdot (3\text{m})^2\\
-       A_1 &= \frac{1}{4} \pi \cdot 9\text{m}^2\\
-       A_1 & \approx 7,07\text{m}^2
-    \end{align}
+    \renewcommand*{\arraystretch}{1.4}%should affect this table only, why..?
+    \begin{longtable}{rcl}
+        $A_1$ & $=$ & $\frac{1}{4} A_K = \frac{1}{4} \pi r^2 = \pi \cdot (3\text{m})^2 = \frac{1}{4} \pi \cdot 9\text{m}^2 \approx 7,07\text{m}^2$\\
+        $A_2$ & $=$ & $A_T = \frac{(a+c)h}{2} = \frac{(1\text{m}+2\text{m}) \cdot 7\text{m}}{2} = 10,5\text{m}^2$\\
+        $A_3$ & $=$ & $A_T= \frac{(a+c)h}{2}=\frac{(7\text{m}+9\text{m}) \cdot 3\text{m}}{2}= 24\text{m}^2$\\
+        $A_4$ & $=$ & $A_R= a \cdot b = 11\text{m} \cdot 5\text{m}= 55\text{m}^2$\\
+        $A_5$ & $=$ & $A_R= a \cdot b = 9\text{m} \cdot 1\text{m}= 9\text{m}^2$\\
+        $A_6$ & $=$ & $A_R= a \cdot b = 3\text{m} \cdot 1\text{m}= 3\text{m}^2$\\
+        $A_7$ & $=$ & $A_Q= a^2= 1\text{m}^2$\\
+        $A_8$ & $=$ & $A_R= a \cdot b= 2\text{m} \cdot 1\text{m}= 2\text{m}^2$\\
+        $A_9$ & $=$ & $A_R= a \cdot b= 3\text{m} \cdot 1\text{m}= 3\text{m}^2$\\
+        $A_{10}$ & $=$ & $A_T= \frac{(a+c)h}{2}= \frac{(6\text{m}+4\text{m}) \cdot 1,5\text{m}}{2}= 7,5\text{m}^2$\\
+        $A_{11}$ & $=$ & $A_R= a \cdot b= 1,5\text{m} \cdot 2,5\text{m}= 3,75\text{m}^2$\\
+        $A_{12}$ & $=$ & $\frac{3}{4} A_K= \pi r^2= \pi \cdot (1,5\text{m})^2= \frac{3}{4} \pi \cdot 2,25\text{m}^2\approx 5,3\text{m}^2$
+    \end{longtable}
 
-    \begin{align}
-      A_2 &= A_T \\
-       &= \frac{(a+c)h}{2}\\
-       &= \frac{(1\text{m}+2\text{m}) \cdot 7\text{m}}{2}\\
-       &= 10,5\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_3 &= A_T \\
-       &= \frac{(a+c)h}{2}\\
-       &= \frac{(7\text{m}+9\text{m}) \cdot 3\text{m}}{2}\\
-       &= 24\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_4 &= A_R \\
-       &= a \cdot b\\
-       &= 11\text{m} \cdot 5\text{m}\\
-       &= 55\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_5 &= A_R \\
-       &= a \cdot b\\
-       &= 9\text{m} \cdot 1\text{m}\\
-       &= 9\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_6 &= A_R \\
-       &= a \cdot b\\
-       &= 3\text{m} \cdot 1\text{m}\\
-       &= 3\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_7 &= A_Q \\
-       &= a^2\\
-       &= 1\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_8 &= A_R \\
-       &= a \cdot b\\
-       &= 2\text{m} \cdot 1\text{m}\\
-       &= 2\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_9 &= A_R \\
-       &= a \cdot b\\
-       &= 3\text{m} \cdot 1\text{m}\\
-       &= 3\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_{10} &= A_T \\
-       &= \frac{(a+c)h}{2}\\
-       &= \frac{(6\text{m}+4\text{m}) \cdot 1,5\text{m}}{2}\\
-       &= 7,5\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_{11} &= A_R \\
-       &= a \cdot b\\
-       &= 1,5\text{m} \cdot 2,5\text{m}\\
-       &= 3,75\text{m}^2
-    \end{align}
-
-    \begin{align}
-      A_{12} &= \frac{3}{4} A_K \\
-       A_K &= \pi r^2 \\
-       &= \pi \cdot (1,5\text{m})^2\\
-       A_1 &= \frac{3}{4} \pi \cdot 2,25\text{m}^2\\
-       A_1 & \approx 5,3\text{m}^2
-    \end{align}
+    \paragraph{4.) Summenformel einsetzen und ausrechnen}
 
     \begin{align}
       A_{\Sigma} & \approx 7,07\text{m}^2 + 10,5\text{m}^2 + 24\text{m}^2\\
@@ -3313,6 +3257,8 @@ Tipps:
        &\quad - 3\text{m}^2 + 7,5\text{m}^2 - 3,75\text{m}^2 - 5,3\text{m}^2\\
        & \approx 89,02\text{m}^2
     \end{align}
+
+    \paragraph{Plausibilität prüfen}
 
     Ohne Ausschnitte und großzügig einen Rahmen ziehend wäre es ein Rechteck mit 12m mal 10m, also 120m\textsuperscript{2}. Das klingt plausibel. Durch die ordentliche Notation sollten wir in einer Prüfung auf jeden Fall viele Teilpunkte bekommen und können darauf hoffen auch Fehler zu finden falls wir nochmal über die Rechnung drüber schauen.\proofsquare
 \end{beispiel}
