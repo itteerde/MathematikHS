@@ -49,6 +49,7 @@
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
 \usepackage{amsthm}
+\usepackage{mathtools}
 
 \usepackage{chemfig}
 \usepackage{listings}
@@ -871,6 +872,8 @@ Wir schreiben die \textbf{Division} von \textbf{Faktoren}\footnote{Die Mathemati
 
 Auch mit Smartphone ist Kopfrechnen nicht nur für die erste Seite in der Mathematik-Prüfung nützlich. Das Minimum das wir sicher und schnell, nämlich auswendig, können müssen ist das kleine 1x1. Das brauchen wir auch beim schriftlichen Rechnen, es hilft im Alltag positiv statt negativ aufzufallen und es ist notwendig für die erste Seite in der Prüfung. Sicher Kopfrechnen zu können verschafft einem auf generell immer wieder etwas mehr Selbstsicherheit. Geschadet dürfte es noch nie haben.
 
+Außerdem hilft Kopfrechnen im Überschlagsrechnen (s. Überschlagsrechnen, S. \pageref{Überschlagsrechnen}) bei einer Rechnung mitzudenken und dadurch gravierende Fehler relativ wahrscheinlich zu finden (z.B. Vertippen auf Telefon oder Taschenrechner).
+
 \section{1 mal 1}
 
 Das \enquote{$1 \times 1$}, sprich \enquote{ein mal eins}, wird perfekt auswendig gelernt.
@@ -916,9 +919,14 @@ Die perfekte Beherrschung des \enquote{$1 \times 1$} ist \textbf{notwendige Vora
 
 \subsection{2er-Potenzen}
 
-Wenn ich $444 : 8$ rechnen muss hole ich nicht das Telefon aus der Tasche (wobei man sich damit vielleicht gerade so nicht mehr lächerlich macht), sondern weiß dass $8 = 2^3$, d.h. durch acht zu teilen bedeutet auch drei mal zu halbieren. Also $444 \frac{:2}{\rightarrow} 222 \frac{:2}{\rightarrow} 111 \frac{:2}{\rightarrow} 55,5$. Entsprechend ist es hilfreich die 2er-Potenzen ein paar Stellen weit auswendig zu können: $2^n=\{2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, ...\}$. Wir sollten zumindest bis $2^6=64$ kommen. Kommt Dir 64 irgendwie besonders bekannt vor? Ja sicher, $8^2 = 64$. Also ${2^3}=8$ und $8^2=64$? Dann ist also ${2^3}^2 = 64$. Und $2^6 = 64$? ${2^3}^2 = 2^6$. In der Tat ist ${a^m}^n = a^{m \cdot n}$. Das ist allerdings gerade so nicht mehr im Bereich Hauptschule, kommt aber in technischen Berufen in der Berufsschule - und möglicherweise auch überall sonst wegen ein klein Wenig Finanz-/ Bankmathematik hinsichtlich Steuern, Kalkulation von Preisen, Geschäftsplan, ...
+Wenn ich $444 : 8$ rechnen muss hole ich nicht das Telefon aus der Tasche (wobei man sich damit vielleicht gerade so nicht mehr lächerlich macht), sondern weiß dass $8 = 2^3$, d.h. durch acht zu teilen bedeutet auch drei mal zu halbieren. Also $444 \xrightarrow{:2} 222 \xrightarrow{:2} 111 \xrightarrow{:2} 55,5$. Entsprechend ist es hilfreich die 2er-Potenzen ein paar Stellen weit auswendig zu können: $2^n=\{2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, ...\}$. Wir sollten zumindest bis $2^6=64$ kommen. Kommt Dir 64 irgendwie besonders bekannt vor? Ja sicher, $8^2 = 64$. Also ${2^3}=8$ und $8^2=64$? Dann ist also ${(2^3)}^2 = 64$. Und $2^6 = 64$? ${(2^3)}^2 = 2^6$. In der Tat ist ${(a^m)}^n = a^{m \cdot n}$. Das ist allerdings gerade so nicht mehr im Bereich Hauptschule, kommt aber in technischen Berufen in der Berufsschule - und möglicherweise auch überall sonst wegen ein klein Wenig Finanz-/ Bankmathematik hinsichtlich Steuern, Kalkulation von Preisen, Geschäftsplan, ...
 
-In der anderen Richtung gilt auch dass ich falls ich einen Preis für 16 Personen rechnen muss, also mal 16, ausnutzen kann, dass $16 = 2^4$. Wenn der Preis 13€ ist, dann also $13\text{€} \frac{\cdot 2}{\rightarrow} 26\text{€}\frac{\cdot 2}{\rightarrow} 52\text{€}\frac{\cdot 2}{\rightarrow} 104\text{€}$. Und falls es 17 Personen sind eben $13^4\text{€}=104\text{€}$, plus 13€ = 117€. Und so weiter...
+In der anderen Richtung gilt auch dass ich falls ich einen Preis für 16 Personen rechnen muss, also mal 16, ausnutzen kann, dass $16 = 2^4$. Wenn der Preis 13€ ist, dann also $13\text{€} \xrightarrow{\cdot 2} 26\text{€} \xrightarrow{\cdot 2} 52\text{€}\xrightarrow{\cdot 2} 104\text{€}$. Und falls es 17 Personen sind eben $13^4\text{€}=104\text{€}$, plus 13€ = 117€. Und so weiter...
+
+
+\subsection{Teilbarkeit durch 3: Quersumme}
+
+Eine Zahl\footnote{im Dezimalsystemnotiert} ist genau dann durch 3 teilbar wenn die Summe ihrer Ziffern durch 3 teilbar ist. Ist 987654321 durch 3 teilbar? Die Quersumme, also die Summe der Ziffern, ist $\Sigma_Q = 9+8+7+6+5+4+3+2+1$. Das ist 45. Weiß ich noch nicht ob 45 durch 3 teilbar ist so ist die Quersumme von 45=9. 9, ist durch drei teilbar, 45 auch und damit auch 987654321. $987654321 : 3 = 3292181107$. Diese Regel ist in Zeiten von Smartphones wirklich eher unwichtig, hilft aber immer noch dabei zu entscheiden ob ich einen Bruch als Ergebnis noch kürzen kann. Auf der ersten Seite in der Prüfung sind Zähler und Nenner dann aber meistens so klein, dass sie noch im 1x1 liegen.
 
 
 
