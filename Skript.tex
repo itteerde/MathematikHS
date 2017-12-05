@@ -312,7 +312,7 @@
 \begin{titlepage}
 %\title{Meine Chance II - 2017\\Mathematik}
 \centering
-\title{Mathematik\\ \vspace{1cm} \normalsize \centering Konzept für den Mathematik-Unterricht in Vorbereitung für die Abschlussprüfung für den Hauptschulabschluss als Nichtschülerprüfung in Hessen, konkretisiert für das Projekt \enquote{Meine Chance} ($mc^2$)\\\vspace{3em}\footnotesize Die freie, insbesondere unentgeltliche, Nutzung im Rahmen von \enquote{Meine Chance} ist auf Dauer vom Urheber genehmigt. Sollte der Autor dauerhaft nicht erreichbar sein geht das komplette Material inklusive der \LaTeX-Sources (\url{https://github.com/itteerde/MathematikHS}) in public domain über.}
+\title{Mathematik\\ \vspace{1cm} \normalsize \centering für den Mathematik-Unterricht, Lernen und Üben in Vorbereitung für die Abschlussprüfung für den Hauptschulabschluss als Nichtschülerprüfung in Hessen, konkretisiert für das Projekt \enquote{Meine Chance} ($mc^2$)\\\vspace{3em}\footnotesize Die freie, insbesondere unentgeltliche, Nutzung im Rahmen von \enquote{Meine Chance} ist auf Dauer vom Urheber genehmigt. Sollte der Autor dauerhaft nicht erreichbar sein geht das komplette Material inklusive der \LaTeX-Sources (\url{https://github.com/itteerde/MathematikHS}) in public domain über.}
 
 \centering
 \author{Erik Itter}
@@ -328,7 +328,7 @@
 
 \chapter*{Vorbemerkungen und Umgang mit dem Text}
 
-Dieses Buch hilft bei der Vorbereitung auf die Prüfung in Mathematik für den Hauptschulabschluss (Abendhauptschule in Hessen). Der Text ist einfach geschrieben. Er kann zum alleine Lernen, zur Wiederholung des im Unterricht Gelernten und zum Üben benutzt werden.
+Dieser Text hilft bei der Vorbereitung auf die Prüfung in Mathematik für den Hauptschulabschluss (Abendhauptschule in Hessen). Der Text ist einfach geschrieben. Er kann zum alleine Lernen, zur Wiederholung des im Unterricht Gelernten und zum Üben benutzt werden.
 
 Wer den ganzen Text wirklich versteht, alle Beispiele versteht, alle Aufgaben lösen kann, ist gut auf die Mathematik in der Prüfung vorbereitet. Fußnoten\footnote{Das hier ist eine Fußnote. Die musst Du nicht lesen. Sie ist für tieferes/ weiteres Verstehen und Lehrer/ Dozenten.} brauchst Du nicht zu lesen. Sie sind für weitergehendes Verstehen nach der Prüfung gedacht\footnote{... und um den Text zwar sehr bewusst unvollständig hinsichtlich der Mathematik zu verfassen aber wenigstens naturwissenschaftlich falsche Texte zu erläutern, die in der Prüfung so erwartet werden, wie Massen konsequent Gewichte zu nennen.}. Einige Abschnitte werden extra gekennzeichnet als nicht für die Prüfung benötigt (\enquote{Exkurs}), aber aus anderen Gründen so wichtig, dass wir ihre Inhalte anbieten wollen. Ein Beispiel dafür ist der \textsc{Satz des Pythagoras}, der in der Prüfung der Abendhauptschule nicht gebraucht wird, in der \enquote{normalen} Hauptschule aber gelehrt (und geprüft) wird, und den Unternehmen als bekannt erwarten. Bei solchen Inhalten schreiben wir warum wir sie Dir anbieten. Du kannst dann wählen sie gar nicht zu beachten, weil Du sie nicht für die Prüfung brauchst. Du kannst wählen sie zu lesen aber nicht beherrschen zu müssen, z.B. um Erwartungen Deines zukünftigen Betriebes zu erfüllen. Du kannst sie als Grundlage für mehr (mathematische) Bildung benutzen, z.B. vorbereitend auf eine Ausbildung mit hohem mathematischen Anteil. Solche Abschnitte beginnen mit einer Überschrift wie \enquote{\textbf{Exkurs 1}} und enden mit einer Markierung, \enquote{\topicend}.
 
@@ -451,7 +451,7 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
 
 \subsection{Größter gemeinsamer Teiler (ggT)}\index{ggT}
 
-\begin{definition}
+\begin{definition}[ggT]
     Wir nennen die größte Zahl, die alle Zahlen einer Menge \textbf{teilt}, den \enquote{\textbf{\glsdisp{GGT}{größten gemeinsamen Teiler} (ggT)}} der Menge.
 \end{definition}
 
@@ -460,8 +460,57 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
 \end{beispiel}
 
 
-\subsection{kgV}\index{kgV}
+\subsection{Kleinstes gemeinsames Vielfaches (kgV)}\index{kgV}
 
+\begin{definition}[kgV]
+    Wir nennen die kleinste Zahl durch die jede Zahl der Menge deren kleinstes gemeinsames Vielfaches (kgV) wir suchen \enquote{\textbf{kleinstes gemeinsames Vielfaches (kgV)}}.
+\end{definition}
+
+Systematisch finden wir das kgV einer Menge von Zahlen, insbesondere von zwei Zahlen, über die Primfaktorzerlegungen der Zahlen. Für kleine Zahlen (so wie die im Teil der Prüfung ohne Taschenrechner) reicht eine Tabelle der Vielfachen aus in der man die erste und damit kleinste Zahl sucht, die in den Reihen der Vielfachen aller Zahlen deren kgV man sucht, vorkommt.
+
+{\centering
+\begin{tabular}{|r|r|r|}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1 & 7 & 9 \\
+  \hline
+  2 & 14 & 18 \\
+  3 & 21 & 27 \\
+  4 & 28 & 36 \\
+  5 & 35 & 45 \\
+  6 & 42 & 54 \\
+  7 & 49 & \textbf{63} \\
+  8 & 56 & 72 \\
+  9 & \textbf{63} &  \\
+  10 & &
+\end{tabular}\hspace{1em}
+\begin{tabular}{|r|r|r|}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1 & 3 & \textbf{15} \\
+  \hline
+  2 & 6 &  \\
+  3 & 9 &  \\
+  4 & 12 &  \\
+  5 & \textbf{15} &  \\
+  6 & & \\
+  7 & & \\
+  8 & & \\
+  9 & & \\
+  10 & &
+\end{tabular}\hspace{1em}
+\begin{tabular}{|r|r|r|r|}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1 & 12 & 16 \\
+  \hline
+  2 & 12 & 32 \\
+  3 & 36 & 48 \\
+  4 & 48 & 64 \\
+  5 & 60 & 80 \\
+  6 & 72 & \textbf{96} \\
+  7 & 84 & \\
+  8 & \textbf{96} & \\
+  9 & & \\
+  10 & &
+\end{tabular}\\}
 
 
 \section{Primzahlen ($\mathbb{P}$)}\index{Primzahlen}
