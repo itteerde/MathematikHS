@@ -714,202 +714,6 @@ $10^0$ ist gleich eins. Das akzeptieren wir bitte, weil es in die Reihe passt un
     \end{align}
 \end{beispiel}
 
-\begin{beispiel}[Multiplikation mit Dezimalbrüchen]
-\begin{figure}
-  \centering
-  \begin{tikzpicture}
-        \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur/2);
-        \node at (0.75,5.75) {1};
-        \node at (1.25,5.75) {5};
-        \node at (1.5,5.65) {,};
-        \node at (1.75,5.75) {7};
-        \node at (2.25,5.75) {3};
-        \node at (2.75,5.75) {$\times$};
-        \node at (3.25,5.75) {2};
-        \node at (3.5,5.65) {,};
-        \node at (3.75,5.75) {7};
-        \node at (4.25,5.75) {1};
-
-        \node at (5.75,5.75) {=};
-
-        \node at (6.75,5.75) {1};
-        \node at (7.25,5.75) {5};
-        \node at (7.75,5.65) {,};
-        \node at (8.25,5.75) {7};
-        \node at (8.75,5.75) {3};
-        \node at (9.25,5.75) {$\times$};
-        \node at (9.75,5.75) {2};
-        \node at (6.25,5.25) {+};
-        \node at (6.75,5.25) {1};
-        \node at (7.25,5.25) {5};
-        \node at (7.75,5.15) {,};
-        \node at (8.25,5.25) {7};
-        \node at (8.75,5.25) {3};
-        \node at (9.25,5.25) {$\times$};
-        \node at (9.75,5.25) {0};
-        \node at (10.25,5.15) {,};
-        \node at (10.75,5.25) {7};
-        \node at (6.25,4.75) {+};
-        \node at (6.75,4.75) {1};
-        \node at (7.25,4.75) {5};
-        \node at (7.75,4.65) {,};
-        \node at (8.25,4.75) {7};
-        \node at (8.75,4.75) {3};
-        \node at (9.25,4.75) {$\times$};
-        \node at (9.75,4.75) {0};
-        \node at (10.25,4.65) {,};
-        \node at (10.75,4.75) {0};
-        \node at (11.25,4.75) {1};
-
-        \node at (1.75,4.75) {3};
-        \node at (2.25,4.75) {1};
-        \node at (2.5,4.65) {,};
-        \node at (2.75,4.75) {4};
-        \node at (3.25,4.75) {6};
-
-        \node at (1.75,4.25) {1};
-        \node at (2.25,4.25) {1};
-        \node at (2.5,4.15) {,};
-        \node at (2.75,4.25) {0};
-        \node at (3.25,4.25) {1};
-        \node at (3.75,4.25) {1};
-
-        \node at (2.25,3.75) {0};
-        \node at (2.5,3.65) {,};
-        \node at (2.75,3.75) {1};
-        \node at (3.25,3.75) {5};
-        \node at (3.75,3.75) {7};
-        \node at (4.25,3.75) {3};
-
-        \draw (0.25,3.25) -- (7.75,3.25);
-
-        \node at (1.75,2.75) {4};
-        \node at (2.25,2.75) {2};
-        \node at (2.5,2.65) {,};
-        \node at (2.75,2.75) {6};
-        \node at (2.85,3.35) {\tiny{1}};
-        \node at (3.25,2.75) {2};
-        \node at (3.75,2.75) {8};
-        \node at (4.25,2.75) {3};
-
-  \end{tikzpicture}
-  \caption{Multiplikation mit Dezimalbrüchen}\label{fig:Dezimalsystem02}
-\end{figure}
-
-Wir rechnen ein Produkt aus zwei Faktoren mit Kommata aus, \enquote{Dezimalbrüche}. $\prod = a \cdot b$, $a=15,73$, $b=2,71$. Wir schreiben die Faktoren ordentlich auf, so dass wir eine Spalte im karierten Papier pro Stelle haben (ob das Komma [interessant ist für die Nutzung der Spalten nur der zweite Faktor] eine eigene Spalte bekommt ist Geschmackssache. Wir schauen uns die Zahlen genauer an um sowohl etwas über das (10er-) Stellenwertsystem zu lernen, was bei der Prozentrechnung sehr hilfreich sein wird, als auch einen Schritt in Richtung Überschlagsrechnen zu gehen. Mit Prozent oder Hundertstel schätzt sich einfacher als mit Komma-Zahlen. $15,73 \cdot 100 = 1573$. $2,71 \cdot 100 = 271$. Also $15,73=\frac{1573}{100}$ und $2,71=\frac{271}{100}$. In der Bruchrechnung lernen wir dass zwei Brüche $a, b$ miteinander multipliziert werden indem $\frac{p}{q} = \frac{z_a}{n_a} \cdot \frac{z_b}{n_b} = \frac{z_a \cdot z_b}{n_a \cdot n_b}$, also die Zähler miteinander multipliziert werden und die Nenner miteinander multipliziert werden. $\frac{1573}{100} \cdot \frac{271}{100} = \frac{1573 \cdot 271}{100 \cdot 100}$. Also ist $15,73 \cdot 2,71 = \frac{1573 \cdot 271}{100 \cdot 100} = \frac{426.283}{10.000}$. Wir erwarten also dass es als Dezimalbruch $15,73 \cdot 2,71 = 42,6283$ ist.\end{beispiel}
-
-
-
-\begin{beispiel}[Division von Dezimalbrüchen]
-    Wir dividieren $0,44 : 0,2$.
-    
-    \begin{enumerate}
-      \item \enquote{Kommaverschiebung}, wir machen aus der Zahl durch die geteilt werden soll eine natürliche Zahl ohne das Ergebnis zu verändern\footnote{der Ausdruck muss gleich bleiben, Äquivalenzumformung}.
-      \item schriftlich dividieren.
-    \end{enumerate}
-    
-    \begin{align*}
-        0,44 & : & 0,2 \\
-         & = & 4,4 : 2
-    \end{align*}
-    
-    $0,44 : 0,2$, gelesen \enquote{Null-Komma-Vier-Vier geteilt durch Null-Komma-Zwei}, ist $\frac{0,44}{0,2}$. Zumindest in der Vorstellung möchten wir in Brüchen nur ganze Zahlen haben. Einen Bruch können wir erweitern: Wir erweitern mit 10, so dass $\frac{0,44}{0,2} = \frac{4,4}{2}$. $4,4 : 2$ ist weder schriftlich noch im Kopf schwierig so dass $4,4 : 2 = 2,2$.    
-\end{beispiel}
-
-\begin{beispiel}[Division von Dezimalbrüchen]
-    Wir dividieren $7,0008 : 0,4$. Durch \enquote{Kommaverschiebung} ergibt das (ohne den Wert zu verändern) $70,008 : 4$. Das dividieren wir wie gehabt schriftlich (s. Abb. \ref{fig:divisionDezimalbrueche}).
-
-    \begin{figure}
-        \centering
-        \begin{tikzpicture}
-            \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
-            
-            \node at (0.75,11.75) {7};
-            \node at (1,11.65) {,};
-            \node at (1.25,11.75) {0};
-            \node at (1.75,11.75) {0};
-            \node at (2.25,11.75) {0};
-            \node at (2.75,11.75) {8};
-            \node at (3.25,11.75) {:};
-            \node at (3.75,11.75) {0};
-            \node at (4.25,11.65) {,};
-            \node at (4.75,11.75) {4};
-            
-            \draw (6.25,11.55) -- (6.25,11.95);
-            \node at (6.75,11.75) {$\cdot$};
-            \node at (7.25,11.75) {1};
-            \node at (7.75,11.75) {0};
-
-            \node at (0.25,11.25) {=};
-            \node at (0.75,11.25) {7};
-            \node at (1.25,11.25) {0};
-            \node at (1.5,11.15) {,};
-            \node at (1.75,11.25) {0};
-            \node at (2.25,11.25) {0};
-            \node at (2.75,11.25) {8};
-            \node at (3.25,11.25) {:};
-            \node at (3.75,11.25) {4};
-
-            \node at (0.75,10.25) {7};
-            \node at (1.25,10.25) {0};
-            \node at (1.5,10.15) {,};
-            \node at (1.75,10.25) {0};
-            \node at (2.25,10.25) {0};
-            \node at (2.75,10.25) {8};
-            \node at (3.25,10.25) {:};
-            \node at (3.75,10.25) {4};
-            \node at (4.25,10.25) {=};
-            \node at (4.75,10.25) {1};
-            \node at (5.25,10.25) {7};
-            \node at (5.5,10.15) {,};
-            \node at (5.75,10.25) {5};
-            \node at (6.25,10.25) {0};
-            \node at (6.75,10.25) {2};
-
-            \node at (0.25,9.75) {-};
-            \node at (0.75,9.75) {4};
-            \draw (0.25,9.25) -- (1.25,9.25);
-            \node at (0.75,8.75) {3};
-            \node at (1.25,8.75) {0};
-
-            \node at (0.25,9.75) {-};
-            \node at (0.75,8.25) {2};
-            \node at (1.25,8.25) {8};
-            \draw (0.25,7.75) -- (1.75,7.75);
-            \node at (1.25,7.25) {2};
-            \node at (1.75,7.25) {0};
-              
-            \node at (0.75,6.75) {-};
-            \node at (1.25,6.75) {2};
-            \node at (1.75,6.75) {0};
-            \draw (0.75,6.25) -- (2.25,6.25);
-            \node at (1.75,5.75) {0};
-            \node at (2.25,5.75) {0};
-            
-            \node at (1.25,5.25) {-};
-            \node at (2.25,5.25) {0};
-            \draw (1.25,4.75) -- (2.75,4.75);
-            \node at (2.25,4.25) {0};
-            \node at (2.75,4.25) {8};
-
-            \node at (1.75,3.75) {-};
-            \node at (2.75,3.75) {8};
-            \draw (1.75,3.25) -- (3.25,3.25);
-            \node at (2.75,2.75) {0};
-        \end{tikzpicture}
-    \caption{Division von Dezimalbrüchen}\label{fig:divisionDezimalbrueche}
-    \end{figure}
-\end{beispiel}
-
-
-
-\chapter{Überschlagsrechnen}\index{Überschlagsrechnen}\label{Überschlagsrechnen}
-
-\enquote{Überschlagsrechnen} (\citep[S. 8]{LehrplanMathematikHauptschuleHessen2017}) und systematisches Schätzen\footnote{Am Ende des Projektdurchlaufes wäre die Idealvorstellung einfache sog. \enquote{Fermi-Probleme} selbständig lösen zu können, was der Autor auch für einen guten Test hält ob, abgesehen vom sprachlichen Niveau in Deutsch als Fremdsprache, voll umfänglich die Basis für beliebige Ausbildungsgänge gelegt ist.} ordnet \citep{LehrplanMathematikHauptschuleHessen2017} den Natürlichen Zahlen unter, da mit diesen auch das Dezimalsystem direkt im fünften Jahrgang explizit behandelt werden soll. Um hier einen deutlichen Zeitgewinn zu erreichen gehen wir der in der Erwachsenenbildung üblichen Struktur nach die Zahlen durch ohne sie rigoros einzuführen, sondern verlassen uns insbesondere in $\mathbb{R}$ auf die Intuition anhand des Zahlenstrahls und als kontinuierliches Maß von Strecken.
-
-
-
-
 
 
 \chapter{Grundrechenarten}\index{Grundrechenarten}\label{Grundrechenarten}
@@ -1060,6 +864,70 @@ Wir schreiben die \textbf{Multiplikation} von \textbf{Faktoren} $f_1 \cdot f_2$ 
 \section{Division}
 
 Wir schreiben die \textbf{Division} von \textbf{Faktoren}\footnote{Die Mathematik nennt das in der Tat so (und unterscheidet Multiplikation und Division kaum). Wem das zu unklar ist kann die Begriffe Dividend und Divisor benutzen. Dann bezeichnet der Dividend die zu teilende Zahl und Divisor die Zahl durch die der Dividend geteilt wird.} $f_1 \div f_2$ und bezeichnen das Ergebnis einer \textbf{Division} der \textbf{Quotient}.\glsadd{symb:Div}
+
+
+
+\chapter{Kopfrechnen}\index{Kopfrechnen}\label{Kopfrechnen}
+
+Auch mit Smartphone ist Kopfrechnen nicht nur für die erste Seite in der Mathematik-Prüfung nützlich. Das Minimum das wir sicher und schnell, nämlich auswendig, können müssen ist das kleine 1x1. Das brauchen wir auch beim schriftlichen Rechnen, es hilft im Alltag positiv statt negativ aufzufallen und es ist notwendig für die erste Seite in der Prüfung. Sicher Kopfrechnen zu können verschafft einem auf generell immer wieder etwas mehr Selbstsicherheit. Geschadet dürfte es noch nie haben.
+
+\section{1 mal 1}
+
+Das \enquote{$1 \times 1$}, sprich \enquote{ein mal eins}, wird perfekt auswendig gelernt.
+
+\begin{tikzpicture}[border style/.style={
+    draw,fill=#1,minimum size=0.8cm,anchor=center,outer sep=0,
+    name=\tikzmatrixname-\the\mcr-\the\mcc
+}]
+\matrix[row sep=-.5*\pgflinewidth,column sep=-.5*\pgflinewidth,
+   execute at empty cell={%
+       \ifnum1=\mcr\relax%
+           \ifnum1=\mcc\relax\node[border style=black!10!white]{$\cdot$};%
+           \else\node[border style=black!10!white]{$\number\numexpr\the\mcc-1\relax$};\fi
+       \else%
+         \ifnum1=\mcc\relax\node[border style=black!10!white]{$\cdot$};%
+           \node[border style=black!10!white]{$\number\numexpr\the\mcr-1\relax$};%
+         \else%
+           \pgfmathparse{int(abs(\mcr-\mcc))}%
+           \ifnum5=\pgfmathresult\relax\def\temp{white}\else\def\temp{none}\fi%
+           \node[border style=\temp]{\number\numexpr\numexpr\the\mcc-1\relax*\numexpr\the\mcr-1\relax\relax};%
+         \fi%
+       \fi}
+] (a) {
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+&&&&&&&&&&&\\
+};
+\end{tikzpicture}
+
+Die perfekte Beherrschung des \enquote{$1 \times 1$} ist \textbf{notwendige Voraussetzung} für sicheres und schnelles schriftliches Rechnen. Wer Probleme mit dem Lernen hat meldet sich bei den Dozenten, um verschiedene Methoden zu lernen zu besprechen und ggf. Material zum Lernen zu bekommen.
+
+
+\section{Hilfreiche Rechenregeln}
+
+\subsection{2er-Potenzen}
+
+Wenn ich $444 : 8$ rechnen muss hole ich nicht das Telefon aus der Tasche (wobei man sich damit vielleicht gerade so nicht mehr lächerlich macht), sondern weiß dass $8 = 2^3$, d.h. durch acht zu teilen bedeutet auch drei mal zu halbieren. Also $444 \frac{:2}{\rightarrow} 222 \frac{:2}{\rightarrow} 111 \frac{:2}{\rightarrow} 55,5$. Entsprechend ist es hilfreich die 2er-Potenzen ein paar Stellen weit auswendig zu können: $2^n=\{2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, ...\}$. Wir sollten zumindest bis $2^6=62$ kommen. Kommt Dir 64 irgendwie besonders bekannt vor? Ja sicher, $8^2 = 64$. Also ${2^3}=8$ und $8^2=64$? Dann ist also ${2^3}^2 = 64$. Und $2^6 = 64$? ${2^3}^2 = 2^6$. In der Tat ist ${a^m}^n = a^{m \cdot n}$. Das ist allerdings gerade so nicht mehr im Bereich Hauptschule, kommt aber in technischen Berufen in der Berufsschule - und möglicherweise auch überall sonst wegen ein klein Wenig Finanz-/ Bankmathematik hinsichtlich Steuern, Kalkulation von Preisen, Geschäftsplan, ...
+
+In der anderen Richtung gilt auch dass ich falls ich einen Preis für 16 Personen rechnen muss, also mal 16, ausnutzen kann, dass $16 = 2^4$. Wenn der Preis 13€ ist, dann also $13\text{€} \frac{\cdot 2}{\rightarrow} 26\text{€}\frac{\cdot 2}{\rightarrow} 52\text{€}\frac{\cdot 2}{\rightarrow} 104\text{€}$. Und falls es 17 Personen sind eben $13^4\text{€}=104\text{€}$, plus 13€ = 117€. Und so weiter...
+
+
+
+\chapter{Überschlagsrechnen}\index{Überschlagsrechnen}\label{Überschlagsrechnen}
+
+\enquote{Überschlagsrechnen} (\citep[S. 8]{LehrplanMathematikHauptschuleHessen2017}) und systematisches Schätzen\footnote{Am Ende des Projektdurchlaufes wäre die Idealvorstellung einfache sog. \enquote{Fermi-Probleme} selbständig lösen zu können, was der Autor auch für einen guten Test hält ob, abgesehen vom sprachlichen Niveau in Deutsch als Fremdsprache, voll umfänglich die Basis für beliebige Ausbildungsgänge gelegt ist.} ordnet \citep{LehrplanMathematikHauptschuleHessen2017} den Natürlichen Zahlen unter, da mit diesen auch das Dezimalsystem direkt im fünften Jahrgang explizit behandelt werden soll. Um hier einen deutlichen Zeitgewinn zu erreichen gehen wir der in der Erwachsenenbildung üblichen Struktur nach die Zahlen durch ohne sie rigoros einzuführen, sondern verlassen uns insbesondere in $\mathbb{R}$ auf die Intuition anhand des Zahlenstrahls und als kontinuierliches Maß von Strecken.
+
+
+
 
 
 \chapter{Maßeinheiten}\index{Maßeinheiten}
@@ -1246,46 +1114,6 @@ Der Vollständigkeit halber einmal alle Einheiten des \glsdisp{SISystem}{SI-Syst
 
 Aus den elementaren Maßeinheiten können wir neue gewinnen durch Kombinationen. So wird Geschwindigkeit in Metern pro Sekunde ($\frac{m}{s}$) gemessen, Beschleunigung in Metern pro Quadratsekunden ($\frac{m}{s^2}$\footnote{Das ist die Veränderung der Geschwindigkeit pro Zeit}), Dichte in Kilogramm pro Kubikmeter ($\frac{kg}{m^3}$) und so weiter...
 
-
-\chapter{1 mal 1}
-
-Das \enquote{$1 \times 1$}, sprich \enquote{ein mal eins}, wird perfekt auswendig gelernt.
-
-\begin{tikzpicture}[border style/.style={
-    draw,fill=#1,minimum size=0.8cm,anchor=center,outer sep=0,
-    name=\tikzmatrixname-\the\mcr-\the\mcc
-}]
-\matrix[row sep=-.5*\pgflinewidth,column sep=-.5*\pgflinewidth,
-   execute at empty cell={%
-       \ifnum1=\mcr\relax%
-           \ifnum1=\mcc\relax\node[border style=black!10!white]{$\cdot$};%
-           \else\node[border style=black!10!white]{$\number\numexpr\the\mcc-1\relax$};\fi
-       \else%
-         \ifnum1=\mcc\relax\node[border style=black!10!white]{$\cdot$};%
-           \node[border style=black!10!white]{$\number\numexpr\the\mcr-1\relax$};%
-         \else%
-           \pgfmathparse{int(abs(\mcr-\mcc))}%
-           \ifnum5=\pgfmathresult\relax\def\temp{white}\else\def\temp{none}\fi%
-           \node[border style=\temp]{\number\numexpr\numexpr\the\mcc-1\relax*\numexpr\the\mcr-1\relax\relax};%
-         \fi%
-       \fi}
-] (a) {
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-&&&&&&&&&&&\\
-};
-\end{tikzpicture}
-
-Die perfekte Beherrschung des \enquote{$1 \times 1$} ist \textbf{notwendige Voraussetzung} für sicheres und schnelles schriftliches Rechnen. Wer Probleme mit dem Lernen hat meldet sich bei den Dozenten, um verschiedene Methoden zu lernen zu besprechen und ggf. Material zum Lernen zu bekommen.
 
 \chapter{Schriftlich Rechnen}\index{Schriftlich Rechnen}
 
@@ -1987,8 +1815,197 @@ Wir schreiben $3-2=1$ und lesen \enquote{drei minus zwei (ist) gleich 1}. Eine n
   \caption{schriftlich multiplizieren}\label{fig:schriftlichMultiplizieren}
 \end{figure}
 
+\begin{beispiel}[Multiplikation mit Dezimalbrüchen]
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur/2);
+        \node at (0.75,5.75) {1};
+        \node at (1.25,5.75) {5};
+        \node at (1.5,5.65) {,};
+        \node at (1.75,5.75) {7};
+        \node at (2.25,5.75) {3};
+        \node at (2.75,5.75) {$\times$};
+        \node at (3.25,5.75) {2};
+        \node at (3.5,5.65) {,};
+        \node at (3.75,5.75) {7};
+        \node at (4.25,5.75) {1};
+
+        \node at (5.75,5.75) {=};
+
+        \node at (6.75,5.75) {1};
+        \node at (7.25,5.75) {5};
+        \node at (7.75,5.65) {,};
+        \node at (8.25,5.75) {7};
+        \node at (8.75,5.75) {3};
+        \node at (9.25,5.75) {$\times$};
+        \node at (9.75,5.75) {2};
+        \node at (6.25,5.25) {+};
+        \node at (6.75,5.25) {1};
+        \node at (7.25,5.25) {5};
+        \node at (7.75,5.15) {,};
+        \node at (8.25,5.25) {7};
+        \node at (8.75,5.25) {3};
+        \node at (9.25,5.25) {$\times$};
+        \node at (9.75,5.25) {0};
+        \node at (10.25,5.15) {,};
+        \node at (10.75,5.25) {7};
+        \node at (6.25,4.75) {+};
+        \node at (6.75,4.75) {1};
+        \node at (7.25,4.75) {5};
+        \node at (7.75,4.65) {,};
+        \node at (8.25,4.75) {7};
+        \node at (8.75,4.75) {3};
+        \node at (9.25,4.75) {$\times$};
+        \node at (9.75,4.75) {0};
+        \node at (10.25,4.65) {,};
+        \node at (10.75,4.75) {0};
+        \node at (11.25,4.75) {1};
+
+        \node at (1.75,4.75) {3};
+        \node at (2.25,4.75) {1};
+        \node at (2.5,4.65) {,};
+        \node at (2.75,4.75) {4};
+        \node at (3.25,4.75) {6};
+
+        \node at (1.75,4.25) {1};
+        \node at (2.25,4.25) {1};
+        \node at (2.5,4.15) {,};
+        \node at (2.75,4.25) {0};
+        \node at (3.25,4.25) {1};
+        \node at (3.75,4.25) {1};
+
+        \node at (2.25,3.75) {0};
+        \node at (2.5,3.65) {,};
+        \node at (2.75,3.75) {1};
+        \node at (3.25,3.75) {5};
+        \node at (3.75,3.75) {7};
+        \node at (4.25,3.75) {3};
+
+        \draw (0.25,3.25) -- (7.75,3.25);
+
+        \node at (1.75,2.75) {4};
+        \node at (2.25,2.75) {2};
+        \node at (2.5,2.65) {,};
+        \node at (2.75,2.75) {6};
+        \node at (2.85,3.35) {\tiny{1}};
+        \node at (3.25,2.75) {2};
+        \node at (3.75,2.75) {8};
+        \node at (4.25,2.75) {3};
+
+  \end{tikzpicture}
+  \caption{Multiplikation mit Dezimalbrüchen}\label{fig:Dezimalsystem02}
+\end{figure}
+
+Wir rechnen ein Produkt aus zwei Faktoren mit Kommata aus, \enquote{Dezimalbrüche}. $\prod = a \cdot b$, $a=15,73$, $b=2,71$. Wir schreiben die Faktoren ordentlich auf, so dass wir eine Spalte im karierten Papier pro Stelle haben (ob das Komma [interessant ist für die Nutzung der Spalten nur der zweite Faktor] eine eigene Spalte bekommt ist Geschmackssache. Wir schauen uns die Zahlen genauer an um sowohl etwas über das (10er-) Stellenwertsystem zu lernen, was bei der Prozentrechnung sehr hilfreich sein wird, als auch einen Schritt in Richtung Überschlagsrechnen zu gehen. Mit Prozent oder Hundertstel schätzt sich einfacher als mit Komma-Zahlen. $15,73 \cdot 100 = 1573$. $2,71 \cdot 100 = 271$. Also $15,73=\frac{1573}{100}$ und $2,71=\frac{271}{100}$. In der Bruchrechnung lernen wir dass zwei Brüche $a, b$ miteinander multipliziert werden indem $\frac{p}{q} = \frac{z_a}{n_a} \cdot \frac{z_b}{n_b} = \frac{z_a \cdot z_b}{n_a \cdot n_b}$, also die Zähler miteinander multipliziert werden und die Nenner miteinander multipliziert werden. $\frac{1573}{100} \cdot \frac{271}{100} = \frac{1573 \cdot 271}{100 \cdot 100}$. Also ist $15,73 \cdot 2,71 = \frac{1573 \cdot 271}{100 \cdot 100} = \frac{426.283}{10.000}$. Wir erwarten also dass es als Dezimalbruch $15,73 \cdot 2,71 = 42,6283$ ist.\end{beispiel}
+
+
 
 \section{Schriftliche Division}\index{Division!schriftliche}
+
+Wir schreiben die Aufgabe sauber auf kariertes Papier. Jede Ziffer hat ihr eigenes Kästchen.
+
+
+\begin{beispiel}[Division von Dezimalbrüchen]
+    Wir dividieren $0,44 : 0,2$.
+
+    \begin{enumerate}
+      \item \enquote{Kommaverschiebung}, wir machen aus der Zahl durch die geteilt werden soll eine natürliche Zahl ohne das Ergebnis zu verändern\footnote{der Ausdruck muss gleich bleiben, Äquivalenzumformung}.
+      \item schriftlich dividieren.
+    \end{enumerate}
+
+    \begin{align*}
+        0,44 & : & 0,2 \\
+         & = & 4,4 : 2
+    \end{align*}
+
+    $0,44 : 0,2$, gelesen \enquote{Null-Komma-Vier-Vier geteilt durch Null-Komma-Zwei}, ist $\frac{0,44}{0,2}$. Zumindest in der Vorstellung möchten wir in Brüchen nur ganze Zahlen haben. Einen Bruch können wir erweitern: Wir erweitern mit 10, so dass $\frac{0,44}{0,2} = \frac{4,4}{2}$. $4,4 : 2$ ist weder schriftlich noch im Kopf schwierig so dass $4,4 : 2 = 2,2$.
+\end{beispiel}
+
+\begin{beispiel}[Division von Dezimalbrüchen]
+    Wir dividieren $7,0008 : 0,4$. Durch \enquote{Kommaverschiebung} ergibt das (ohne den Wert zu verändern) $70,008 : 4$. Das dividieren wir wie gehabt schriftlich (s. Abb. \ref{fig:divisionDezimalbrueche}).
+
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}
+            \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
+
+            \node at (0.75,11.75) {7};
+            \node at (1,11.65) {,};
+            \node at (1.25,11.75) {0};
+            \node at (1.75,11.75) {0};
+            \node at (2.25,11.75) {0};
+            \node at (2.75,11.75) {8};
+            \node at (3.25,11.75) {:};
+            \node at (3.75,11.75) {0};
+            \node at (4.25,11.65) {,};
+            \node at (4.75,11.75) {4};
+
+            \draw (6.25,11.55) -- (6.25,11.95);
+            \node at (6.75,11.75) {$\cdot$};
+            \node at (7.25,11.75) {1};
+            \node at (7.75,11.75) {0};
+
+            \node at (0.25,11.25) {=};
+            \node at (0.75,11.25) {7};
+            \node at (1.25,11.25) {0};
+            \node at (1.5,11.15) {,};
+            \node at (1.75,11.25) {0};
+            \node at (2.25,11.25) {0};
+            \node at (2.75,11.25) {8};
+            \node at (3.25,11.25) {:};
+            \node at (3.75,11.25) {4};
+
+            \node at (0.75,10.25) {7};
+            \node at (1.25,10.25) {0};
+            \node at (1.5,10.15) {,};
+            \node at (1.75,10.25) {0};
+            \node at (2.25,10.25) {0};
+            \node at (2.75,10.25) {8};
+            \node at (3.25,10.25) {:};
+            \node at (3.75,10.25) {4};
+            \node at (4.25,10.25) {=};
+            \node at (4.75,10.25) {1};
+            \node at (5.25,10.25) {7};
+            \node at (5.5,10.15) {,};
+            \node at (5.75,10.25) {5};
+            \node at (6.25,10.25) {0};
+            \node at (6.75,10.25) {2};
+
+            \node at (0.25,9.75) {-};
+            \node at (0.75,9.75) {4};
+            \draw (0.25,9.25) -- (1.25,9.25);
+            \node at (0.75,8.75) {3};
+            \node at (1.25,8.75) {0};
+
+            \node at (0.25,9.75) {-};
+            \node at (0.75,8.25) {2};
+            \node at (1.25,8.25) {8};
+            \draw (0.25,7.75) -- (1.75,7.75);
+            \node at (1.25,7.25) {2};
+            \node at (1.75,7.25) {0};
+
+            \node at (0.75,6.75) {-};
+            \node at (1.25,6.75) {2};
+            \node at (1.75,6.75) {0};
+            \draw (0.75,6.25) -- (2.25,6.25);
+            \node at (1.75,5.75) {0};
+            \node at (2.25,5.75) {0};
+
+            \node at (1.25,5.25) {-};
+            \node at (2.25,5.25) {0};
+            \draw (1.25,4.75) -- (2.75,4.75);
+            \node at (2.25,4.25) {0};
+            \node at (2.75,4.25) {8};
+
+            \node at (1.75,3.75) {-};
+            \node at (2.75,3.75) {8};
+            \draw (1.75,3.25) -- (3.25,3.25);
+            \node at (2.75,2.75) {0};
+        \end{tikzpicture}
+    \caption{Division von Dezimalbrüchen}\label{fig:divisionDezimalbrueche}
+    \end{figure}
+\end{beispiel}
 
 \begin{figure}
   \centering
