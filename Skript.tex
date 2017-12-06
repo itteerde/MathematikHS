@@ -334,6 +334,10 @@ Wer den ganzen Text wirklich versteht, alle Beispiele versteht, alle Aufgaben l�
 
 Alle Worte im Text, der nicht besonders als Ausnahme gezeichnet ist, müssen gelernt werden. Besonders wichtig ist das bei der Fachsprache der Mathematik, die auch in der Prüfung benutzt wird. Zusätzlich sollen alle Wörter in Beispielen und Aufgaben gelernt werden, da diese besonders häufig im Text von Prüfungen vorkommen. Der Text enthält ein Vokabelverzeichnis der Fachsprache und häufig verwendeter Vokabeln. Diese Vokabeln müssen sicher gelernt und gut verstanden werden. Das Vokabular für die Mathematik ist umfangreich und muss über die ganze Schulzeit verteilt gelernt werden. Dafür seid Ihr selbst verantwortlich. In der Mathematik schreiben wir keine Vokabeltests. Ohne die Vokabeln zu lernen wirst Du aber die Prüfung nicht schaffen.
 
+\begin{exkurs}[mathematische Methodik]
+    Eine Besonderheit der Mathematik\footnote{bezogen auf die Schule, universitär arbeiten alle Wissenschaften so} ist die Arbeit mit Definitionen und Sätzen. Dinge, wie eine Zahl erfüllen eine Definition oder tun das nicht. Wenn sie die Definition erfüllen kann man Methoden, Regeln, Techniken auf sie anwenden, die in Sätzen (mit einem Namen wie \textsc{Satz des Pythagoras}) oder Rechenregeln exakt beschrieben sind. Dieses anfangs scheinbar umständliche und schwierige Vorgehen stellt sich später als große Stärke der Mathematik heraus, die dazu führt, dass alle Naturwissenschaften (und zunehmend auch alle anderen Wissenschaften und vermehrt auch nicht akademisch gelernte Berufe) sich in ihrer Methodik der Mathematik als Mittel der Kommunikation bedienen.
+\end{exkurs} 
+
 
 \chapter{Was ist Mathematik?}
 
@@ -427,7 +431,7 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
 
 \section{Natürliche Zahlen ($\mathbb{N}$)}\index{natürliche Zahlen}
 
-\textbf{\glsdisp{symb:N}{Natürliche Zahlen}} benutzen wir zum Zählen. Ein Apfel, zwei Äpfel, drei Äpfel, vier Äpfel, ... $\mathbb{N} = \{ 0$\footnote{Viele Mathematiker betrachten die Null nicht als natürliche Zahl. Für uns spielt keine Rolle ob Null eine natürliche Zahl ist oder nicht.}\textsuperscript{,}\footnote{Wir verzichten auf eine Definition und gehen davon aus, dass Beispiele ausreichen und spätestens mit der Teilbarkeit Klarheit intuitiv (natürlich!) entsteht.}$, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...\}$.
+\textbf{\glsdisp{symb:N}{Natürliche Zahlen}} benutzen wir zum Zählen. Ein Apfel, zwei Äpfel, drei Äpfel, vier Äpfel, ... Wir schreiben die Menge der Natürlichen Zahlen \enquote{$\mathbb{N} = \{ 0$\footnote{Viele Mathematiker betrachten die Null nicht als natürliche Zahl. Für uns spielt keine Rolle ob Null eine natürliche Zahl ist oder nicht.}\textsuperscript{,}\footnote{Wir verzichten auf eine Definition und gehen davon aus, dass Beispiele ausreichen und spätestens mit der Teilbarkeit Klarheit intuitiv (natürlich!) entsteht.}$, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...\}$} und sagen \enquote{die Natürlichen Zahlen}.
 
 
 \section{Teilbarkeit}\index{Teilbarkeit}\label{def:teilbarkeit}
@@ -435,6 +439,8 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
 \begin{definition}[Teilbarkeit]\index{Teilbarkeit}
     Wir sagen dass eine natürliche Zahl $a$ eine natürliche Zahl $b$ \textbf{teilt} wenn $b \div a$ eine natürliche Zahl ist. Wir sagen \enquote{a teilt b} und schreiben \enquote{\glsdisp{symb:teilt}{$a | b$}} und \enquote{a teilt nicht b} und schreiben \glsdisp{symb:teiltnicht}{\enquote{$a \nmid b$}}. Jede natürliche Zahl ist durch sich selbst und durch 1 teilbar. Wir nennen 1 und die Zahl selbst triviale Teiler der Zahl.
 \end{definition}
+
+Wir brauchen die Teilbarkeit beim Kürzen von Brüchen (s. Bruchrechnung, S. \pageref{Bruchrechnung}).
 
 \begin{beispiel}[Teilbarkeit]\index{Teilbarkeit}
     $2 | 4$, $1 | 2$, $3 \nmid 4$, $3 | 9$, $3 \nmid 7$, $3 | 27$, $15 | 60$, $3 \nmid 10$, $10 | 10$, $ 5 \nmid 7$, $16 | 32$.
@@ -465,6 +471,8 @@ Wir machen Mengen nicht zu einem großen zentralen Thema, da sie meistens nur mi
 \begin{definition}[kgV]
     Wir nennen die kleinste Zahl durch die jede Zahl der Menge deren kleinstes gemeinsames Vielfaches (kgV) wir suchen \enquote{\textbf{kleinstes gemeinsames Vielfaches (kgV)}}.
 \end{definition}
+
+Wir brauchen das kgV beim Addieren und Subtrahieren von Brüchen (s. Brüche, S. \pageref{Bruchrechnung}).
 
 Systematisch finden wir das kgV einer Menge von Zahlen, insbesondere von zwei Zahlen, über die Primfaktorzerlegungen der Zahlen. Für kleine Zahlen (so wie die im Teil der Prüfung ohne Taschenrechner) reicht eine Tabelle der Vielfachen aus in der man die erste und damit kleinste Zahl sucht, die in den Reihen der Vielfachen aller Zahlen deren kgV man sucht, vorkommt.
 
@@ -552,7 +560,11 @@ Die Reihenfolge der \textbf{Faktoren} ist egal. $3 \cdot 2$ und $2 \cdot 3$ werd
 
 \section{Ganze Zahlen ($\mathbb{Z}$)}\index{ganze Zahlen}
 
-Die Menge der ganzen Zahlen $\mathbb{Z}$ besteht aus den natürlichen Zahlen und die negativen Zahlen gleichen Betrages: $\mathbb{Z}=\{..., -2, -1, 0, 1, 2, 3, ...\}$. Die Ordnungsrelation \enquote{$<$}\glsadd{symb:Kleiner}\index{$<$} sprechen wir \enquote{kleiner als}. \enquote{$1<2$} ist eine wahre Aussage; \enquote{$2<1$} ist eine falsche Aussage. Die Ordnungsrelation \enquote{$>$}\glsadd{symb:Groeszer}\index{$>$} sprechen wir \enquote{größer als}. \enquote{$2>1$} ist eine wahre Aussage; \enquote{$1>2$} ist eine falsche Aussage.
+\begin{definition}[Betrag]\index{Betrag}
+    Wir nennen $|x|$ den Betrag (engl. abs) von $x$. Es sei $|-x| = x$, $|x|=x$ und damit $|-x|=|x|$.
+\end{definition}
+
+Die Menge der ganzen Zahlen $\mathbb{Z}$ besteht aus den natürlichen Zahlen und die negativen Zahlen gleichen Betrages: $\mathbb{Z}=\{..., -2, -1, 0, 1, 2, 3, ...\}$. Die \textbf{Ordnungsrelation} \enquote{$<$}\glsadd{symb:Kleiner}\index{$<$} sprechen wir \enquote{kleiner als}. \enquote{$1<2$} ist eine wahre Aussage; \enquote{$2<1$} ist eine falsche Aussage. Die Ordnungsrelation \enquote{$>$}\glsadd{symb:Groeszer}\index{$>$} sprechen wir \enquote{größer als}. \enquote{$2>1$} ist eine wahre Aussage; \enquote{$1>2$} ist eine falsche Aussage. Auf dem Zahlenstrahl ist eine Zahl $a$ mit $a < b$ links von der Zahl $b$.
 
 
 \section{Rationale Zahlen ($\mathbb{Q}$)}\index{rationale Zahlen}
@@ -839,10 +851,6 @@ Problematisch wird das Subtrahieren von negativen Zahlen, für das man sich am Z
   \caption{$+/-$ am Zahlenstrahl $\mathbb{R}$}\label{fig:zahlenstrahlSubtraktion}
 \end{figure}
 
-\begin{definition}[Betrag]\index{Betrag}
-    Wir nennen $|x|$ den Betrag (engl. abs) von $x$. Es sei $|-x| = x$, $|x|=x$ und damit $|-x|=|x|$.
-\end{definition}
-
 
 \begin{beispiel}[Summe mit gemischten Vorzeichen]
     \begin{equation}
@@ -908,12 +916,12 @@ Problematisch wird das Subtrahieren von negativen Zahlen, für das man sich am Z
 
 \section{Multiplikation}
 
-Wir schreiben die \textbf{Multiplikation} von \textbf{Faktoren} $f_1 \cdot f_2$ und das Ergebnis einer \textbf{Multiplikation} das \textbf{Produkt}.\glsadd{symb:Mal}
+Wir schreiben die \textbf{Multiplikation} von \textbf{Faktoren} $f_1 \cdot f_2$ und das Ergebnis einer \textbf{Multiplikation} das \textbf{Produkt}.\glsadd{symb:Mal} Am Zahlenstrahl bedeutet $n \cdot m$ $n$ Schritte der Länge $m$ aneinander zu setzen oder $m$ Schritte der Länge $n$.
 
 
 \section{Division}
 
-Wir schreiben die \textbf{Division} von \textbf{Faktoren}\footnote{Die Mathematik nennt das in der Tat so (und unterscheidet Multiplikation und Division kaum). Wem das zu unklar ist kann die Begriffe Dividend und Divisor benutzen. Dann bezeichnet der Dividend die zu teilende Zahl und Divisor die Zahl durch die der Dividend geteilt wird.} $f_1 \div f_2$ und bezeichnen das Ergebnis einer \textbf{Division} der \textbf{Quotient}.\glsadd{symb:Div}
+Wir schreiben die \textbf{Division} von \textbf{Faktoren}\footnote{Die Mathematik nennt das in der Tat so (und unterscheidet Multiplikation und Division kaum). Wem das zu unklar ist kann die Begriffe Dividend und Divisor benutzen. Dann bezeichnet der Dividend die zu teilende Zahl und Divisor die Zahl durch die der Dividend geteilt wird.} $f_1 : f_2$, $f_1 \div f_2$ oder $f_1 / f_2$ und nennen das Ergebnis einer \textbf{Division} \textbf{Quotient}.\glsadd{symb:Div} Am Zahlenstrahl bedeutete die Division $p : q$ die Strecke $p$ in $q$ gleich lange Stücke aufzuteilen und der Ausdruck $p : q$, z.B. $6:3=2$ die Länge einer solchen Teilstrecke (ohne Angabe der Maßeinheit).
 
 
 
@@ -982,9 +990,6 @@ Eine Zahl\footnote{im Dezimalsystemnotiert} ist genau dann durch 3 teilbar wenn 
 \chapter{Überschlagsrechnen}\index{Überschlagsrechnen}\label{Überschlagsrechnen}
 
 \enquote{Überschlagsrechnen} (\citep[S. 8]{LehrplanMathematikHauptschuleHessen2017}) und systematisches Schätzen\footnote{Am Ende des Projektdurchlaufes wäre die Idealvorstellung einfache sog. \enquote{Fermi-Probleme} selbständig lösen zu können, was der Autor auch für einen guten Test hält ob, abgesehen vom sprachlichen Niveau in Deutsch als Fremdsprache, voll umfänglich die Basis für beliebige Ausbildungsgänge gelegt ist.} ordnet \citep{LehrplanMathematikHauptschuleHessen2017} den Natürlichen Zahlen unter, da mit diesen auch das Dezimalsystem direkt im fünften Jahrgang explizit behandelt werden soll. Um hier einen deutlichen Zeitgewinn zu erreichen gehen wir der in der Erwachsenenbildung üblichen Struktur nach die Zahlen durch ohne sie rigoros einzuführen, sondern verlassen uns insbesondere in $\mathbb{R}$ auf die Intuition anhand des Zahlenstrahls und als kontinuierliches Maß von Strecken.
-
-
-
 
 
 \chapter{Maßeinheiten}\index{Maßeinheiten}
@@ -1167,10 +1172,13 @@ Monate sind nicht eindeutig. Kalendarische Monate haben 28 bis 31 Tage, betriebs
 
 In Wissenschaft und Technik wird durchgehend mit der Sekunde gerechnet und die Größenordnung wissenschaftlich notiert. So ist ein Tag $1 \text{d} = 60 \cdot 60 \cdot 24 \text{s} = 86.400\text{s} = 8,64 \times 10^4 \text{s}$ und das Universum ist ca. 14 Milliarden Jahre alt, was wissenschaftlich notiert $4,3 \times 10^{17}\text{s}$ sind.
 
-Der Vollständigkeit halber einmal alle Einheiten des \glsdisp{SISystem}{SI-Systems}: Wir kennen bereits die Maßeinheit für Längen, den Meter (m), die Einheit für Massen, das Kilogramm (kg) und die Einheit für Zeit, die Sekunde (s). Die weiteren Einheiten, die nicht relevant sind für die Prüfung, da wir nur diese drei (kms) in der Mathematik brauchen und Erdkunde haben statt Physik, sind das Ampere (A) für Stromstärken, Kelvin (K) für Temperaturen, Mol (mol) für Stoffmengen und Candela (cd) für Lichtstärke.
+\begin{exkurs}[SI-Einheiten über kms hinaus]
+    Der Vollständigkeit halber einmal alle Einheiten des \glsdisp{SISystem}{SI-Systems}: Wir kennen bereits die Maßeinheit für Längen, den Meter\index{Meter} (m), die Einheit für Massen, das Kilogramm\index{Kilogramm} (kg) und die Einheit für Zeit, die Sekunde\index{Sekunde} (s). Die weiteren Einheiten, die nicht relevant sind für die Prüfung, da wir nur diese drei (kms) in der Mathematik brauchen und Erdkunde haben statt Physik, sind das Ampere\index{Ampere} (A) für Stromstärken, Kelvin\index{Kelvin} (K) für Temperaturen, Mol\index{Mol} (mol) für Stoffmengen und Candela\index{Candela} (cd) für Lichtstärke.
 
-Aus den elementaren Maßeinheiten können wir neue gewinnen durch Kombinationen. So wird Geschwindigkeit in Metern pro Sekunde ($\frac{m}{s}$) gemessen, Beschleunigung in Metern pro Quadratsekunden ($\frac{m}{s^2}$\footnote{Das ist die Veränderung der Geschwindigkeit pro Zeit}), Dichte in Kilogramm pro Kubikmeter ($\frac{kg}{m^3}$) und so weiter...
-
+    Aus den elementaren Maßeinheiten können wir neue gewinnen durch Kombinationen. So wird Geschwindigkeit in Metern pro Sekunde ($\frac{m}{s}$) gemessen, Beschleunigung in Metern pro Quadratsekunden ($\frac{m}{s^2}$\footnote{Das ist die Veränderung der Geschwindigkeit pro Zeit}), Dichte in Kilogramm pro Kubikmeter ($\frac{kg}{m^3}$) und so weiter...
+    
+    Während einige Einheiten ursprünglich recht willkürlich und wenig stabil gewählt wurden (so ist $\frac{1}{1000000}$ des Kreisbogens der Erdoberfläche von Äquator bis Paris sicherlich besser als ein Schritt des Königs), ändert sich aber tatsächlich auch, wenn auch nicht so stark wie beim Tod des Königs, und war tatsächlich auch nur die Basis für den Stab aus einer Legierung, die in Paris im Keller liegt und damit die wirkliche Definition war) bemühen sich Wissenschaftler seit einigen Jahrzehnten die SI-Einheiten auf Naturkonstanten zu definieren und so ist der Meter seit 1983 definiert als die Strecke, die Licht im Vakuum währen der Dauer von $\frac{1}{299792458}$ Sekunden zurücklegt. Nach aktuellem Stand der Wissenschaften ist dies eine in unserem Universum überall und zu allen Zeiten gleiche Größe (und den genauen Nenner hat man natürlich so gewählt dass es dem alten Meter entspricht - nur nun auch so bleibt und nicht von der Temperatur im Pariser Keller abhängig ist).\topicend
+\end{exkurs}
 
 \chapter{Schriftlich Rechnen}\index{Schriftlich Rechnen}
 
@@ -1394,6 +1402,147 @@ Die Beispiele zeigen, dass schriftlich zu addieren bei Nutzung des karierten Pap
 
   \end{tikzpicture}
   \caption{schriftlich addieren}\label{fig:schriftlichAddieren}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+        \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur/2);
+        
+        \node at (3.25,5.25) {2};
+        \node at (3.5,5.15) {,};
+        \node at (3.75,5.25) {3};
+        \node at (4.25,5.25) {4};
+
+        \node at (1.25,4.75) {+};
+        \node at (3.25,4.75) {0};
+        \node at (3.5,4.65) {,};
+        \node at (3.75,4.75) {0};
+        \node at (4.25,4.75) {0};
+        \node at (4.75,4.75) {8};
+        
+        \node at (1.25,4.25) {+};
+        \node at (2.25,4.25) {1};
+        \node at (2.75,4.25) {2};
+        \node at (3.25,4.25) {0};
+        \node at (3.5,4.15) {};
+
+        \node at (1.25,3.75) {+};
+        \node at (3.25,3.75) {7};
+        \node at (3.5,3.65) {,};
+        \node at (3.75,3.75) {8};
+        \node at (4.25,3.75) {8};
+        
+        \draw (1.25,3.2) -- (5.25,3.2);
+        
+        \node at (4.75,2.75) {8};
+        \node at (4.25,2.75) {2};
+        \node at (3.8cm, 3.3cm) {\tiny 1};
+        \node at (3.75,2.75) {2};
+        \node at (3.3cm, 3.3cm) {\tiny 1};
+        \node at (3.5,2.65) {,};
+        \node at (3.25,2.75) {0};
+        \node at (2.8cm, 3.3cm) {\tiny 1};
+        \node at (2.75,2.75) {3};
+        \node at (2.25,2.75) {1};
+        
+        \node at (8.75,5.25) {4};
+        \node at (9.25,5.25) {5};
+        \node at (9.5,5.15) {,};
+        \node at (9.75,5.25) {0};
+        \node at (10.25,5.25) {0};
+        \node at (10.75,5.25) {2};
+        \node at (11.25,5.25) {3};
+        
+        \node at (6.75,4.75) {+};
+        \node at (7.75,4.75) {1};
+        \node at (8.25,4.75) {0};
+        \node at (8.75,4.75) {0};
+        \node at (9.25,4.75) {7};
+        \node at (9.5,4.65) {,};
+        \node at (9.75,4.75) {7};
+        \node at (10.25,4.75) {8};
+
+        \node at (6.75,4.25) {+};
+        \node at (7.75,4.25) {};
+        \node at (8.25,4.25) {9};
+        \node at (8.75,4.25) {8};
+        \node at (9.25,4.25) {7};
+        \node at (9.5,4.15) {,};
+        \node at (9.75,4.25) {7};
+        \node at (10.25,4.25) {6};
+        \node at (10.75,4.25) {5};
+        \node at (11.25,4.25) {9};
+
+        \node at (6.75,3.75) {+};
+        \node at (7.75,3.75) {6};
+        \node at (8.25,3.75) {7};
+        \node at (8.75,3.75) {8};
+        \node at (9.25,3.75) {9};
+        \node at (9.5,3.65) {,};
+        \node at (9.75,3.75) {9};
+        \node at (10.25,3.75) {6};
+        \node at (10.75,3.75) {3};
+        \node at (11.25,3.75) {};
+
+        \node at (6.75,3.25) {+};
+        \node at (7.75,3.25) {};
+        \node at (8.25,3.25) {};
+        \node at (8.75,3.25) {9};
+        \node at (9.25,3.25) {9};
+        \node at (9.5,3.15) {,};
+        \node at (9.75,3.25) {7};
+        \node at (10.25,3.25) {6};
+        \node at (10.75,3.25) {5};
+        \node at (11.25,3.25) {2};
+        \node at (11.75,3.25) {9};
+
+        \node at (6.75,2.75) {+};
+        \node at (7.75,2.75) {};
+        \node at (8.25,2.75) {5};
+        \node at (8.75,2.75) {7};
+        \node at (9.25,2.75) {9};
+        \node at (9.5,2.65) {,};
+        \node at (9.75,2.75) {8};
+        \node at (10.25,2.75) {6};
+        \node at (10.75,2.75) {4};
+        \node at (11.25,2.75) {4};
+        \node at (11.75,2.75) {2};
+
+        \node at (6.75,2.25) {+};
+        \node at (7.75,2.25) {};
+        \node at (8.25,2.25) {};
+        \node at (8.75,2.25) {};
+        \node at (9.25,2.25) {7};
+        \node at (9.5,2.15) {,};
+        \node at (9.75,2.25) {8};
+        \node at (10.25,2.25) {6};
+        \node at (10.75,2.25) {2};
+        \node at (11.25,2.25) {3};
+        \node at (11.75,2.25) {};
+        
+        \draw (6.75,1.7) -- (12,1.7);
+
+        \node at (7.75,1.25) {9};
+        \node at (7.8,1.8) {\tiny 2};
+        \node at (8.25,1.25) {5};
+        \node at (8.3,1.8) {\tiny 4};
+        \node at (8.75,1.25) {1};
+        \node at (8.8,1.8) {\tiny 5};
+        \node at (9.25,1.25) {8};
+        \node at (9.3,1.8) {\tiny 5};
+        \node at (9.5,1.15) {,};
+        \node at (9.75,1.25) {0};
+        \node at (9.8,1.8) {\tiny 4};
+        \node at (10.25,1.25) {0};
+        \node at (10.3,1.8) {\tiny 2};
+        \node at (10.75,1.25) {3};
+        \node at (10.8,1.8) {\tiny 2};
+        \node at (11.25,1.25) {2};
+        \node at (11.3,1.8) {\tiny 1};
+        \node at (11.75,1.25) {1};
+  \end{tikzpicture}
+  \caption{schriftlich addieren von Dezimalbrüchen}\label{fig:schriftlichAddierenDezimalbrueche}
 \end{figure}
 
 
@@ -1798,75 +1947,75 @@ Wir schreiben $3-2=1$ und lesen \enquote{drei minus zwei (ist) gleich 1}. Eine n
   \centering
   \begin{tikzpicture}
     %\draw[step=1mm, line width=0.1mm, black!30!white] (0,0) grid (\width,\hauteur);
-    \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur);
+    \draw[step=5mm, line width=0.1mm, black!40!white] (0,0) grid (\width,\hauteur/2);
     %\draw[step=5cm, line width=0.5mm, black!50!white] (0,0) grid (\width,\hauteur);
     %\draw[step=1cm, line width=0.3mm, black!90!white] (0,0) grid (\width,\hauteur);
 
-    \node at (1.25cm, 11.25cm) {1};
-    \node at (1.75cm, 11.25cm) {2};
-    \node at (2.25cm, 11.25cm) {3};
-    \node at (2.75cm, 11.25cm) {4};
-    \node at (3.25cm, 11.25cm) {5};
-    \node at (3.75cm, 11.25cm) {$\cdot$};
-    \node at (4.25cm, 11.25cm) {6};
-    \node at (4.75cm, 11.25cm) {7};
-    \node at (5.25cm, 11.25cm) {8};
-    \node at (5.75cm, 11.25cm) {9};
-    \node at (6.25cm, 11.25cm) {=};
-    \node at (6.75cm, 11.25cm) {8};
-    \node at (7.25cm, 11.25cm) {3};
-    \node at (7.75cm, 11.25cm) {8};
-    \node at (8.25cm, 11.25cm) {1};
-    \node at (8.75cm, 11.25cm) {0};
-    \node at (9.25cm, 11.25cm) {2};
-    \node at (9.75cm, 11.25cm) {0};
-    \node at (10.25cm, 11.25cm) {5};
+    \node at (1.25cm, 5.25cm) {1};
+    \node at (1.75cm, 5.25cm) {2};
+    \node at (2.25cm, 5.25cm) {3};
+    \node at (2.75cm, 5.25cm) {4};
+    \node at (3.25cm, 5.25cm) {5};
+    \node at (3.75cm, 5.25cm) {$\cdot$};
+    \node at (4.25cm, 5.25cm) {6};
+    \node at (4.75cm, 5.25cm) {7};
+    \node at (5.25cm, 5.25cm) {8};
+    \node at (5.75cm, 5.25cm) {9};
+    \node at (6.25cm, 5.25cm) {=};
+    \node at (6.75cm, 5.25cm) {8};
+    \node at (7.25cm, 5.25cm) {3};
+    \node at (7.75cm, 5.25cm) {8};
+    \node at (8.25cm, 5.25cm) {1};
+    \node at (8.75cm, 5.25cm) {0};
+    \node at (9.25cm, 5.25cm) {2};
+    \node at (9.75cm, 5.25cm) {0};
+    \node at (10.25cm, 5.25cm) {5};
 
-    \draw (0.2cm,10.75cm) -- (6.2cm,10.75cm);
-    \node at (1.25cm, 9.75cm) {+};
-    \node at (1.25cm, 9.25cm) {+};
-    \node at (1.25cm, 8.75cm) {+};
+    \draw (0.2cm,4.75cm) -- (6.2cm,4.75cm);
+    \node at (1.25cm, 3.75cm) {+};
+    \node at (1.25cm, 3.25cm) {+};
+    \node at (1.25cm, 2.75cm) {+};
 
-    \node at (2.25cm, 10.25cm) {7};
-    \node at (2.75cm, 10.25cm) {4};
-    \node at (3.25cm, 10.25cm) {0};
-    \node at (3.75cm, 10.25cm) {7};
-    \node at (4.25cm, 10.25cm) {0};
+    \node at (2.25cm, 4.25cm) {7};
+    \node at (2.75cm, 4.25cm) {4};
+    \node at (3.25cm, 4.25cm) {0};
+    \node at (3.75cm, 4.25cm) {7};
+    \node at (4.25cm, 4.25cm) {0};
 
-    \node at (2.75cm, 9.75cm) {8};
-    \node at (3.25cm, 9.75cm) {6};
-    \node at (3.75cm, 9.75cm) {4};
-    \node at (4.25cm, 9.75cm) {1};
-    \node at (4.75cm, 9.75cm) {5};
+    \node at (2.75cm, 3.75cm) {8};
+    \node at (3.25cm, 3.75cm) {6};
+    \node at (3.75cm, 3.75cm) {4};
+    \node at (4.25cm, 3.75cm) {1};
+    \node at (4.75cm, 3.75cm) {5};
 
-    \node at (3.25cm, 9.25cm) {9};
-    \node at (3.75cm, 9.25cm) {8};
-    \node at (4.25cm, 9.25cm) {7};
-    \node at (4.75cm, 9.25cm) {6};
-    \node at (5.25cm, 9.25cm) {0};
+    \node at (3.25cm, 3.25cm) {9};
+    \node at (3.75cm, 3.25cm) {8};
+    \node at (4.25cm, 3.25cm) {7};
+    \node at (4.75cm, 3.25cm) {6};
+    \node at (5.25cm, 3.25cm) {0};
 
-    \node at (3.25cm, 8.75cm) {1};
-    \node at (3.75cm, 8.75cm) {1};
-    \node at (4.25cm, 8.75cm) {1};
-    \node at (4.75cm, 8.75cm) {1};
-    \node at (5.25cm, 8.75cm) {0};
-    \node at (5.75cm, 8.75cm) {5};
+    \node at (3.25cm, 2.75cm) {1};
+    \node at (3.75cm, 2.75cm) {1};
+    \node at (4.25cm, 2.75cm) {1};
+    \node at (4.75cm, 2.75cm) {1};
+    \node at (5.25cm, 2.75cm) {0};
+    \node at (5.75cm, 2.75cm) {5};
 
-    \draw (0.2cm,8.2cm) -- (6.2cm,8.2cm);
+    \draw (0.2cm,2.2cm) -- (6.2cm,2.2cm);
 
-    \node at (2.35cm, 8.3cm) {\tiny 1};
-    \node at (2.25cm, 7.75cm) {8};
-    \node at (2.85cm, 8.3cm) {\tiny 1};
-    \node at (2.75cm, 7.75cm) {3};
-    \node at (3.35cm, 8.3cm) {\tiny 2};
-    \node at (3.25cm, 7.75cm) {8};
-    \node at (3.85cm, 8.3cm) {\tiny 1};
-    \node at (3.75cm, 7.75cm) {1};
-    \node at (4.35cm, 8.3cm) {\tiny 1};
-    \node at (4.25cm, 7.75cm) {0};
-    \node at (4.75cm, 7.75cm) {2};
-    \node at (5.25cm, 7.75cm) {0};
-    \node at (5.75cm, 7.75cm) {5};
+    \node at (2.35cm, 2.3cm) {\tiny 1};
+    \node at (2.25cm, 1.75cm) {8};
+    \node at (2.85cm, 2.3cm) {\tiny 1};
+    \node at (2.75cm, 1.75cm) {3};
+    \node at (3.35cm, 2.3cm) {\tiny 2};
+    \node at (3.25cm, 1.75cm) {8};
+    \node at (3.85cm, 2.3cm) {\tiny 1};
+    \node at (3.75cm, 1.75cm) {1};
+    \node at (4.35cm, 2.3cm) {\tiny 1};
+    \node at (4.25cm, 1.75cm) {0};
+    \node at (4.75cm, 1.75cm) {2};
+    \node at (5.25cm, 1.75cm) {0};
+    \node at (5.75cm, 1.75cm) {5};
 
   \end{tikzpicture}
   \caption{schriftlich multiplizieren}\label{fig:schriftlichMultiplizieren}
@@ -2487,7 +2636,7 @@ Beim Rechnen mit Geld sind \textbf{Kapital} und \textbf{Guthaben}\footnote{sowie
 
 \chapter{Geometrie}\index{Geometrie}
 
-In der Mathematik-Prüfung im Hauptschulabschluss konstruieren und berechnen wir Dreiecke, andere elementare 2-dimensionale Flächen und zwei 3-dimensionale Körper, die \textbf{Prismen}\index{Prisma} und Zylinder. Hier sind praktische Anwendungen z.B. wie viel Luft in einem Gebäude zu erwärmen ist oder wie lange es dauert diese durch Lüftung auszutauschen, wie viel Wasser ein Pflanztopf halten kann und vieles mehr. Wie in der Hauptschul-Mathematik immer gilt auch hier dass die Inhalte über den Abschluss hinaus für uns alle im Alltag wichtig sind.
+In der Mathematik-Prüfung im Hauptschulabschluss \textbf{konstruieren} und \textbf{berechnen} wir Dreiecke, andere elementare 2-di\-men\-sio\-nale Flächen und zwei 3-di\-men\-sio\-nale Körper, die \textbf{Prismen}\index{Prisma} und \textbf{Zylinder}. Praktische Anwendungen sind z.B. wie viel Luft in einem Gebäude zu erwärmen (Anlagenmechaniker SHK) ist oder wie lange es dauert diese durch Lüftung auszutauschen, wie viel Wasser ein Pflanztopf halten kann, ein Schwimmbecken und vieles mehr. Wie in der Hauptschul-Mathematik immer gilt auch hier dass die Inhalte über den Abschluss hinaus für uns alle im Alltag wichtig sind.
 
 
 \section{Geraden und Strecken}\index{Gerade}\index{Strecke}
@@ -3745,7 +3894,11 @@ Wir erhalten einen Körper indem wir eine \textbf{Grundfläche} \textbf{extrudie
 
 Wir können uns aus versuchen vorzustellen, dass wir mit Wasser arbeiten (das sicherlich in Eiswürfel aufteilbar ist). Dann können wir z.B. einen letzten Würfel hineinwerfen, der (abgesehen vom Dichte-Unterschied von flüssigem Wasser und Eis) das Volumen um eine hundertstel Schicht vermehrt, indem hundertstel-Scheiben auf hundert Quadrate gelegt werden.
 
-
+So können wir jeden Körper für den wir eine \textbf{Grundfläche} kennen, die \enquote{senkrecht nach oben gezogen wird (um die \textbf{Körperhöhe})}, das \textbf{Volumen} als
+\begin{equation*}
+  V_K = A_G \cdot h_K
+\end{equation*}
+berechnen, sprich \enquote{das Volumen eines Körpers ist seine Grundfläche mal seine Körperhöhe}. Das gilt für Körper mit den Bedingungen wie oben. Das sind für uns hinsichtlich der Prüfung \textbf{Prisma} und \textbf{Zylinder}.
 
 \subsection{Prisma}\index{Prisma}\label{Prisma}
 
